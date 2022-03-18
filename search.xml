@@ -1,13 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>HTML相关</title>
-    <url>/2022/03/18/%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/</url>
-    <content><![CDATA[<h5 id="1-行内元素有哪些？块级元素有哪些？-空-void-元素有哪些？"><a href="#1-行内元素有哪些？块级元素有哪些？-空-void-元素有哪些？" class="headerlink" title="1.行内元素有哪些？块级元素有哪些？ 空(void)元素有哪些？"></a>1.行内元素有哪些？块级元素有哪些？ 空(void)元素有哪些？</h5><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">行内元素：span、img、input...</span><br><span class="line">块级元素：div、footer、header、section、p、h1...h6...</span><br><span class="line">空元素：br、hr...</span><br></pre></td></tr></table></figure>
-
+    <title>前端基础面试题</title>
+    <url>/2022/03/18/%E5%89%8D%E7%AB%AF%E5%9F%BA%E7%A1%80%E9%9D%A2%E8%AF%95%E9%A2%98/</url>
+    <content><![CDATA[<h2 id="一-HTML"><a href="#一-HTML" class="headerlink" title="一.HTML"></a>一.HTML</h2><p><strong>1.行内元素有哪些？块级元素有哪些？ 空(void)元素有哪些？</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">行内元素：span、img、input...</span><br><span class="line">块级元素：div、footer、header、section、p、h1...h6...</span><br><span class="line">空元素：br、hr...</span><br></pre></td></tr></table></figure>
 <span id="more"></span>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">元素之间的转换问题：</span><br><span class="line">display: inline;把某元素转换成了行内元素      ===&gt;不独占一行的，并且不能设置宽高</span><br><span class="line">display: inline-block; 	把某元素转换成了行内块元素		 ===&gt;不独占一行的，可以设置宽高</span><br><span class="line">display: block;	把某元素转换成了块元素	  ===&gt;独占一行，并且可以设置宽高</span><br></pre></td></tr></table></figure>
 
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">元素之间的转换问题：</span><br><span class="line">display: inline; 把某元素转换成了行内元素      ===&gt;不独占一行的，并且不能设置宽高</span><br><span class="line">display: inline-block; 把某元素转换成了行内块元素		 ===&gt;不独占一行的，可以设置宽高</span><br><span class="line">display: block; 把某元素转换成了块元素			   ===&gt;独占一行，并且可以设置宽高</span><br></pre></td></tr></table></figure>
+<h2 id="二-CSS"><a href="#二-CSS" class="headerlink" title="二.CSS"></a>二.CSS</h2><p><strong>1.介绍一下CSS的盒子模型</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">CSS的盒子模型有哪些：标准盒子模型、IE盒子模型</span><br><span class="line">CSS的盒子模型区别：</span><br><span class="line">	标准盒子模型：margin、border、padding、content</span><br><span class="line">	IE盒子模型 ：margin、content（ border +  padding  + content ）</span><br><span class="line">通过CSS如何转换盒子模型：</span><br><span class="line">	box-sizing: content-box;	/*标准盒子模型*/</span><br><span class="line">	box-sizing: border-box;	  /*IE盒子模型*/</span><br></pre></td></tr></table></figure>
+<p><strong>2.CSS优先级算法如何计算？</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">优先级比较：!important &gt; 内联样式 &gt; id &gt; class &gt; 标签 &gt; 通配</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">CSS权重计算：</span><br><span class="line">第一：内联样式（style）  权重值:1000</span><br><span class="line">第二：id选择器  				 权重值:100</span><br><span class="line">第三：类选择器 				  权重值:10</span><br><span class="line">第四：标签&amp;伪元素选择器   权重值:1</span><br><span class="line">第五：通配、&gt;、+         权重值:0</span><br></pre></td></tr></table></figure>
+<p><strong>3.清除浮动有哪些方式？</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">1. 触发BFC</span><br><span class="line">2. 多创建一个盒子，添加样式：clear: both;</span><br><span class="line">3. after方式</span><br><span class="line">	ul:after&#123;</span><br><span class="line">			content: &#x27;&#x27;;</span><br><span class="line">			display: block;</span><br><span class="line">			clear: both;</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>4.position有哪些值？分别是根据什么定位的？</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">static [默认]  没有定位</span><br><span class="line">fixed  固定定位，相对于浏览器窗口进行定位。</span><br><span class="line">relative  相对于自身定位，不脱离文档流。</span><br><span class="line">absolute	相对于第一个有relative的父元素，脱离文档流。</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">relative和absolute区别</span><br><span class="line">1. relative不脱离文档流 、absolute脱离文档流</span><br><span class="line">2. relative相对于自身 、 absolute相对于第一个有relative的父元素</span><br><span class="line">3. relative如果有left、right、top、bottom ==》left、top</span><br><span class="line">	 absolute如果有left、right、top、bottom ==》left、right、top、bottom</span><br></pre></td></tr></table></figure>
+<p><strong>5.用CSS画一个三角形</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">用边框画（border）,例如：</span><br><span class="line">&#123;</span><br><span class="line">		width: 0;</span><br><span class="line">		height: 0;</span><br><span class="line"></span><br><span class="line">		border-left:100px solid transparent;</span><br><span class="line">		border-right:100px solid transparent;</span><br><span class="line">		border-top:100px solid transparent;</span><br><span class="line">		border-bottom:100px solid #ccc;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>6.一个盒子不给宽度和高度如何水平垂直居中？</strong></p>
+<p>方式一：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;div class=&#x27;container&#x27;&gt;</span><br><span class="line">	&lt;div class=&#x27;main&#x27;&gt;main&lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line"></span><br><span class="line">.container&#123;</span><br><span class="line">		display: flex;</span><br><span class="line">		justify-content: center;</span><br><span class="line">		align-items: center;</span><br><span class="line">		width: 300px;</span><br><span class="line">		height: 300px;</span><br><span class="line">		border:5px solid #ccc;</span><br><span class="line">&#125;</span><br><span class="line">.main&#123;</span><br><span class="line">		background: red;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>方式二：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;div class=&#x27;container&#x27;&gt;</span><br><span class="line">	&lt;div class=&#x27;main&#x27;&gt;main&lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line"></span><br><span class="line">.container&#123;</span><br><span class="line">		position: relative;</span><br><span class="line">		width: 300px;</span><br><span class="line">		height: 300px;</span><br><span class="line">		border:5px solid #ccc;</span><br><span class="line">&#125;</span><br><span class="line">.main&#123;</span><br><span class="line">		position: absolute;</span><br><span class="line">		left:50%;</span><br><span class="line">		top:50%;</span><br><span class="line">		background: red;</span><br><span class="line">		transform: translate(-50%,-50%);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="三-H5与CS3"><a href="#三-H5与CS3" class="headerlink" title="三.H5与CS3"></a>三.H5与CS3</h2><p><strong>1.什么是语义化标签</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">1. 易读性和维护性更好。</span><br><span class="line">2. seo成分会更好，蜘蛛抓取更好。</span><br></pre></td></tr></table></figure>
+
+<h2 id="四-JS"><a href="#四-JS" class="headerlink" title="四.JS"></a>四.JS</h2><p><strong>1.&#x3D;&#x3D;和&#x3D;&#x3D;&#x3D;有什么不同？</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">==  :  比较的是值		</span><br><span class="line">	string == number || boolean || number ....都会隐式转换</span><br><span class="line">	通过valueOf转换（valueOf() 方法通常由 JavaScript 在后台自动调用，并不显式地出现在代码中。）</span><br><span class="line"></span><br><span class="line">=== ： 除了比较值，还比较类型</span><br></pre></td></tr></table></figure>
+
+<p> <strong>2.JS数据类型有哪些？</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">7种</span><br><span class="line">基本类型：String、Number、Boolean、Undefined、Null、Symbol（ES6）</span><br><span class="line">引用类型：object(function/array/object)</span><br><span class="line"></span><br><span class="line">NaN是一个数值类型，但是不是一个具体的数字。</span><br></pre></td></tr></table></figure>
+
+
+
 
 ]]></content>
       <categories>
@@ -15,7 +47,24 @@
       </categories>
       <tags>
         <tag>HTML</tag>
+        <tag>CSS</tag>
+        <tag>JS</tag>
         <tag>面试</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>排序</title>
+    <url>/2022/03/18/%E6%8E%92%E5%BA%8F/</url>
+    <content><![CDATA[<h4 id="1-冒泡排序"><a href="#1-冒泡排序" class="headerlink" title="1.冒泡排序"></a>1.冒泡排序</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">解析：1.比较相邻的两个元素，如果前一个比后一个大，则交换位置。</span><br><span class="line">　　　2.第一轮的时候最后一个元素应该是最大的一个。</span><br><span class="line">　　　3.这个时候由于最后一个元素已经是最大的了，所以最后一个元素不用比较。</span><br></pre></td></tr></table></figure>
+<span id="more"></span>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">// 编写方法，实现冒泡</span><br><span class="line">var arr = [29,45,51,68,72,97];</span><br><span class="line">//外层循环，控制趟数，每一次找到一个最大值</span><br><span class="line">for (var i = 0; i &lt; arr.length - 1; i++) &#123;</span><br><span class="line">    // 内层循环,控制比较的次数，并且判断两个数的大小</span><br><span class="line">    for (var j = 0; j &lt; arr.length - 1 - i; j++) &#123;</span><br><span class="line">        // 白话解释：如果前面的数大，放到后面(当然是从小到大的冒泡排序)</span><br><span class="line">        if (arr[j] &gt; arr[j + 1]) &#123;</span><br><span class="line">            var temp = arr[j];</span><br><span class="line">            arr[j] = arr[j + 1];</span><br><span class="line">            arr[j + 1] = temp;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"> </span><br><span class="line">&#125;</span><br><span class="line">console.log(arr);//[2, 4, 5, 12, 31, 32, 45, 52, 78, 89]</span><br></pre></td></tr></table></figure>
+<h4 id="2-快速排序"><a href="#2-快速排序" class="headerlink" title="2.快速排序"></a>2.快速排序</h4>]]></content>
+      <categories>
+        <category>数据结构</category>
+      </categories>
+      <tags>
+        <tag>JS</tag>
+        <tag>数据结构</tag>
       </tags>
   </entry>
 </search>
