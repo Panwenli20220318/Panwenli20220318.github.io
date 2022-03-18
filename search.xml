@@ -3,12 +3,12 @@
   <entry>
     <title>前端基础面试题</title>
     <url>/2022/03/18/%E5%89%8D%E7%AB%AF%E5%9F%BA%E7%A1%80%E9%9D%A2%E8%AF%95%E9%A2%98/</url>
-    <content><![CDATA[<h2 id="一-HTML"><a href="#一-HTML" class="headerlink" title="一.HTML"></a>一.HTML</h2><p><strong>1.行内元素有哪些？块级元素有哪些？ 空(void)元素有哪些？</strong></p>
+    <content><![CDATA[<h2 id="HTML"><a href="#HTML" class="headerlink" title="HTML"></a>HTML</h2><p><strong>1.行内元素有哪些？块级元素有哪些？ 空(void)元素有哪些？</strong></p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">行内元素：span、img、input...</span><br><span class="line">块级元素：div、footer、header、section、p、h1...h6...</span><br><span class="line">空元素：br、hr...</span><br></pre></td></tr></table></figure>
 <span id="more"></span>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">元素之间的转换问题：</span><br><span class="line">display: inline;把某元素转换成了行内元素      ===&gt;不独占一行的，并且不能设置宽高</span><br><span class="line">display: inline-block; 	把某元素转换成了行内块元素		 ===&gt;不独占一行的，可以设置宽高</span><br><span class="line">display: block;	把某元素转换成了块元素	  ===&gt;独占一行，并且可以设置宽高</span><br></pre></td></tr></table></figure>
 
-<h2 id="二-CSS"><a href="#二-CSS" class="headerlink" title="二.CSS"></a>二.CSS</h2><p><strong>1.介绍一下CSS的盒子模型</strong></p>
+<h2 id="CSS"><a href="#CSS" class="headerlink" title="CSS"></a>CSS</h2><p><strong>1.介绍一下CSS的盒子模型</strong></p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">CSS的盒子模型有哪些：标准盒子模型、IE盒子模型</span><br><span class="line">CSS的盒子模型区别：</span><br><span class="line">	标准盒子模型：margin、border、padding、content</span><br><span class="line">	IE盒子模型 ：margin、content（ border +  padding  + content ）</span><br><span class="line">通过CSS如何转换盒子模型：</span><br><span class="line">	box-sizing: content-box;	/*标准盒子模型*/</span><br><span class="line">	box-sizing: border-box;	  /*IE盒子模型*/</span><br></pre></td></tr></table></figure>
 <p><strong>2.CSS优先级算法如何计算？</strong></p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">优先级比较：!important &gt; 内联样式 &gt; id &gt; class &gt; 标签 &gt; 通配</span><br></pre></td></tr></table></figure>
@@ -29,10 +29,10 @@
 <p>方式二：</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;div class=&#x27;container&#x27;&gt;</span><br><span class="line">	&lt;div class=&#x27;main&#x27;&gt;main&lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line"></span><br><span class="line">.container&#123;</span><br><span class="line">		position: relative;</span><br><span class="line">		width: 300px;</span><br><span class="line">		height: 300px;</span><br><span class="line">		border:5px solid #ccc;</span><br><span class="line">&#125;</span><br><span class="line">.main&#123;</span><br><span class="line">		position: absolute;</span><br><span class="line">		left:50%;</span><br><span class="line">		top:50%;</span><br><span class="line">		background: red;</span><br><span class="line">		transform: translate(-50%,-50%);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<h2 id="三-H5与CS3"><a href="#三-H5与CS3" class="headerlink" title="三.H5与CS3"></a>三.H5与CS3</h2><p><strong>1.什么是语义化标签</strong></p>
+<h2 id="H5与CS3"><a href="#H5与CS3" class="headerlink" title="H5与CS3"></a>H5与CS3</h2><p><strong>1.什么是语义化标签</strong></p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">1. 易读性和维护性更好。</span><br><span class="line">2. seo成分会更好，蜘蛛抓取更好。</span><br></pre></td></tr></table></figure>
 
-<h2 id="四-JS"><a href="#四-JS" class="headerlink" title="四.JS"></a>四.JS</h2><p><strong>1.&#x3D;&#x3D;和&#x3D;&#x3D;&#x3D;有什么不同？</strong></p>
+<h2 id="JS"><a href="#JS" class="headerlink" title="JS"></a>JS</h2><p><strong>1.&#x3D;&#x3D;和&#x3D;&#x3D;&#x3D;有什么不同？</strong></p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">==  :  比较的是值		</span><br><span class="line">	string == number || boolean || number ....都会隐式转换</span><br><span class="line">	通过valueOf转换（valueOf() 方法通常由 JavaScript 在后台自动调用，并不显式地出现在代码中。）</span><br><span class="line"></span><br><span class="line">=== ： 除了比较值，还比较类型</span><br></pre></td></tr></table></figure>
 
 <p> <strong>2.JS数据类型有哪些？</strong></p>
@@ -55,10 +55,10 @@
   <entry>
     <title>排序</title>
     <url>/2022/03/18/%E6%8E%92%E5%BA%8F/</url>
-    <content><![CDATA[<h4 id="1-冒泡排序"><a href="#1-冒泡排序" class="headerlink" title="1.冒泡排序"></a>1.冒泡排序</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">解析：1.比较相邻的两个元素，如果前一个比后一个大，则交换位置。</span><br><span class="line">　　　2.第一轮的时候最后一个元素应该是最大的一个。</span><br><span class="line">　　　3.这个时候由于最后一个元素已经是最大的了，所以最后一个元素不用比较。</span><br></pre></td></tr></table></figure>
+    <content><![CDATA[<h4 id="冒泡排序"><a href="#冒泡排序" class="headerlink" title="冒泡排序"></a>冒泡排序</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">解析：1.比较相邻的两个元素，如果前一个比后一个大，则交换位置。</span><br><span class="line">　　　2.第一轮的时候最后一个元素应该是最大的一个。</span><br><span class="line">　　　3.这个时候由于最后一个元素已经是最大的了，所以最后一个元素不用比较。</span><br></pre></td></tr></table></figure>
 <span id="more"></span>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">// 编写方法，实现冒泡</span><br><span class="line">var arr = [29,45,51,68,72,97];</span><br><span class="line">//外层循环，控制趟数，每一次找到一个最大值</span><br><span class="line">for (var i = 0; i &lt; arr.length - 1; i++) &#123;</span><br><span class="line">    // 内层循环,控制比较的次数，并且判断两个数的大小</span><br><span class="line">    for (var j = 0; j &lt; arr.length - 1 - i; j++) &#123;</span><br><span class="line">        // 白话解释：如果前面的数大，放到后面(当然是从小到大的冒泡排序)</span><br><span class="line">        if (arr[j] &gt; arr[j + 1]) &#123;</span><br><span class="line">            var temp = arr[j];</span><br><span class="line">            arr[j] = arr[j + 1];</span><br><span class="line">            arr[j + 1] = temp;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"> </span><br><span class="line">&#125;</span><br><span class="line">console.log(arr);//[2, 4, 5, 12, 31, 32, 45, 52, 78, 89]</span><br></pre></td></tr></table></figure>
-<h4 id="2-快速排序"><a href="#2-快速排序" class="headerlink" title="2.快速排序"></a>2.快速排序</h4>]]></content>
+<h4 id="快速排序"><a href="#快速排序" class="headerlink" title="快速排序"></a>快速排序</h4>]]></content>
       <categories>
         <category>数据结构</category>
       </categories>
