@@ -22,21 +22,20 @@
     var CONFIG = {"hostname":"pwl.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="冒泡排序123解析：1.比较相邻的两个元素，如果前一个比后一个大，则交换位置。　　　2.第一轮的时候最后一个元素应该是最大的一个。　　　3.这个时候由于最后一个元素已经是最大的了，所以最后一个元素不用比较。">
+  <meta name="description" content="前提123456789function fun()&amp;#123;	this.x &#x3D; 123;    console.log(111111);    return &amp;#x27;aaaaaa&amp;#x27;;&amp;#125;console.log(fun);  &#x2F;&#x2F;输出：函数体，不会执行函数console.log(fun());  &#x2F;&#x2F;输出：111111 aaaaaa 执行函数，this指向windowcons">
 <meta property="og:type" content="article">
-<meta property="og:title" content="排序">
-<meta property="og:url" content="http://pwl.com/2022/03/18/%E6%8E%92%E5%BA%8F/index.html">
+<meta property="og:title" content="JS作用域+this指向+原型考题">
+<meta property="og:url" content="http://pwl.com/2022/03/19/JS%E4%BD%9C%E7%94%A8%E5%9F%9F+this%E6%8C%87%E5%90%91+%E5%8E%9F%E5%9E%8B%E8%80%83%E9%A2%98/index.html">
 <meta property="og:site_name" content="PWL">
-<meta property="og:description" content="冒泡排序123解析：1.比较相邻的两个元素，如果前一个比后一个大，则交换位置。　　　2.第一轮的时候最后一个元素应该是最大的一个。　　　3.这个时候由于最后一个元素已经是最大的了，所以最后一个元素不用比较。">
+<meta property="og:description" content="前提123456789function fun()&amp;#123;	this.x &#x3D; 123;    console.log(111111);    return &amp;#x27;aaaaaa&amp;#x27;;&amp;#125;console.log(fun);  &#x2F;&#x2F;输出：函数体，不会执行函数console.log(fun());  &#x2F;&#x2F;输出：111111 aaaaaa 执行函数，this指向windowcons">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2022-03-18T13:45:05.000Z">
-<meta property="article:modified_time" content="2022-03-18T14:29:53.336Z">
+<meta property="article:published_time" content="2022-03-19T04:25:48.000Z">
+<meta property="article:modified_time" content="2022-03-19T07:59:49.790Z">
 <meta property="article:author" content="PWL">
 <meta property="article:tag" content="JS">
-<meta property="article:tag" content="数据结构">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://pwl.com/2022/03/18/%E6%8E%92%E5%BA%8F/">
+<link rel="canonical" href="http://pwl.com/2022/03/19/JS%E4%BD%9C%E7%94%A8%E5%9F%9F+this%E6%8C%87%E5%90%91+%E5%8E%9F%E5%9E%8B%E8%80%83%E9%A2%98/">
 
 
 <script id="page-configurations">
@@ -49,7 +48,7 @@
   };
 </script>
 
-  <title>排序 | PWL</title>
+  <title>JS作用域+this指向+原型考题 | PWL</title>
   
 
 
@@ -192,7 +191,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://pwl.com/2022/03/18/%E6%8E%92%E5%BA%8F/">
+    <link itemprop="mainEntityOfPage" href="http://pwl.com/2022/03/19/JS%E4%BD%9C%E7%94%A8%E5%9F%9F+this%E6%8C%87%E5%90%91+%E5%8E%9F%E5%9E%8B%E8%80%83%E9%A2%98/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.jpeg">
@@ -205,7 +204,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          排序
+          JS作用域+this指向+原型考题
         </h1>
 
         <div class="post-meta">
@@ -216,7 +215,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2022-03-18 21:45:05 / 修改时间：22:29:53" itemprop="dateCreated datePublished" datetime="2022-03-18T21:45:05+08:00">2022-03-18</time>
+              <time title="创建时间：2022-03-19 12:25:48 / 修改时间：15:59:49" itemprop="dateCreated datePublished" datetime="2022-03-19T12:25:48+08:00">2022-03-19</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -224,7 +223,7 @@
               </span>
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" itemprop="url" rel="index"><span itemprop="name">数据结构</span></a>
+                  <a href="/categories/JS%E9%87%8D%E9%9A%BE%E7%82%B9%E7%AA%81%E7%A0%B4/" itemprop="url" rel="index"><span itemprop="name">JS重难点突破</span></a>
                 </span>
             </span>
 
@@ -244,8 +243,8 @@
       </span>
       <span class="post-meta-item-text">Valine：</span>
     
-    <a title="valine" href="/2022/03/18/%E6%8E%92%E5%BA%8F/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2022/03/18/%E6%8E%92%E5%BA%8F/" itemprop="commentCount"></span>
+    <a title="valine" href="/2022/03/19/JS%E4%BD%9C%E7%94%A8%E5%9F%9F+this%E6%8C%87%E5%90%91+%E5%8E%9F%E5%9E%8B%E8%80%83%E9%A2%98/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2022/03/19/JS%E4%BD%9C%E7%94%A8%E5%9F%9F+this%E6%8C%87%E5%90%91+%E5%8E%9F%E5%9E%8B%E8%80%83%E9%A2%98/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -255,14 +254,14 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>460</span>
+              <span>1.8k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
                 <i class="far fa-clock"></i>
               </span>
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>1 分钟</span>
+              <span>2 分钟</span>
             </span>
 
         </div>
@@ -274,10 +273,25 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h4 id="冒泡排序"><a href="#冒泡排序" class="headerlink" title="冒泡排序"></a>冒泡排序</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">解析：1.比较相邻的两个元素，如果前一个比后一个大，则交换位置。</span><br><span class="line">　　　2.第一轮的时候最后一个元素应该是最大的一个。</span><br><span class="line">　　　3.这个时候由于最后一个元素已经是最大的了，所以最后一个元素不用比较。</span><br></pre></td></tr></table></figure>
+        <h5 id="前提"><a href="#前提" class="headerlink" title="前提"></a>前提</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">function fun()&#123;</span><br><span class="line">	this.x = 123;</span><br><span class="line">    console.log(111111);</span><br><span class="line">    return &#x27;aaaaaa&#x27;;</span><br><span class="line">&#125;</span><br><span class="line">console.log(fun);  //输出：函数体，不会执行函数</span><br><span class="line">console.log(fun());  //输出：111111 aaaaaa 执行函数，this指向window</span><br><span class="line">console.log(new fun());  //输出：111111 fun&#123;&#125; </span><br><span class="line">//new fun() 是一个对象，this指向这个对象</span><br></pre></td></tr></table></figure>
+
 <span id="more"></span>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">// 编写方法，实现冒泡</span><br><span class="line">var arr = [29,45,51,68,72,97];</span><br><span class="line">//外层循环，控制趟数，每一次找到一个最大值</span><br><span class="line">for (var i = 0; i &lt; arr.length - 1; i++) &#123;</span><br><span class="line">    // 内层循环,控制比较的次数，并且判断两个数的大小</span><br><span class="line">    for (var j = 0; j &lt; arr.length - 1 - i; j++) &#123;</span><br><span class="line">        // 白话解释：如果前面的数大，放到后面(当然是从小到大的冒泡排序)</span><br><span class="line">        if (arr[j] &gt; arr[j + 1]) &#123;</span><br><span class="line">            var temp = arr[j];</span><br><span class="line">            arr[j] = arr[j + 1];</span><br><span class="line">            arr[j + 1] = temp;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"> </span><br><span class="line">&#125;</span><br><span class="line">console.log(arr);//[2, 4, 5, 12, 31, 32, 45, 52, 78, 89]</span><br></pre></td></tr></table></figure>
-<h4 id="快速排序"><a href="#快速排序" class="headerlink" title="快速排序"></a>快速排序</h4>
+
+<p>考题一：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">function Foo()&#123;</span><br><span class="line">	getName = function()&#123;console.log(1)&#125; //注意是全局的window.  不是new Foo()的</span><br><span class="line">	return this;  //返回的是window</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">Foo.getName = function()&#123;console.log(2)&#125;  //Foo没加括号，函数并没有执行</span><br><span class="line">Foo.prototype.getName = function()&#123;console.log(3)&#125;</span><br><span class="line">var getName = function()&#123;console.log(4)&#125;</span><br><span class="line">  //声明变量 &gt; 声明普通函数 这句执行，下一句不会执行</span><br><span class="line">function getName()&#123;</span><br><span class="line">	console.log(5)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">Foo.getName();    //2</span><br><span class="line">getName(); 		  //4</span><br><span class="line"></span><br><span class="line">//这句话之前执行了getName = function()&#123;console.log(1)&#125;，</span><br><span class="line">将会覆盖var getName = function()&#123;console.log(4)&#125;</span><br><span class="line">//Foo()返回window</span><br><span class="line">Foo().getName();  //1     </span><br><span class="line">getName();		  //1</span><br><span class="line"></span><br><span class="line">new Foo().getName();//3</span><br></pre></td></tr></table></figure>
+
+<p>考题二：（头条考题）</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">var o = &#123;</span><br><span class="line">	a:10,</span><br><span class="line">	b:&#123;</span><br><span class="line">		a:2,</span><br><span class="line">		fn:function()&#123;</span><br><span class="line">			console.log( this.a ); // 2</span><br><span class="line">			console.log( this );   //代表b对象</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">o.b.fn();</span><br></pre></td></tr></table></figure>
+
+<p>考题三：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">window.name = &#x27;ByteDance&#x27;;</span><br><span class="line">function A()&#123;</span><br><span class="line">	this.name = 123;</span><br><span class="line">&#125;</span><br><span class="line">A.prototype.getA = function()&#123;</span><br><span class="line">	console.log( this );</span><br><span class="line">	return this.name + 1;</span><br><span class="line">&#125;</span><br><span class="line">//注意函数加不加括号的区别</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">let a = new A();</span><br><span class="line">let funcA = a.getA; </span><br><span class="line"></span><br><span class="line">//a.getA后面不加括号，返回的是函数体</span><br><span class="line">相对于let funcA = function()&#123;</span><br><span class="line">	console.log( this );  //this指的是window</span><br><span class="line">	return this.name + 1;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">funcA();  //输出：window</span><br><span class="line">console.log(funcA());  //输出：ByteDance1</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">let a = new A();</span><br><span class="line">let funcA = a.getA(); //执行函数，this指的是A</span><br><span class="line">console.log(funcA);    //输出：124</span><br></pre></td></tr></table></figure>
+
+<p>考题四：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">var length = 10;</span><br><span class="line">function fn()&#123;</span><br><span class="line">	return this.length + 1;   //this指向window</span><br><span class="line">&#125;</span><br><span class="line">var obj = &#123;</span><br><span class="line">	length:5,</span><br><span class="line">	test1:function()&#123;</span><br><span class="line">		return fn();</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">obj.test2 = fn;</span><br><span class="line">//相对于在obj里面加了一个</span><br><span class="line">test2:function()&#123;</span><br><span class="line">		return this.length + 1;  </span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">console.log( obj.test1() );  	//11</span><br><span class="line">console.log( fn()===obj.test2() ); 	 //11 ！= 6 输出：false</span><br><span class="line">console.log( obj.test1() == obj.test2() ); //false</span><br></pre></td></tr></table></figure>
     </div>
 
     
@@ -287,7 +301,6 @@
       <footer class="post-footer">
           <div class="post-tags">
               <a href="/tags/JS/" rel="tag"># JS</a>
-              <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" rel="tag"># 数据结构</a>
           </div>
 
         
@@ -296,12 +309,12 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2022/03/18/HTML%E9%9D%A2%E8%AF%95%E9%A2%98/" rel="prev" title="HTML面试题">
-      <i class="fa fa-chevron-left"></i> HTML面试题
+    <a href="/2022/03/19/JS%E4%BD%9C%E7%94%A8%E5%9F%9F/" rel="prev" title="JS作用域">
+      <i class="fa fa-chevron-left"></i> JS作用域
     </a></div>
       <div class="post-nav-item">
-    <a href="/2022/03/19/CSS%E9%9D%A2%E8%AF%95%E9%A2%98/" rel="next" title="CSS面试题">
-      CSS面试题 <i class="fa fa-chevron-right"></i>
+    <a href="/2022/03/19/JS%E6%95%B0%E7%BB%84%E5%8E%BB%E9%87%8D/" rel="next" title="JS数组去重">
+      JS数组去重 <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
       </footer>
@@ -362,7 +375,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F"><span class="nav-number">1.</span> <span class="nav-text">冒泡排序</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F"><span class="nav-number">2.</span> <span class="nav-text">快速排序</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%89%8D%E6%8F%90"><span class="nav-number">1.</span> <span class="nav-text">前提</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 

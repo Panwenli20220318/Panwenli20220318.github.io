@@ -22,15 +22,22 @@
     var CONFIG = {"hostname":"pwl.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="PWL">
-<meta property="og:url" content="http://pwl.com/tags/CSS/index.html">
+  <meta name="description" content="要点123451. 对象是通过new操作符构建出来的，所以对象之间不想等(除了引用外)；2. 对象注意引用类型(共同一个地址)；3. 对象的key都是字符串类型；4. 对象如何找属性|方法；	查找规则：先在对象本身找 &#x3D;&#x3D;&#x3D;&gt; 构造函数中找 &#x3D;&#x3D;&#x3D;&gt; 对象原型中找 &#x3D;&#x3D;&#x3D;&gt; 构造函数原型中找 &#x3D;&#x3D;&#x3D;&gt; 对象上一层原型查找">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JS对象">
+<meta property="og:url" content="http://pwl.com/2022/03/19/JS%E5%AF%B9%E8%B1%A1/index.html">
 <meta property="og:site_name" content="PWL">
+<meta property="og:description" content="要点123451. 对象是通过new操作符构建出来的，所以对象之间不想等(除了引用外)；2. 对象注意引用类型(共同一个地址)；3. 对象的key都是字符串类型；4. 对象如何找属性|方法；	查找规则：先在对象本身找 &#x3D;&#x3D;&#x3D;&gt; 构造函数中找 &#x3D;&#x3D;&#x3D;&gt; 对象原型中找 &#x3D;&#x3D;&#x3D;&gt; 构造函数原型中找 &#x3D;&#x3D;&#x3D;&gt; 对象上一层原型查找">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://s2.loli.net/2022/03/19/ck1jtTEUxAzRi7K.png">
+<meta property="article:published_time" content="2022-03-19T04:15:30.000Z">
+<meta property="article:modified_time" content="2022-03-19T08:52:01.976Z">
 <meta property="article:author" content="PWL">
+<meta property="article:tag" content="JS">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://s2.loli.net/2022/03/19/ck1jtTEUxAzRi7K.png">
 
-<link rel="canonical" href="http://pwl.com/tags/CSS/">
+<link rel="canonical" href="http://pwl.com/2022/03/19/JS%E5%AF%B9%E8%B1%A1/">
 
 
 <script id="page-configurations">
@@ -38,12 +45,12 @@
   CONFIG.page = {
     sidebar: "",
     isHome : false,
-    isPost : false,
+    isPost : true,
     lang   : 'zh-CN'
   };
 </script>
 
-  <title>标签: CSS | PWL</title>
+  <title>JS对象 | PWL</title>
   
 
 
@@ -179,81 +186,150 @@
         <div class="content-wrap">
           
 
-          <div class="content tag">
+          <div class="content post posts-expand">
             
 
+    
   
   
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://pwl.com/2022/03/19/JS%E5%AF%B9%E8%B1%A1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpeg">
+      <meta itemprop="name" content="PWL">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="PWL">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          JS对象
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2022-03-19 12:15:30 / 修改时间：16:52:01" itemprop="dateCreated datePublished" datetime="2022-03-19T12:15:30+08:00">2022-03-19</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/JS%E9%87%8D%E9%9A%BE%E7%82%B9%E7%AA%81%E7%A0%B4/" itemprop="url" rel="index"><span itemprop="name">JS重难点突破</span></a>
+                </span>
+            </span>
+
+          
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
   
-  <div class="post-block">
-    <div class="posts-collapse">
-      <div class="collection-title">
-        <h2 class="collection-header">CSS
-          <small>标签</small>
-        </h2>
-      </div>
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2022/03/19/JS%E5%AF%B9%E8%B1%A1/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2022/03/19/JS%E5%AF%B9%E8%B1%A1/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>1.2k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>1 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-    <div class="collection-year">
-      <h1 class="collection-header">2022</h1>
+        <h5 id="要点"><a href="#要点" class="headerlink" title="要点"></a>要点</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">1. 对象是通过new操作符构建出来的，所以对象之间不想等(除了引用外)；</span><br><span class="line">2. 对象注意引用类型(共同一个地址)；</span><br><span class="line">3. 对象的key都是字符串类型；</span><br><span class="line">4. 对象如何找属性|方法；</span><br><span class="line">	查找规则：先在对象本身找 ===&gt; 构造函数中找 ===&gt; 对象原型中找 ===&gt; 构造函数原型中找 ===&gt; 对象上一层原型查找</span><br></pre></td></tr></table></figure>
+
+<span id="more"></span>
+
+<h5 id="易错点"><a href="#易错点" class="headerlink" title="易错点"></a>易错点</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">console.log([1,2,3] === [1,2,3]);    //false 其实是两个不同的对象</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">var obj1=&#123;</span><br><span class="line">    a:1</span><br><span class="line">&#125;</span><br><span class="line">var obj2 = obj1;  //引用，obj2不是new出来的</span><br><span class="line">console.log(obj1 === obj2);  //true</span><br></pre></td></tr></table></figure>
+
+<p>考题一</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">var obj1 = &#123;</span><br><span class="line">	a:&#x27;hellow&#x27;</span><br><span class="line">&#125;</span><br><span class="line">var obj2 = obj1;</span><br><span class="line">obj2.a = &#x27;world&#x27;;</span><br><span class="line">console.log(obj1); 	//&#123;a:world&#125;</span><br><span class="line">(function()&#123;</span><br><span class="line">	console.log(a); 	//undefined</span><br><span class="line">	var a = 1;</span><br><span class="line">&#125;)();</span><br></pre></td></tr></table></figure>
+
+<p>考题二</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">var a = &#123;&#125;</span><br><span class="line">var b = &#123;</span><br><span class="line">	key:&#x27;a&#x27;</span><br><span class="line">&#125;</span><br><span class="line">var c = &#123;</span><br><span class="line">	key:&#x27;c&#x27;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">a[b] = &#x27;123&#x27;;   </span><br><span class="line">a[c] = &#x27;456&#x27;;  //b和c是字符串不是对象了，都变成了&#123;Object Object&#125;字符串，会进行覆盖</span><br><span class="line"></span><br><span class="line">console.log( a[b] ); // 456</span><br></pre></td></tr></table></figure>
+
+<p>考题三:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">//1.每一个函数都自带一个prototype【原型】</span><br><span class="line">//注意：对象拥有_proto_</span><br><span class="line">//2.new Fun 该Fun构造函数的原型指向于对象（new Fun)的原型</span><br><span class="line"></span><br><span class="line">function Fun()&#123;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br><span class="line">let obj = new Fun();</span><br><span class="line"></span><br><span class="line">console.log(Fun.prototype==obj._proto_);   //true </span><br></pre></td></tr></table></figure>
+<p>原理图：<br><img src="https://s2.loli.net/2022/03/19/ck1jtTEUxAzRi7K.png" alt="53EB9F73A503BD552BA7B6B5A792C1EE.png"></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">function Fun()&#123;</span><br><span class="line">    this.a=&#x27;在Fun函数中添加的&#x27;;</span><br><span class="line">&#125;</span><br><span class="line">Fun.prototype.a=&#x27;这是Fun原型添加的&#x27;</span><br><span class="line">let obj = new Fun();</span><br><span class="line">obj.a=&#x27;对象本身&#x27;;</span><br><span class="line">obj._proto_.a=&#x27;这是对象原型添加的&#x27;；</span><br><span class="line"></span><br><span class="line">console.log( obj.a );</span><br><span class="line">//1.对象本身</span><br><span class="line">//2.在Fun函数中添加的</span><br><span class="line">//3.这是对象原型添加的</span><br><span class="line">//4.这是Fun原型添加的</span><br></pre></td></tr></table></figure>
     </div>
 
-  <article class="my-post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="my-post-header">
+    
+    
+    
 
-      <div class="my-post-meta">
-        <time class="my-post-time" itemprop="dateCreated"
-              datetime="2022-03-19T11:07:49+08:00"
-              content="2022-03-19">
-          03-19
-        </time>
-      </div>
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/JS/" rel="tag"># JS</a>
+          </div>
 
-      <h2 class="my-post-title">
-          <a class="my-post-title-link" href="/2022/03/19/CSS%E4%BB%A3%E7%A0%81%E9%A2%98/" itemprop="url">
-            
-              <span itemprop="name">CSS代码题</span>
-            
-          </a>
-      </h2>
+        
 
-    </header>
-  </article>
 
-  <article class="my-post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="my-post-header">
-
-      <div class="my-post-meta">
-        <time class="my-post-time" itemprop="dateCreated"
-              datetime="2022-03-19T10:56:14+08:00"
-              content="2022-03-19">
-          03-19
-        </time>
-      </div>
-
-      <h2 class="my-post-title">
-          <a class="my-post-title-link" href="/2022/03/19/CSS%E9%9D%A2%E8%AF%95%E9%A2%98/" itemprop="url">
-            
-              <span itemprop="name">CSS面试题</span>
-            
-          </a>
-      </h2>
-
-    </header>
-  </article>
-
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2022/03/19/JS%E5%B8%B8%E8%A7%81%E4%BB%A3%E7%A0%81%E9%A2%98/" rel="prev" title="JS常见代码题">
+      <i class="fa fa-chevron-left"></i> JS常见代码题
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2022/03/19/JS%E4%BD%9C%E7%94%A8%E5%9F%9F/" rel="next" title="JS作用域">
+      JS作用域 <i class="fa fa-chevron-right"></i>
+    </a></div>
     </div>
-  </div>
+      </footer>
+    
+  </article>
   
   
-  
-
   
 
 
 
           </div>
           
+    <div class="comments" id="valine-comments"></div>
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -300,6 +376,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E8%A6%81%E7%82%B9"><span class="nav-number">1.</span> <span class="nav-text">要点</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E6%98%93%E9%94%99%E7%82%B9"><span class="nav-number">2.</span> <span class="nav-text">易错点</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 

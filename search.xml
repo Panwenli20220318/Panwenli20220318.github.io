@@ -1,55 +1,238 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>前端基础面试题</title>
-    <url>/2022/03/18/%E5%89%8D%E7%AB%AF%E5%9F%BA%E7%A1%80%E9%9D%A2%E8%AF%95%E9%A2%98/</url>
-    <content><![CDATA[<h2 id="HTML"><a href="#HTML" class="headerlink" title="HTML"></a>HTML</h2><p><strong>1.行内元素有哪些？块级元素有哪些？ 空(void)元素有哪些？</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">行内元素：span、img、input...</span><br><span class="line">块级元素：div、footer、header、section、p、h1...h6...</span><br><span class="line">空元素：br、hr...</span><br></pre></td></tr></table></figure>
+    <title>CSS代码题</title>
+    <url>/2022/03/19/CSS%E4%BB%A3%E7%A0%81%E9%A2%98/</url>
+    <content><![CDATA[<h5 id="用CSS画一个三角形"><a href="#用CSS画一个三角形" class="headerlink" title="用CSS画一个三角形"></a>用CSS画一个三角形</h5><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">用边框画（border）,例如：</span><br><span class="line">&lt;style&gt;</span><br><span class="line">        div &#123;</span><br><span class="line">            width: 0;</span><br><span class="line">            height: 0;</span><br><span class="line">            border-width: 30px;</span><br><span class="line">            border-style: solid;</span><br><span class="line">            border-color: transparent transparent pink transparent;</span><br><span class="line">        &#125;</span><br><span class="line">&lt;/style&gt;</span><br><span class="line"></span><br><span class="line"> &lt;div&gt;&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+
 <span id="more"></span>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">元素之间的转换问题：</span><br><span class="line">display: inline;把某元素转换成了行内元素      ===&gt;不独占一行的，并且不能设置宽高</span><br><span class="line">display: inline-block; 	把某元素转换成了行内块元素		 ===&gt;不独占一行的，可以设置宽高</span><br><span class="line">display: block;	把某元素转换成了块元素	  ===&gt;独占一行，并且可以设置宽高</span><br></pre></td></tr></table></figure>
 
-<h2 id="CSS"><a href="#CSS" class="headerlink" title="CSS"></a>CSS</h2><p><strong>1.介绍一下CSS的盒子模型</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">CSS的盒子模型有哪些：标准盒子模型、IE盒子模型</span><br><span class="line">CSS的盒子模型区别：</span><br><span class="line">	标准盒子模型：margin、border、padding、content</span><br><span class="line">	IE盒子模型 ：margin、content（ border +  padding  + content ）</span><br><span class="line">通过CSS如何转换盒子模型：</span><br><span class="line">	box-sizing: content-box;	/*标准盒子模型*/</span><br><span class="line">	box-sizing: border-box;	  /*IE盒子模型*/</span><br></pre></td></tr></table></figure>
-<p><strong>2.CSS优先级算法如何计算？</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">优先级比较：!important &gt; 内联样式 &gt; id &gt; class &gt; 标签 &gt; 通配</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">CSS权重计算：</span><br><span class="line">第一：内联样式（style）  权重值:1000</span><br><span class="line">第二：id选择器  				 权重值:100</span><br><span class="line">第三：类选择器 				  权重值:10</span><br><span class="line">第四：标签&amp;伪元素选择器   权重值:1</span><br><span class="line">第五：通配、&gt;、+         权重值:0</span><br></pre></td></tr></table></figure>
-<p><strong>3.清除浮动有哪些方式？</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">1. 触发BFC</span><br><span class="line">2. 多创建一个盒子，添加样式：clear: both;</span><br><span class="line">3. after方式</span><br><span class="line">	ul:after&#123;</span><br><span class="line">			content: &#x27;&#x27;;</span><br><span class="line">			display: block;</span><br><span class="line">			clear: both;</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
-
-<p><strong>4.position有哪些值？分别是根据什么定位的？</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">static [默认]  没有定位</span><br><span class="line">fixed  固定定位，相对于浏览器窗口进行定位。</span><br><span class="line">relative  相对于自身定位，不脱离文档流。</span><br><span class="line">absolute	相对于第一个有relative的父元素，脱离文档流。</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">relative和absolute区别</span><br><span class="line">1. relative不脱离文档流 、absolute脱离文档流</span><br><span class="line">2. relative相对于自身 、 absolute相对于第一个有relative的父元素</span><br><span class="line">3. relative如果有left、right、top、bottom ==》left、top</span><br><span class="line">	 absolute如果有left、right、top、bottom ==》left、right、top、bottom</span><br></pre></td></tr></table></figure>
-<p><strong>5.用CSS画一个三角形</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">用边框画（border）,例如：</span><br><span class="line">&#123;</span><br><span class="line">		width: 0;</span><br><span class="line">		height: 0;</span><br><span class="line"></span><br><span class="line">		border-left:100px solid transparent;</span><br><span class="line">		border-right:100px solid transparent;</span><br><span class="line">		border-top:100px solid transparent;</span><br><span class="line">		border-bottom:100px solid #ccc;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p><strong>6.一个盒子不给宽度和高度如何水平垂直居中？</strong></p>
-<p>方式一：</p>
+<h5 id="一个盒子不给宽度和高度如何水平垂直居中？"><a href="#一个盒子不给宽度和高度如何水平垂直居中？" class="headerlink" title="一个盒子不给宽度和高度如何水平垂直居中？"></a>一个盒子不给宽度和高度如何水平垂直居中？</h5><p>方式一：flex</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;div class=&#x27;container&#x27;&gt;</span><br><span class="line">	&lt;div class=&#x27;main&#x27;&gt;main&lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line"></span><br><span class="line">.container&#123;</span><br><span class="line">		display: flex;</span><br><span class="line">		justify-content: center;</span><br><span class="line">		align-items: center;</span><br><span class="line">		width: 300px;</span><br><span class="line">		height: 300px;</span><br><span class="line">		border:5px solid #ccc;</span><br><span class="line">&#125;</span><br><span class="line">.main&#123;</span><br><span class="line">		background: red;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>方式二：</p>
+<p>方式二：相对定位</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;div class=&#x27;container&#x27;&gt;</span><br><span class="line">	&lt;div class=&#x27;main&#x27;&gt;main&lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line"></span><br><span class="line">.container&#123;</span><br><span class="line">		position: relative;</span><br><span class="line">		width: 300px;</span><br><span class="line">		height: 300px;</span><br><span class="line">		border:5px solid #ccc;</span><br><span class="line">&#125;</span><br><span class="line">.main&#123;</span><br><span class="line">		position: absolute;</span><br><span class="line">		left:50%;</span><br><span class="line">		top:50%;</span><br><span class="line">		background: red;</span><br><span class="line">		transform: translate(-50%,-50%);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="H5与CS3"><a href="#H5与CS3" class="headerlink" title="H5与CS3"></a>H5与CS3</h2><p><strong>1.什么是语义化标签</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">1. 易读性和维护性更好。</span><br><span class="line">2. seo成分会更好，蜘蛛抓取更好。</span><br></pre></td></tr></table></figure>
-
-<h2 id="JS"><a href="#JS" class="headerlink" title="JS"></a>JS</h2><p><strong>1.&#x3D;&#x3D;和&#x3D;&#x3D;&#x3D;有什么不同？</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">==  :  比较的是值		</span><br><span class="line">	string == number || boolean || number ....都会隐式转换</span><br><span class="line">	通过valueOf转换（valueOf() 方法通常由 JavaScript 在后台自动调用，并不显式地出现在代码中。）</span><br><span class="line"></span><br><span class="line">=== ： 除了比较值，还比较类型</span><br></pre></td></tr></table></figure>
-
-<p> <strong>2.JS数据类型有哪些？</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">7种</span><br><span class="line">基本类型：String、Number、Boolean、Undefined、Null、Symbol（ES6）</span><br><span class="line">引用类型：object(function/array/object)</span><br><span class="line"></span><br><span class="line">NaN是一个数值类型，但是不是一个具体的数字。</span><br></pre></td></tr></table></figure>
-
-
-
 
 ]]></content>
       <categories>
-        <category>前端基础</category>
+        <category>前端 —— 基础</category>
       </categories>
       <tags>
-        <tag>HTML</tag>
         <tag>CSS</tag>
-        <tag>JS</tag>
         <tag>面试</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>CSS面试题</title>
+    <url>/2022/03/19/CSS%E9%9D%A2%E8%AF%95%E9%A2%98/</url>
+    <content><![CDATA[<p><strong>1.介绍一下CSS的盒子模型</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">1.CSS的盒子模型有哪些：标准盒子模型、IE盒子模型</span><br><span class="line">2.CSS的盒子模型区别：</span><br><span class="line">	标准盒子模型：margin、border、padding、content</span><br><span class="line">	IE盒子模型 ：margin、content（ border +  padding  + content ）</span><br><span class="line">3.通过CSS如何转换盒子模型：</span><br><span class="line">	box-sizing: content-box;	/*标准盒子模型*/</span><br><span class="line">	box-sizing: border-box;	  /*IE盒子模型*/</span><br></pre></td></tr></table></figure>
+
+<span id="more"></span>
+
+<p><strong>2.CSS优先级算法如何计算？</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">优先级比较：!important &gt; 内联样式 &gt; id &gt; class &gt; 标签 &gt; 通配</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">CSS权重计算：</span><br><span class="line">第一：内联样式（style）  权重值:1000</span><br><span class="line">第二：id选择器  		  权重值:100</span><br><span class="line">第三：类选择器 		 权重值:10</span><br><span class="line">第四：标签&amp;伪元素选择器   权重值:1</span><br><span class="line">第五：通配、&gt;、+         权重值:0</span><br></pre></td></tr></table></figure>
+
+<p><strong>3.position有哪些值？分别是根据什么定位的？</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">static [默认]  没有定位</span><br><span class="line">fixed  固定定位，相对于浏览器窗口进行定位。</span><br><span class="line">relative  相对于自身定位，不脱离文档流。</span><br><span class="line">absolute	相对于第一个有relative的父元素，脱离文档流。</span><br><span class="line"></span><br><span class="line">relative和absolute区别</span><br><span class="line">1. relative不脱离文档流 、absolute脱离文档流</span><br><span class="line">2. relative相对于自身 、 absolute相对于第一个有relative的父元素</span><br><span class="line">3. relative如果有left、right、top、bottom ==》left、top</span><br><span class="line">   absolute如果有left、right、top、bottom ==》left、right、top、bottom</span><br></pre></td></tr></table></figure>
+
+<p><strong>4.伪类和伪元素</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">伪类：用于为已有元素处于某种状态时为其添加对应的样式，这个状态是根据用户行为而动态变化的。</span><br><span class="line">	:link  :hover</span><br><span class="line">伪元素：用于创建一些不在DOM树中的元素，并为其添加样式。</span><br><span class="line">	::before  ::after</span><br><span class="line"></span><br><span class="line">本区别在于：它们是否创造了新的元素，这个新创造的元素就叫&quot;伪元素&quot; 。</span><br></pre></td></tr></table></figure>
+<p><strong>5.清除浮动有哪些方式？</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">1. 父元素加上overflow:hidden</span><br><span class="line">2. 在浮动元素末尾创建一个div，添加样式：clear: both;</span><br><span class="line">3. after方式</span><br><span class="line">	父元素标签:after&#123;</span><br><span class="line">			content: &#x27;&#x27;;</span><br><span class="line">			display: block;</span><br><span class="line">			clear: both;</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>前端 —— 基础</category>
+      </categories>
+      <tags>
+        <tag>CSS</tag>
+        <tag>面试</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>HTML面试题</title>
+    <url>/2022/03/18/HTML%E9%9D%A2%E8%AF%95%E9%A2%98/</url>
+    <content><![CDATA[<h5 id="html标签的类型（head，-body，-Doctype）-他们的作用是什么"><a href="#html标签的类型（head，-body，-Doctype）-他们的作用是什么" class="headerlink" title="html标签的类型（head， body，!Doctype） 他们的作用是什么"></a>html标签的类型（head， body，!Doctype） 他们的作用是什么</h5><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">!Doctype 告诉浏览器关于页面是使用哪个版本的html进行编写的</span><br><span class="line">head 头部元素的容器，大多数头部标签内容不会显示在页面上，一般含有&lt;title&gt;、&lt;meta&gt;、&lt;link&gt;等标签</span><br><span class="line">body 定义文档的主体，包含文档所有的内容，支持html全局属性和事件属性</span><br></pre></td></tr></table></figure>
+
+<span id="more"></span>
+
+<h5 id="行内元素有哪些？块级元素有哪些？-空-void-元素有哪些？"><a href="#行内元素有哪些？块级元素有哪些？-空-void-元素有哪些？" class="headerlink" title="行内元素有哪些？块级元素有哪些？ 空(void)元素有哪些？"></a>行内元素有哪些？块级元素有哪些？ 空(void)元素有哪些？</h5><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">行内元素：span、img、input...</span><br><span class="line">块级元素：div、footer、header、section、p、h1...h6...</span><br><span class="line">空元素：br、hr...</span><br></pre></td></tr></table></figure>
+<h5 id="H5新特性"><a href="#H5新特性" class="headerlink" title="H5新特性"></a>H5新特性</h5><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">1.媒体播放的 video 和 audio</span><br><span class="line">2.绘画 canvas</span><br><span class="line">3.增强表单控件 date、time、email、search、color</span><br><span class="line">4.语意化标签 article、footer、header、nav、section</span><br><span class="line">5.本地存储 localStorage 和 sessionStorage</span><br><span class="line">6.全双工通信协议 websocket</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Ajax 轮询：</span><br><span class="line">轮询是在特定的的时间间隔（如每1秒），由浏览器对服务器发出HTTP请求，然后由服务器返回最新的数据给客户端的浏览器。</span><br><span class="line">缺点：浏览器需要不断的向服务器发出请求，然而HTTP请求可能包含较长的头部，其中真正有效的数据可能只是很小的一部分，显然这样会浪费很多的带宽等资源。</span><br><span class="line">websocket：</span><br><span class="line">浏览器和服务器只需要完成一次握手，两者之间就直接可以创建持久性的连接，并进行双向数据传输。</span><br></pre></td></tr></table></figure>
+
+<h5 id="html5语义化好处"><a href="#html5语义化好处" class="headerlink" title="html5语义化好处"></a>html5语义化好处</h5><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;title&gt;、&lt;header&gt;、&lt;footer&gt;、&lt;article&gt;、&lt;main&gt;、&lt;section&gt;、&lt;nav&gt;</span><br><span class="line">1.易于用户阅读，样式丢失的时候能让页面呈现清晰的结构。</span><br><span class="line">2.有利于SEO，根据标签来确定内容的权重。</span><br><span class="line">3.方便屏幕阅读器解析，如盲人阅读器根据语义渲染网页</span><br><span class="line">5.有利于开发和维护，语义化更具可读性，代码更好维护，与CSS3关系更和谐。</span><br></pre></td></tr></table></figure>
+
+<h5 id="audio-标签"><a href="#audio-标签" class="headerlink" title="audio 标签"></a>audio 标签</h5><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">常用属性：</span><br><span class="line">src 播放的音乐的url地址</span><br><span class="line">preload 预加载</span><br><span class="line">loop 循环播放</span><br><span class="line">controls 是否显示控制按钮</span><br><span class="line">autoplay 自动播放</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>前端 —— 基础</category>
+      </categories>
+      <tags>
+        <tag>面试</tag>
+        <tag>HTML</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>JS作用域</title>
+    <url>/2022/03/19/JS%E4%BD%9C%E7%94%A8%E5%9F%9F/</url>
+    <content><![CDATA[<h5 id="基本规则"><a href="#基本规则" class="headerlink" title="基本规则"></a>基本规则</h5><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">1. 除了函数外，js是没有块级作用域。</span><br><span class="line">2. 作用域链：内部可以访问外部的变量，但是外部不能访问内部的变量。</span><br><span class="line">	 注意：如果内部有，优先查找到内部，如果内部没有就查找外部的。</span><br><span class="line">3. 注意声明变量是用var还是没有写（window.）</span><br><span class="line">4. 注意：js有变量提升的机制【变量悬挂声明】</span><br><span class="line">5. 优先级：声明变量 &gt; 声明普通函数 &gt; 参数 &gt; 变量提升</span><br></pre></td></tr></table></figure>
+
+<span id="more"></span>
+
+<h5 id="易错点"><a href="#易错点" class="headerlink" title="易错点"></a>易错点</h5><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">(function() &#123;          //匿名函数</span><br><span class="line">	var a = b = 10;    //b其实是全局变量</span><br><span class="line">&#125;)()</span><br><span class="line">console.log(a); //出错，无法找到</span><br><span class="line">console.log(b);  //10</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">function fun()&#123;   //var str; 变量提升，你看不见，js独有的机制</span><br><span class="line">    console.log(str);  //undefined</span><br><span class="line">    var str = &#x27;你好吗&#x27;;</span><br><span class="line">    console.log(str);  //你好吗</span><br><span class="line">&#125;</span><br><span class="line">fun();</span><br></pre></td></tr></table></figure>
+
+<h5 id="面试的时候怎么看"><a href="#面试的时候怎么看" class="headerlink" title="面试的时候怎么看"></a>面试的时候怎么看</h5><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">1. 本层作用域有没有此变量【注意变量提升】</span><br><span class="line">2. 注意：js除了函数外没有块级作用域</span><br><span class="line">3. 普通声明函数是不看写函数的时候顺序</span><br></pre></td></tr></table></figure>
+
+<p>考题一：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">function c()&#123;</span><br><span class="line">	var b = 1;</span><br><span class="line">	function a()&#123;</span><br><span class="line">		console.log( b );  //本层作用域有没有此变量【注意变量提升】</span><br><span class="line">		var b = 2;</span><br><span class="line">		console.log( b );     </span><br><span class="line">	&#125;</span><br><span class="line">	a();</span><br><span class="line">	console.log( b );</span><br><span class="line">&#125;</span><br><span class="line">c();</span><br><span class="line"></span><br><span class="line">输出：underfined  2  1</span><br></pre></td></tr></table></figure>
+
+<p>考题二：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">var name = &#x27;a&#x27;;  //起迷惑作用</span><br><span class="line">(function()&#123;  //var name;</span><br><span class="line">	if( typeof name == &#x27;undefined&#x27; )&#123;//内部有name,变量提升，if和for没有块级作用域</span><br><span class="line">		var name = &#x27;b&#x27;;</span><br><span class="line">		console.log(&#x27;111&#x27;+name);   //输出：111b</span><br><span class="line">	&#125;else&#123;</span><br><span class="line">		console.log(&#x27;222&#x27;+name);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;)()</span><br></pre></td></tr></table></figure>
+<p>例证：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">console.log(a);  //undefined</span><br><span class="line">if (false) &#123;    //不执行，但a会变量提升，因为if没有块级作用域</span><br><span class="line">    var a = 0;   </span><br><span class="line">&#125;</span><br><span class="line">console.log(a);   //undefined</span><br></pre></td></tr></table></figure>
+
+<p>考题三：优先级：声明变量 &gt; 声明普通函数 &gt; 参数 &gt; 变量提升</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">function fun()&#123;</span><br><span class="line">	var a = 10;</span><br><span class="line">	function a()&#123;&#125;</span><br><span class="line">	console.log( a );  //输出：10</span><br><span class="line">&#125;</span><br><span class="line">fun();</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">function fun()&#123;</span><br><span class="line">	var a = 10;</span><br><span class="line">	var a = function a()&#123;&#125;</span><br><span class="line">	console.log( a );  //输出：f ()&#123;&#125;</span><br><span class="line">&#125;</span><br><span class="line">fun();</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">function fun() &#123;</span><br><span class="line">        console.log(a);  //输出：f a()&#123;&#125;</span><br><span class="line">        var a = 10;   //声明普通函数 &gt; 变量提升  普通声明函数是不看写函数的时候顺序</span><br><span class="line">        function a() &#123;&#125;</span><br><span class="line">&#125;</span><br><span class="line">fun();</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">function fun(a) &#123;  //声明普通函数 &gt; 参数   </span><br><span class="line">        console.log(a); //输出：f a()&#123;&#125;</span><br><span class="line">        function a() &#123;&#125;</span><br><span class="line">&#125;</span><br><span class="line">fun(100);</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>JS重难点突破</category>
+      </categories>
+      <tags>
+        <tag>JS</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>JS作用域+this指向+原型考题</title>
+    <url>/2022/03/19/JS%E4%BD%9C%E7%94%A8%E5%9F%9F+this%E6%8C%87%E5%90%91+%E5%8E%9F%E5%9E%8B%E8%80%83%E9%A2%98/</url>
+    <content><![CDATA[<h5 id="前提"><a href="#前提" class="headerlink" title="前提"></a>前提</h5><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">function fun()&#123;</span><br><span class="line">	this.x = 123;</span><br><span class="line">    console.log(111111);</span><br><span class="line">    return &#x27;aaaaaa&#x27;;</span><br><span class="line">&#125;</span><br><span class="line">console.log(fun);  //输出：函数体，不会执行函数</span><br><span class="line">console.log(fun());  //输出：111111 aaaaaa 执行函数，this指向window</span><br><span class="line">console.log(new fun());  //输出：111111 fun&#123;&#125; </span><br><span class="line">//new fun() 是一个对象，this指向这个对象</span><br></pre></td></tr></table></figure>
+
+<span id="more"></span>
+
+<p>考题一：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">function Foo()&#123;</span><br><span class="line">	getName = function()&#123;console.log(1)&#125; //注意是全局的window.  不是new Foo()的</span><br><span class="line">	return this;  //返回的是window</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">Foo.getName = function()&#123;console.log(2)&#125;  //Foo没加括号，函数并没有执行</span><br><span class="line">Foo.prototype.getName = function()&#123;console.log(3)&#125;</span><br><span class="line">var getName = function()&#123;console.log(4)&#125;</span><br><span class="line">  //声明变量 &gt; 声明普通函数 这句执行，下一句不会执行</span><br><span class="line">function getName()&#123;</span><br><span class="line">	console.log(5)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">Foo.getName();    //2</span><br><span class="line">getName(); 		  //4</span><br><span class="line"></span><br><span class="line">//这句话之前执行了getName = function()&#123;console.log(1)&#125;，</span><br><span class="line">将会覆盖var getName = function()&#123;console.log(4)&#125;</span><br><span class="line">//Foo()返回window</span><br><span class="line">Foo().getName();  //1     </span><br><span class="line">getName();		  //1</span><br><span class="line"></span><br><span class="line">new Foo().getName();//3</span><br></pre></td></tr></table></figure>
+
+<p>考题二：（头条考题）</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">var o = &#123;</span><br><span class="line">	a:10,</span><br><span class="line">	b:&#123;</span><br><span class="line">		a:2,</span><br><span class="line">		fn:function()&#123;</span><br><span class="line">			console.log( this.a ); // 2</span><br><span class="line">			console.log( this );   //代表b对象</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">o.b.fn();</span><br></pre></td></tr></table></figure>
+
+<p>考题三：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">window.name = &#x27;ByteDance&#x27;;</span><br><span class="line">function A()&#123;</span><br><span class="line">	this.name = 123;</span><br><span class="line">&#125;</span><br><span class="line">A.prototype.getA = function()&#123;</span><br><span class="line">	console.log( this );</span><br><span class="line">	return this.name + 1;</span><br><span class="line">&#125;</span><br><span class="line">//注意函数加不加括号的区别</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">let a = new A();</span><br><span class="line">let funcA = a.getA; </span><br><span class="line"></span><br><span class="line">//a.getA后面不加括号，返回的是函数体</span><br><span class="line">相对于let funcA = function()&#123;</span><br><span class="line">	console.log( this );  //this指的是window</span><br><span class="line">	return this.name + 1;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">funcA();  //输出：window</span><br><span class="line">console.log(funcA());  //输出：ByteDance1</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">let a = new A();</span><br><span class="line">let funcA = a.getA(); //执行函数，this指的是A</span><br><span class="line">console.log(funcA);    //输出：124</span><br></pre></td></tr></table></figure>
+
+<p>考题四：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">var length = 10;</span><br><span class="line">function fn()&#123;</span><br><span class="line">	return this.length + 1;   //this指向window</span><br><span class="line">&#125;</span><br><span class="line">var obj = &#123;</span><br><span class="line">	length:5,</span><br><span class="line">	test1:function()&#123;</span><br><span class="line">		return fn();</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">obj.test2 = fn;</span><br><span class="line">//相对于在obj里面加了一个</span><br><span class="line">test2:function()&#123;</span><br><span class="line">		return this.length + 1;  </span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">console.log( obj.test1() );  	//11</span><br><span class="line">console.log( fn()===obj.test2() ); 	 //11 ！= 6 输出：false</span><br><span class="line">console.log( obj.test1() == obj.test2() ); //false</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>JS重难点突破</category>
+      </categories>
+      <tags>
+        <tag>JS</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>JS基础</title>
+    <url>/2022/03/19/JS%E5%9F%BA%E7%A1%80/</url>
+    <content><![CDATA[<h5 id="js数据类型，区别"><a href="#js数据类型，区别" class="headerlink" title="js数据类型，区别"></a>js数据类型，区别</h5><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">8种</span><br><span class="line">基本类型：String、Number、Boolean、Undefined、Null、Symbol、bigint（后两个为ES6新增）</span><br><span class="line">引用类型：object(Function/Array/Date)</span><br><span class="line"></span><br><span class="line">NaN是一个数值类型，但是不是一个具体的数字。</span><br></pre></td></tr></table></figure>
+<span id="more"></span>
+
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">两种数据存储方式：</span><br><span class="line">基本数据类型存储在栈中，占据空间小、大小固定，属于被频繁使用的数据。栈是存储基本类型值和执行代码的空间。</span><br><span class="line">引用数据类型存储在堆中，占据空间大、大小不固定。引用数据类型在栈中存储了指针，该指针指向堆中该实体的起始地址，使用时，会检索其在栈中的地址，取得地址后从堆中获得实体。</span><br><span class="line"></span><br><span class="line">两种数据类型的区别：</span><br><span class="line">堆比栈空间大，栈比堆运行速度快。</span><br><span class="line">堆内存是无序存储，可以根据引用直接获取。</span><br></pre></td></tr></table></figure>
+
+<h5 id="x3D-x3D-和-x3D-x3D-x3D-有什么不同？"><a href="#x3D-x3D-和-x3D-x3D-x3D-有什么不同？" class="headerlink" title="&#x3D;&#x3D;和&#x3D;&#x3D;&#x3D;有什么不同？"></a>&#x3D;&#x3D;和&#x3D;&#x3D;&#x3D;有什么不同？</h5><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">==  :  比较的是值		</span><br><span class="line">	string == number || boolean || number ....都会隐式转换</span><br><span class="line">=== ： 除了比较值，还比较类型</span><br></pre></td></tr></table></figure>
+
+<h5 id="null-和-undefined-的区别"><a href="#null-和-undefined-的区别" class="headerlink" title="null 和 undefined 的区别"></a>null 和 undefined 的区别</h5><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">undefined的字面意思就是：未定义的值。这个值的语义是，希望表示一个变量最原始的状态。</span><br><span class="line">这种原始状态会在以下 4 种场景中出现：</span><br><span class="line">1.声明了一个变量，但没有赋值</span><br><span class="line">2.访问对象上不存在的属性</span><br><span class="line">3.函数定义了形参，但没有传递实参</span><br><span class="line">4.使用 void 对表达式求值</span><br><span class="line"></span><br><span class="line">null的字面意思是：空值。这个值的语义是，希望表示一个对象被人为的重置为空对象。在内存里的表示就是，栈中的变量没有指向堆中的内存对象</span><br></pre></td></tr></table></figure>
+
+<h5 id="constructor的理解"><a href="#constructor的理解" class="headerlink" title="constructor的理解"></a>constructor的理解</h5><p><img src="https://s2.loli.net/2022/03/19/ErAuIOXLDkYwh2d.png" alt="382EDEFBB03758DE9F9FF4AF2A8F7B6D.png"></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">数组 constructor 属性返回 function Array() &#123; [native code] &#125;</span><br><span class="line">数字 constructor 属性返回 function Number() &#123; [native code] &#125;</span><br><span class="line">字符串 constructor 属性返回 function String() &#123; [native code] &#125;</span><br></pre></td></tr></table></figure>
+
+<h5 id="JavaScript有几种方法判断变量的类型-（3种）"><a href="#JavaScript有几种方法判断变量的类型-（3种）" class="headerlink" title="JavaScript有几种方法判断变量的类型?（3种）"></a>JavaScript有几种方法判断变量的类型?（3种）</h5><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">1.typeof</span><br><span class="line">使用typeof能判断出四种，分别是number，string，boolean，function,剩余的均被检测为object</span><br><span class="line">2.instanceof</span><br><span class="line">测试左边的对象是否是右边类或者该类的子类创建的实例对象，是则返回true，否则返回false。</span><br><span class="line">3.constructor</span><br><span class="line">construction指向构造函数。但是根据实例对象寻找属性的顺序，若实例对象上没有实例属性或方法时，就去原型链上寻找，因此，实例对象也是能使用constructor属性的。</span><br></pre></td></tr></table></figure>
+
+<p>举例：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">var p = new Date();</span><br><span class="line">console.log(typeof(p));   //Object</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">class Person&#123; </span><br><span class="line">        constructor(name)&#123;    //构造函数</span><br><span class="line">         this.name= name;   </span><br><span class="line">       &#125;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line">  let p = new Person(&#x27;张三&#x27;)</span><br><span class="line">  console.log(p instanceof  Person) //ture</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">class Stuent = &#123; </span><br><span class="line">              constructor(age)&#123; </span><br><span class="line">                this.age =age; </span><br><span class="line">      &#125; </span><br><span class="line">&#125; </span><br><span class="line">Student.prototype = new Person(&#x27;张三&#x27;)  </span><br><span class="line">//函数对象都有一个子对象 prototype对象，表示该函数的原型,prototype属性允许您向对象添加属性和方法</span><br><span class="line">Student.prototype.constructor === &#x27;Person&#x27;  //true</span><br></pre></td></tr></table></figure>
+
+<h5 id="let-const-var-中间的区别（5点）"><a href="#let-const-var-中间的区别（5点）" class="headerlink" title="let const var 中间的区别（5点）"></a>let const var 中间的区别（5点）</h5><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">1.变量提升</span><br><span class="line">var声明的变量存在变量提升，即变量可以在声明之前调用，值为undefined</span><br><span class="line">let和const不存在变量提升，即它们所声明的变量一定要在声明后使用，否则报错</span><br><span class="line"></span><br><span class="line">2.暂时性死区</span><br><span class="line">var不存在暂时性死区</span><br><span class="line">let和const存在暂时性死区，只有等到声明变量的那一行代码出现，才可以获取和使用该变量</span><br><span class="line"></span><br><span class="line">3.块级作用域</span><br><span class="line">var不存在块级作用域</span><br><span class="line">let和const存在块级作用域</span><br><span class="line"></span><br><span class="line">4.重复声明</span><br><span class="line">var允许重复声明变量</span><br><span class="line">let和const在同一作用域不允许重复声明变量</span><br><span class="line"></span><br><span class="line">5.修改声明的变量</span><br><span class="line">var和let可以</span><br><span class="line">const声明一个只读的常量。一旦声明，常量的值就不能改变</span><br><span class="line"></span><br><span class="line">能用const的情况尽量使用const，其他情况下大多数使用let，避免使用var</span><br></pre></td></tr></table></figure>
+
+<h5 id="Object-assign的理解"><a href="#Object-assign的理解" class="headerlink" title="Object.assign的理解"></a>Object.assign的理解</h5><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">const target = &#123; a: 1, b: 2 &#125;;</span><br><span class="line">const source = &#123; b: 4, c: 5 &#125;;</span><br><span class="line"></span><br><span class="line">const returnedTarget = Object.assign(target, source);</span><br><span class="line"></span><br><span class="line">console.log(target);//&#123; a: 1, b: 4, c: 5 &#125;</span><br><span class="line">console.log(returnedTarget);  //&#123; a: 1, b: 4, c: 5 &#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">1.Object.assign会将source里面的可枚举属性复制到target，如果和target的已有属性重名，则会覆盖。</span><br><span class="line">2.Object.assign复制的是属性值，如果属性值是一个引用类型，那么复制的其实是引用地址</span><br></pre></td></tr></table></figure>
+
+<h5 id="map-和-forEach-的区别"><a href="#map-和-forEach-的区别" class="headerlink" title="map 和 forEach 的区别"></a>map 和 forEach 的区别</h5><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">foreEach()方法:</span><br><span class="line">针对每一个元素执行提供的函数。</span><br><span class="line">map()方法:</span><br><span class="line">创建一个新的数组，其中每一个元素由调用数组中的每一个元素执行提供的函数得来。</span><br><span class="line"></span><br><span class="line">区别：</span><br><span class="line">forEach()方法不会返回执行结果，显示undefined，会callback会修改原来的数组。</span><br><span class="line">而map()方法会得到一个新的数组并返回。</span><br></pre></td></tr></table></figure>
+
+<p>举例</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">let arr = [1, 2, 3, 4, 5];</span><br><span class="line">arr.forEach((value, key) =&gt; arr[key] = value * value);</span><br><span class="line">console.log(arr)  //1,4,9,16,25</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">let arr = [1, 2, 3, 4, 5];</span><br><span class="line">let list = arr.map(value =&gt; value * value)</span><br><span class="line">console.log(arr);  //1,2,3,4,5</span><br><span class="line">console.log(list);  //1,4,9,16,25</span><br></pre></td></tr></table></figure>
+
+<h5 id="for-of-可以遍历哪些对象"><a href="#for-of-可以遍历哪些对象" class="headerlink" title="for of 可以遍历哪些对象"></a>for of 可以遍历哪些对象</h5><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">包括Array, Map, Set, String, TypedArray, arguments对象等等</span><br><span class="line"></span><br><span class="line">const array1 = [&#x27;a&#x27;, &#x27;b&#x27;, &#x27;c&#x27;];</span><br><span class="line">        for (const element of array1) &#123;</span><br><span class="line">            console.log(element);</span><br><span class="line">        &#125;</span><br></pre></td></tr></table></figure>
+
+<h5 id="indexof"><a href="#indexof" class="headerlink" title="indexof"></a>indexof</h5><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">返回某个指定的字符串值在字符串中首次出现的位置。</span><br><span class="line">如果要检索的字符串值没有出现，则该方法返回 -1。</span><br></pre></td></tr></table></figure>
+
+<h5 id="变量提升"><a href="#变量提升" class="headerlink" title="变量提升"></a>变量提升</h5><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">JavaScript是单线程语言，所以执行肯定是按顺序执行。但是并不是逐行的分析和执行，而是一段一段地分析执行，会先进行编译阶段然后才是执行阶段。</span><br><span class="line">在编译阶段阶段，会检测到所有的变量和函数声明，所有这些函数和变量声明都被添加内存中。所以这些变量和函数能在它们真正被声明之前使用。</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>前端 —— 基础</category>
+      </categories>
+      <tags>
+        <tag>面试</tag>
+        <tag>JS</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>JS对象</title>
+    <url>/2022/03/19/JS%E5%AF%B9%E8%B1%A1/</url>
+    <content><![CDATA[<h5 id="要点"><a href="#要点" class="headerlink" title="要点"></a>要点</h5><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">1. 对象是通过new操作符构建出来的，所以对象之间不想等(除了引用外)；</span><br><span class="line">2. 对象注意引用类型(共同一个地址)；</span><br><span class="line">3. 对象的key都是字符串类型；</span><br><span class="line">4. 对象如何找属性|方法；</span><br><span class="line">	查找规则：先在对象本身找 ===&gt; 构造函数中找 ===&gt; 对象原型中找 ===&gt; 构造函数原型中找 ===&gt; 对象上一层原型查找</span><br></pre></td></tr></table></figure>
+
+<span id="more"></span>
+
+<h5 id="易错点"><a href="#易错点" class="headerlink" title="易错点"></a>易错点</h5><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">console.log([1,2,3] === [1,2,3]);    //false 其实是两个不同的对象</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">var obj1=&#123;</span><br><span class="line">    a:1</span><br><span class="line">&#125;</span><br><span class="line">var obj2 = obj1;  //引用，obj2不是new出来的</span><br><span class="line">console.log(obj1 === obj2);  //true</span><br></pre></td></tr></table></figure>
+
+<p>考题一</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">var obj1 = &#123;</span><br><span class="line">	a:&#x27;hellow&#x27;</span><br><span class="line">&#125;</span><br><span class="line">var obj2 = obj1;</span><br><span class="line">obj2.a = &#x27;world&#x27;;</span><br><span class="line">console.log(obj1); 	//&#123;a:world&#125;</span><br><span class="line">(function()&#123;</span><br><span class="line">	console.log(a); 	//undefined</span><br><span class="line">	var a = 1;</span><br><span class="line">&#125;)();</span><br></pre></td></tr></table></figure>
+
+<p>考题二</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">var a = &#123;&#125;</span><br><span class="line">var b = &#123;</span><br><span class="line">	key:&#x27;a&#x27;</span><br><span class="line">&#125;</span><br><span class="line">var c = &#123;</span><br><span class="line">	key:&#x27;c&#x27;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">a[b] = &#x27;123&#x27;;   </span><br><span class="line">a[c] = &#x27;456&#x27;;  //b和c是字符串不是对象了，都变成了&#123;Object Object&#125;字符串，会进行覆盖</span><br><span class="line"></span><br><span class="line">console.log( a[b] ); // 456</span><br></pre></td></tr></table></figure>
+
+<p>考题三:</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">//1.每一个函数都自带一个prototype【原型】</span><br><span class="line">//注意：对象拥有_proto_</span><br><span class="line">//2.new Fun 该Fun构造函数的原型指向于对象（new Fun)的原型</span><br><span class="line"></span><br><span class="line">function Fun()&#123;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br><span class="line">let obj = new Fun();</span><br><span class="line"></span><br><span class="line">console.log(Fun.prototype==obj._proto_);   //true </span><br></pre></td></tr></table></figure>
+<p>原理图：<br><img src="https://s2.loli.net/2022/03/19/ck1jtTEUxAzRi7K.png" alt="53EB9F73A503BD552BA7B6B5A792C1EE.png"></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">function Fun()&#123;</span><br><span class="line">    this.a=&#x27;在Fun函数中添加的&#x27;;</span><br><span class="line">&#125;</span><br><span class="line">Fun.prototype.a=&#x27;这是Fun原型添加的&#x27;</span><br><span class="line">let obj = new Fun();</span><br><span class="line">obj.a=&#x27;对象本身&#x27;;</span><br><span class="line">obj._proto_.a=&#x27;这是对象原型添加的&#x27;；</span><br><span class="line"></span><br><span class="line">console.log( obj.a );</span><br><span class="line">//1.对象本身</span><br><span class="line">//2.在Fun函数中添加的</span><br><span class="line">//3.这是对象原型添加的</span><br><span class="line">//4.这是Fun原型添加的</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>JS重难点突破</category>
+      </categories>
+      <tags>
+        <tag>JS</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>JS常见代码题</title>
+    <url>/2022/03/19/JS%E5%B8%B8%E8%A7%81%E4%BB%A3%E7%A0%81%E9%A2%98/</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>JS数组去重</title>
+    <url>/2022/03/19/JS%E6%95%B0%E7%BB%84%E5%8E%BB%E9%87%8D/</url>
+    <content><![CDATA[<h5 id="Set去重"><a href="#Set去重" class="headerlink" title="Set去重"></a>Set去重</h5><p>.</p>
+<h5 id="利用indexOf去重"><a href="#利用indexOf去重" class="headerlink" title="利用indexOf去重"></a>利用indexOf去重</h5><h5 id="利用for嵌套for，然后splice去重"><a href="#利用for嵌套for，然后splice去重" class="headerlink" title="利用for嵌套for，然后splice去重"></a>利用for嵌套for，然后splice去重</h5><h5 id="利用sort"><a href="#利用sort" class="headerlink" title="利用sort()"></a>利用sort()</h5><h5 id="利用filter"><a href="#利用filter" class="headerlink" title="利用filter"></a>利用filter</h5><h5 id="利用Map数据结构去重"><a href="#利用Map数据结构去重" class="headerlink" title="利用Map数据结构去重"></a>利用Map数据结构去重</h5>]]></content>
+      <categories>
+        <category>前端 —— 基础</category>
+      </categories>
+      <tags>
+        <tag>JS</tag>
       </tags>
   </entry>
   <entry>
@@ -65,6 +248,17 @@
       <tags>
         <tag>JS</tag>
         <tag>数据结构</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>深拷贝与浅拷贝</title>
+    <url>/2022/03/19/%E6%B7%B1%E6%8B%B7%E8%B4%9D%E4%B8%8E%E6%B5%85%E6%8B%B7%E8%B4%9D/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>JS重难点突破</category>
+      </categories>
+      <tags>
+        <tag>JS</tag>
       </tags>
   </entry>
 </search>
