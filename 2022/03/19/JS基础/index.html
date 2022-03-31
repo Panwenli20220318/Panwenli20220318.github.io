@@ -22,21 +22,18 @@
     var CONFIG = {"hostname":"pwl.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="js数据类型，区别123458种基本类型：String、Number、Boolean、Undefined、Null、Symbol、bigint（后两个为ES6新增）引用类型：object(Function&#x2F;Array&#x2F;Date)NaN是一个数值类型，但是不是一个具体的数字。">
+  <meta name="description" content="js数据类型，区别1238种原始值：String、Number、Boolean、Undefined、Null、Symbol、bigint（后两个为ES6新增）引用值：object(Function&#x2F;Array&#x2F;Date)">
 <meta property="og:type" content="article">
 <meta property="og:title" content="JS基础">
 <meta property="og:url" content="http://pwl.com/2022/03/19/JS%E5%9F%BA%E7%A1%80/index.html">
 <meta property="og:site_name" content="PWL">
-<meta property="og:description" content="js数据类型，区别123458种基本类型：String、Number、Boolean、Undefined、Null、Symbol、bigint（后两个为ES6新增）引用类型：object(Function&#x2F;Array&#x2F;Date)NaN是一个数值类型，但是不是一个具体的数字。">
+<meta property="og:description" content="js数据类型，区别1238种原始值：String、Number、Boolean、Undefined、Null、Symbol、bigint（后两个为ES6新增）引用值：object(Function&#x2F;Array&#x2F;Date)">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://s2.loli.net/2022/03/19/ErAuIOXLDkYwh2d.png">
 <meta property="article:published_time" content="2022-03-19T03:05:52.000Z">
-<meta property="article:modified_time" content="2022-03-19T10:09:23.826Z">
+<meta property="article:modified_time" content="2022-03-31T10:59:27.945Z">
 <meta property="article:author" content="PWL">
-<meta property="article:tag" content="面试">
 <meta property="article:tag" content="JS">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://s2.loli.net/2022/03/19/ErAuIOXLDkYwh2d.png">
 
 <link rel="canonical" href="http://pwl.com/2022/03/19/JS%E5%9F%BA%E7%A1%80/">
 
@@ -216,17 +213,23 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2022-03-19 11:05:52 / 修改时间：18:09:23" itemprop="dateCreated datePublished" datetime="2022-03-19T11:05:52+08:00">2022-03-19</time>
+              <time title="创建时间：2022-03-19 11:05:52" itemprop="dateCreated datePublished" datetime="2022-03-19T11:05:52+08:00">2022-03-19</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2022-03-31 18:59:27" itemprop="dateModified" datetime="2022-03-31T18:59:27+08:00">2022-03-31</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
               </span>
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%89%8D%E7%AB%AF-%E2%80%94%E2%80%94-%E5%9F%BA%E7%A1%80/" itemprop="url" rel="index"><span itemprop="name">前端 —— 基础</span></a>
+                  <a href="/categories/%E5%89%8D%E7%AB%AF/" itemprop="url" rel="index"><span itemprop="name">前端</span></a>
                 </span>
             </span>
 
@@ -257,14 +260,14 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>3k</span>
+              <span>2.3k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
                 <i class="far fa-clock"></i>
               </span>
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>3 分钟</span>
+              <span>2 分钟</span>
             </span>
 
         </div>
@@ -276,26 +279,17 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h5 id="js数据类型，区别"><a href="#js数据类型，区别" class="headerlink" title="js数据类型，区别"></a>js数据类型，区别</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">8种</span><br><span class="line">基本类型：String、Number、Boolean、Undefined、Null、Symbol、bigint（后两个为ES6新增）</span><br><span class="line">引用类型：object(Function/Array/Date)</span><br><span class="line"></span><br><span class="line">NaN是一个数值类型，但是不是一个具体的数字。</span><br></pre></td></tr></table></figure>
+        <h5 id="js数据类型，区别"><a href="#js数据类型，区别" class="headerlink" title="js数据类型，区别"></a>js数据类型，区别</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">8种</span><br><span class="line">原始值：String、Number、Boolean、Undefined、Null、Symbol、bigint（后两个为ES6新增）</span><br><span class="line">引用值：object(Function/Array/Date)</span><br></pre></td></tr></table></figure>
 <span id="more"></span>
 
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">两种数据存储方式：</span><br><span class="line">基本数据类型存储在栈中，占据空间小、大小固定，属于被频繁使用的数据。栈是存储基本类型值和执行代码的空间。</span><br><span class="line">引用数据类型存储在堆中，占据空间大、大小不固定。引用数据类型在栈中存储了指针，该指针指向堆中该实体的起始地址，使用时，会检索其在栈中的地址，取得地址后从堆中获得实体。</span><br><span class="line"></span><br><span class="line">两种数据类型的区别：</span><br><span class="line">堆比栈空间大，栈比堆运行速度快。</span><br><span class="line">堆内存是无序存储，可以根据引用直接获取。</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">原始值存储在栈中，引用值存储在堆中</span><br><span class="line">原始值是以值的拷贝方式进行赋值，值是不可变的；引用值是以引用的拷贝方式进行赋值，值是可变的</span><br><span class="line">原始值的比较是值的比较，引用值的比较是引用的比较（比较引用的是否为同一对象）</span><br></pre></td></tr></table></figure>
 
 <h5 id="x3D-x3D-和-x3D-x3D-x3D-有什么不同？"><a href="#x3D-x3D-和-x3D-x3D-x3D-有什么不同？" class="headerlink" title="&#x3D;&#x3D;和&#x3D;&#x3D;&#x3D;有什么不同？"></a>&#x3D;&#x3D;和&#x3D;&#x3D;&#x3D;有什么不同？</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">==  :  比较的是值		</span><br><span class="line">	string == number || boolean || number ....都会隐式转换</span><br><span class="line">=== ： 除了比较值，还比较类型</span><br></pre></td></tr></table></figure>
 
 <h5 id="null-和-undefined-的区别"><a href="#null-和-undefined-的区别" class="headerlink" title="null 和 undefined 的区别"></a>null 和 undefined 的区别</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">undefined的字面意思就是：未定义的值。这个值的语义是，希望表示一个变量最原始的状态。</span><br><span class="line">这种原始状态会在以下 4 种场景中出现：</span><br><span class="line">1.声明了一个变量，但没有赋值</span><br><span class="line">2.访问对象上不存在的属性</span><br><span class="line">3.函数定义了形参，但没有传递实参</span><br><span class="line">4.使用 void 对表达式求值</span><br><span class="line"></span><br><span class="line">null的字面意思是：空值。这个值的语义是，希望表示一个对象被人为的重置为空对象。在内存里的表示就是，栈中的变量没有指向堆中的内存对象</span><br></pre></td></tr></table></figure>
 
-<h5 id="constructor的理解"><a href="#constructor的理解" class="headerlink" title="constructor的理解"></a>constructor的理解</h5><p><img src="https://s2.loli.net/2022/03/19/ErAuIOXLDkYwh2d.png" alt="382EDEFBB03758DE9F9FF4AF2A8F7B6D.png"></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">数组 constructor 属性返回 function Array() &#123; [native code] &#125;</span><br><span class="line">数字 constructor 属性返回 function Number() &#123; [native code] &#125;</span><br><span class="line">字符串 constructor 属性返回 function String() &#123; [native code] &#125;</span><br></pre></td></tr></table></figure>
-
-<h5 id="JavaScript有几种方法判断变量的类型-（3种）"><a href="#JavaScript有几种方法判断变量的类型-（3种）" class="headerlink" title="JavaScript有几种方法判断变量的类型?（3种）"></a>JavaScript有几种方法判断变量的类型?（3种）</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">1.typeof</span><br><span class="line">使用typeof能判断出四种，分别是number，string，boolean，function,剩余的均被检测为object</span><br><span class="line">2.instanceof</span><br><span class="line">测试左边的对象是否是右边类或者该类的子类创建的实例对象，是则返回true，否则返回false。</span><br><span class="line">3.constructor</span><br><span class="line">construction指向构造函数。但是根据实例对象寻找属性的顺序，若实例对象上没有实例属性或方法时，就去原型链上寻找，因此，实例对象也是能使用constructor属性的。</span><br></pre></td></tr></table></figure>
-
-<p>举例：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var p = new Date();</span><br><span class="line">console.log(typeof(p));   //Object</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">class Person&#123; </span><br><span class="line">        constructor(name)&#123;    //构造函数</span><br><span class="line">         this.name= name;   </span><br><span class="line">       &#125;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line">  let p = new Person(&#x27;张三&#x27;)</span><br><span class="line">  console.log(p instanceof  Person) //ture</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">class Stuent = &#123; </span><br><span class="line">              constructor(age)&#123; </span><br><span class="line">                this.age =age; </span><br><span class="line">      &#125; </span><br><span class="line">&#125; </span><br><span class="line">Student.prototype = new Person(&#x27;张三&#x27;)  </span><br><span class="line">//函数对象都有一个子对象 prototype对象，表示该函数的原型,prototype属性允许您向对象添加属性和方法</span><br><span class="line">Student.prototype.constructor === &#x27;Person&#x27;  //true</span><br></pre></td></tr></table></figure>
+<h5 id="JavaScript有几种方法判断变量的类型-（4种）"><a href="#JavaScript有几种方法判断变量的类型-（4种）" class="headerlink" title="JavaScript有几种方法判断变量的类型?（4种）"></a>JavaScript有几种方法判断变量的类型?（4种）</h5><p><a target="_blank" rel="noopener" href="https://segmentfault.com/a/1190000015264821">答案</a></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">1.typeof</span><br><span class="line">使用typeof能判断出四种，对于null及数组、对象，typeof均检测出为object，不能进一步判断它们的类型。</span><br><span class="line">2.instanceof</span><br><span class="line">instanceof不能区别undefined和null，而且对于基本类型如果不是用new声明的则也测试不出来。</span><br><span class="line">3.constructor</span><br><span class="line">undefined和null没有contructor属性</span><br><span class="line">4.Object.prototype.toString.call</span><br></pre></td></tr></table></figure>
 
 <h5 id="let-const-var-中间的区别（5点）"><a href="#let-const-var-中间的区别（5点）" class="headerlink" title="let const var 中间的区别（5点）"></a>let const var 中间的区别（5点）</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">1.变量提升</span><br><span class="line">var声明的变量存在变量提升，即变量可以在声明之前调用，值为undefined</span><br><span class="line">let和const不存在变量提升，即它们所声明的变量一定要在声明后使用，否则报错</span><br><span class="line"></span><br><span class="line">2.暂时性死区</span><br><span class="line">var不存在暂时性死区</span><br><span class="line">let和const存在暂时性死区，只有等到声明变量的那一行代码出现，才可以获取和使用该变量</span><br><span class="line"></span><br><span class="line">3.块级作用域</span><br><span class="line">var不存在块级作用域</span><br><span class="line">let和const存在块级作用域</span><br><span class="line"></span><br><span class="line">4.重复声明</span><br><span class="line">var允许重复声明变量</span><br><span class="line">let和const在同一作用域不允许重复声明变量</span><br><span class="line"></span><br><span class="line">5.修改声明的变量</span><br><span class="line">var和let可以</span><br><span class="line">const声明一个只读的常量。一旦声明，常量的值就不能改变</span><br><span class="line"></span><br><span class="line">能用const的情况尽量使用const，其他情况下大多数使用let，避免使用var</span><br></pre></td></tr></table></figure>
 
@@ -316,7 +310,6 @@
 
 <h5 id="变量提升"><a href="#变量提升" class="headerlink" title="变量提升"></a>变量提升</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">JavaScript是单线程语言，所以执行肯定是按顺序执行。但是并不是逐行的分析和执行，而是一段一段地分析执行，会先进行编译阶段然后才是执行阶段。</span><br><span class="line">在编译阶段阶段，会检测到所有的变量和函数声明，所有这些函数和变量声明都被添加内存中。所以这些变量和函数能在它们真正被声明之前使用。</span><br></pre></td></tr></table></figure>
 
-
     </div>
 
     
@@ -325,7 +318,6 @@
 
       <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/%E9%9D%A2%E8%AF%95/" rel="tag"># 面试</a>
               <a href="/tags/JS/" rel="tag"># JS</a>
           </div>
 
@@ -401,7 +393,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#js%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%EF%BC%8C%E5%8C%BA%E5%88%AB"><span class="nav-number">1.</span> <span class="nav-text">js数据类型，区别</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#x3D-x3D-%E5%92%8C-x3D-x3D-x3D-%E6%9C%89%E4%BB%80%E4%B9%88%E4%B8%8D%E5%90%8C%EF%BC%9F"><span class="nav-number">2.</span> <span class="nav-text">&#x3D;&#x3D;和&#x3D;&#x3D;&#x3D;有什么不同？</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#null-%E5%92%8C-undefined-%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="nav-number">3.</span> <span class="nav-text">null 和 undefined 的区别</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#constructor%E7%9A%84%E7%90%86%E8%A7%A3"><span class="nav-number">4.</span> <span class="nav-text">constructor的理解</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#JavaScript%E6%9C%89%E5%87%A0%E7%A7%8D%E6%96%B9%E6%B3%95%E5%88%A4%E6%96%AD%E5%8F%98%E9%87%8F%E7%9A%84%E7%B1%BB%E5%9E%8B-%EF%BC%883%E7%A7%8D%EF%BC%89"><span class="nav-number">5.</span> <span class="nav-text">JavaScript有几种方法判断变量的类型?（3种）</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#let-const-var-%E4%B8%AD%E9%97%B4%E7%9A%84%E5%8C%BA%E5%88%AB%EF%BC%885%E7%82%B9%EF%BC%89"><span class="nav-number">6.</span> <span class="nav-text">let const var 中间的区别（5点）</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Object-assign%E7%9A%84%E7%90%86%E8%A7%A3"><span class="nav-number">7.</span> <span class="nav-text">Object.assign的理解</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#map-%E5%92%8C-forEach-%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="nav-number">8.</span> <span class="nav-text">map 和 forEach 的区别</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#for-of-%E5%8F%AF%E4%BB%A5%E9%81%8D%E5%8E%86%E5%93%AA%E4%BA%9B%E5%AF%B9%E8%B1%A1"><span class="nav-number">9.</span> <span class="nav-text">for of 可以遍历哪些对象</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#indexof"><span class="nav-number">10.</span> <span class="nav-text">indexof</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%8F%98%E9%87%8F%E6%8F%90%E5%8D%87"><span class="nav-number">11.</span> <span class="nav-text">变量提升</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#js%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%EF%BC%8C%E5%8C%BA%E5%88%AB"><span class="nav-number">1.</span> <span class="nav-text">js数据类型，区别</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#x3D-x3D-%E5%92%8C-x3D-x3D-x3D-%E6%9C%89%E4%BB%80%E4%B9%88%E4%B8%8D%E5%90%8C%EF%BC%9F"><span class="nav-number">2.</span> <span class="nav-text">&#x3D;&#x3D;和&#x3D;&#x3D;&#x3D;有什么不同？</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#null-%E5%92%8C-undefined-%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="nav-number">3.</span> <span class="nav-text">null 和 undefined 的区别</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#JavaScript%E6%9C%89%E5%87%A0%E7%A7%8D%E6%96%B9%E6%B3%95%E5%88%A4%E6%96%AD%E5%8F%98%E9%87%8F%E7%9A%84%E7%B1%BB%E5%9E%8B-%EF%BC%884%E7%A7%8D%EF%BC%89"><span class="nav-number">4.</span> <span class="nav-text">JavaScript有几种方法判断变量的类型?（4种）</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#let-const-var-%E4%B8%AD%E9%97%B4%E7%9A%84%E5%8C%BA%E5%88%AB%EF%BC%885%E7%82%B9%EF%BC%89"><span class="nav-number">5.</span> <span class="nav-text">let const var 中间的区别（5点）</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Object-assign%E7%9A%84%E7%90%86%E8%A7%A3"><span class="nav-number">6.</span> <span class="nav-text">Object.assign的理解</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#map-%E5%92%8C-forEach-%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="nav-number">7.</span> <span class="nav-text">map 和 forEach 的区别</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#for-of-%E5%8F%AF%E4%BB%A5%E9%81%8D%E5%8E%86%E5%93%AA%E4%BA%9B%E5%AF%B9%E8%B1%A1"><span class="nav-number">8.</span> <span class="nav-text">for of 可以遍历哪些对象</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#indexof"><span class="nav-number">9.</span> <span class="nav-text">indexof</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%8F%98%E9%87%8F%E6%8F%90%E5%8D%87"><span class="nav-number">10.</span> <span class="nav-text">变量提升</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -417,20 +409,20 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">14</span>
+          <span class="site-state-item-count">8</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-count">2</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">6</span>
+        <span class="site-state-item-count">3</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -472,13 +464,13 @@
       <i class="fa fa-chart-area"></i>
     </span>
       <span class="post-meta-item-text">站点总字数：</span>
-    <span title="站点总字数">12k</span>
+    <span title="站点总字数">10k</span>
     <span class="post-meta-divider"></span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">11 分钟</span>
+    <span title="站点阅读时长">9 分钟</span>
 </div>
 <!--  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
   </div> -->

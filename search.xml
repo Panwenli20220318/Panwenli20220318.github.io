@@ -1,6 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>HTML面试题</title>
+    <url>/2022/03/18/HTML%E9%9D%A2%E8%AF%95%E9%A2%98/</url>
+    <content><![CDATA[<h5 id="html标签的类型（head，-body，-Doctype）-他们的作用是什么"><a href="#html标签的类型（head，-body，-Doctype）-他们的作用是什么" class="headerlink" title="html标签的类型（head， body，!Doctype） 他们的作用是什么"></a>html标签的类型（head， body，!Doctype） 他们的作用是什么</h5><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">!Doctype 告诉浏览器关于页面是使用哪个版本的html进行编写的</span><br><span class="line">head 头部元素的容器，大多数头部标签内容不会显示在页面上，一般含有&lt;title&gt;、&lt;meta&gt;、&lt;link&gt;等标签</span><br><span class="line">body 定义文档的主体，包含文档所有的内容，支持html全局属性和事件属性</span><br></pre></td></tr></table></figure>
+
+<span id="more"></span>
+
+<h5 id="行内元素有哪些？块级元素有哪些？-空-void-元素有哪些？"><a href="#行内元素有哪些？块级元素有哪些？-空-void-元素有哪些？" class="headerlink" title="行内元素有哪些？块级元素有哪些？ 空(void)元素有哪些？"></a>行内元素有哪些？块级元素有哪些？ 空(void)元素有哪些？</h5><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">行内元素：span、img、input...</span><br><span class="line">块级元素：div、footer、header、section、p、h1...h6...</span><br><span class="line">空元素：br、hr...</span><br></pre></td></tr></table></figure>
+<h5 id="H5新特性"><a href="#H5新特性" class="headerlink" title="H5新特性"></a>H5新特性</h5><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">1.媒体播放的 video 和 audio</span><br><span class="line">2.绘画 canvas</span><br><span class="line">3.增强表单控件 date、time、email、search、color</span><br><span class="line">4.语意化标签 article、footer、header、nav、section</span><br><span class="line">5.本地存储 localStorage 和 sessionStorage</span><br><span class="line">6.全双工通信协议 websocket</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Ajax 轮询：</span><br><span class="line">轮询是在特定的的时间间隔（如每1秒），由浏览器对服务器发出HTTP请求，然后由服务器返回最新的数据给客户端的浏览器。</span><br><span class="line">缺点：浏览器需要不断的向服务器发出请求，然而HTTP请求可能包含较长的头部，其中真正有效的数据可能只是很小的一部分，显然这样会浪费很多的带宽等资源。</span><br><span class="line">websocket：</span><br><span class="line">浏览器和服务器只需要完成一次握手，两者之间就直接可以创建持久性的连接，并进行双向数据传输。</span><br></pre></td></tr></table></figure>
+
+<h5 id="html5语义化好处"><a href="#html5语义化好处" class="headerlink" title="html5语义化好处"></a>html5语义化好处</h5><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;title&gt;、&lt;header&gt;、&lt;footer&gt;、&lt;article&gt;、&lt;main&gt;、&lt;section&gt;、&lt;nav&gt;</span><br><span class="line">1.易于用户阅读，样式丢失的时候能让页面呈现清晰的结构。</span><br><span class="line">2.有利于SEO，根据标签来确定内容的权重。</span><br><span class="line">3.方便屏幕阅读器解析，如盲人阅读器根据语义渲染网页</span><br><span class="line">5.有利于开发和维护，语义化更具可读性，代码更好维护，与CSS3关系更和谐。</span><br></pre></td></tr></table></figure>
+
+<h5 id="audio-标签"><a href="#audio-标签" class="headerlink" title="audio 标签"></a>audio 标签</h5><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">常用属性：</span><br><span class="line">src 播放的音乐的url地址</span><br><span class="line">preload 预加载</span><br><span class="line">loop 循环播放</span><br><span class="line">controls 是否显示控制按钮</span><br><span class="line">autoplay 自动播放</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>前端</category>
+      </categories>
+      <tags>
+        <tag>HTML</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>CSS代码题</title>
     <url>/2022/03/19/CSS%E4%BB%A3%E7%A0%81%E9%A2%98/</url>
     <content><![CDATA[<h5 id="用CSS画一个三角形"><a href="#用CSS画一个三角形" class="headerlink" title="用CSS画一个三角形"></a>用CSS画一个三角形</h5><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">用边框画（border）,例如：</span><br><span class="line">&lt;style&gt;</span><br><span class="line">        div &#123;</span><br><span class="line">            width: 0;</span><br><span class="line">            height: 0;</span><br><span class="line">            border-width: 30px;</span><br><span class="line">            border-style: solid;</span><br><span class="line">            border-color: transparent transparent pink transparent;</span><br><span class="line">        &#125;</span><br><span class="line">&lt;/style&gt;</span><br><span class="line"></span><br><span class="line"> &lt;div&gt;&lt;/div&gt;</span><br></pre></td></tr></table></figure>
@@ -15,11 +38,10 @@
 
 ]]></content>
       <categories>
-        <category>前端 —— 基础</category>
+        <category>前端</category>
       </categories>
       <tags>
         <tag>CSS</tag>
-        <tag>面试</tag>
       </tags>
   </entry>
   <entry>
@@ -44,35 +66,10 @@
 
 ]]></content>
       <categories>
-        <category>前端 —— 基础</category>
+        <category>前端</category>
       </categories>
       <tags>
         <tag>CSS</tag>
-        <tag>面试</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>HTML面试题</title>
-    <url>/2022/03/18/HTML%E9%9D%A2%E8%AF%95%E9%A2%98/</url>
-    <content><![CDATA[<h5 id="html标签的类型（head，-body，-Doctype）-他们的作用是什么"><a href="#html标签的类型（head，-body，-Doctype）-他们的作用是什么" class="headerlink" title="html标签的类型（head， body，!Doctype） 他们的作用是什么"></a>html标签的类型（head， body，!Doctype） 他们的作用是什么</h5><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">!Doctype 告诉浏览器关于页面是使用哪个版本的html进行编写的</span><br><span class="line">head 头部元素的容器，大多数头部标签内容不会显示在页面上，一般含有&lt;title&gt;、&lt;meta&gt;、&lt;link&gt;等标签</span><br><span class="line">body 定义文档的主体，包含文档所有的内容，支持html全局属性和事件属性</span><br></pre></td></tr></table></figure>
-
-<span id="more"></span>
-
-<h5 id="行内元素有哪些？块级元素有哪些？-空-void-元素有哪些？"><a href="#行内元素有哪些？块级元素有哪些？-空-void-元素有哪些？" class="headerlink" title="行内元素有哪些？块级元素有哪些？ 空(void)元素有哪些？"></a>行内元素有哪些？块级元素有哪些？ 空(void)元素有哪些？</h5><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">行内元素：span、img、input...</span><br><span class="line">块级元素：div、footer、header、section、p、h1...h6...</span><br><span class="line">空元素：br、hr...</span><br></pre></td></tr></table></figure>
-<h5 id="H5新特性"><a href="#H5新特性" class="headerlink" title="H5新特性"></a>H5新特性</h5><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">1.媒体播放的 video 和 audio</span><br><span class="line">2.绘画 canvas</span><br><span class="line">3.增强表单控件 date、time、email、search、color</span><br><span class="line">4.语意化标签 article、footer、header、nav、section</span><br><span class="line">5.本地存储 localStorage 和 sessionStorage</span><br><span class="line">6.全双工通信协议 websocket</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Ajax 轮询：</span><br><span class="line">轮询是在特定的的时间间隔（如每1秒），由浏览器对服务器发出HTTP请求，然后由服务器返回最新的数据给客户端的浏览器。</span><br><span class="line">缺点：浏览器需要不断的向服务器发出请求，然而HTTP请求可能包含较长的头部，其中真正有效的数据可能只是很小的一部分，显然这样会浪费很多的带宽等资源。</span><br><span class="line">websocket：</span><br><span class="line">浏览器和服务器只需要完成一次握手，两者之间就直接可以创建持久性的连接，并进行双向数据传输。</span><br></pre></td></tr></table></figure>
-
-<h5 id="html5语义化好处"><a href="#html5语义化好处" class="headerlink" title="html5语义化好处"></a>html5语义化好处</h5><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;title&gt;、&lt;header&gt;、&lt;footer&gt;、&lt;article&gt;、&lt;main&gt;、&lt;section&gt;、&lt;nav&gt;</span><br><span class="line">1.易于用户阅读，样式丢失的时候能让页面呈现清晰的结构。</span><br><span class="line">2.有利于SEO，根据标签来确定内容的权重。</span><br><span class="line">3.方便屏幕阅读器解析，如盲人阅读器根据语义渲染网页</span><br><span class="line">5.有利于开发和维护，语义化更具可读性，代码更好维护，与CSS3关系更和谐。</span><br></pre></td></tr></table></figure>
-
-<h5 id="audio-标签"><a href="#audio-标签" class="headerlink" title="audio 标签"></a>audio 标签</h5><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">常用属性：</span><br><span class="line">src 播放的音乐的url地址</span><br><span class="line">preload 预加载</span><br><span class="line">loop 循环播放</span><br><span class="line">controls 是否显示控制按钮</span><br><span class="line">autoplay 自动播放</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>前端 —— 基础</category>
-      </categories>
-      <tags>
-        <tag>面试</tag>
-        <tag>HTML</tag>
       </tags>
   </entry>
   <entry>
@@ -98,7 +95,7 @@
 <p>考题四：</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">var length = 10;</span><br><span class="line">function fn()&#123;</span><br><span class="line">	return this.length + 1;   //this指向window</span><br><span class="line">&#125;</span><br><span class="line">var obj = &#123;</span><br><span class="line">	length:5,</span><br><span class="line">	test1:function()&#123;</span><br><span class="line">		return fn();</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">obj.test2 = fn;</span><br><span class="line">//相对于在obj里面加了一个</span><br><span class="line">test2:function()&#123;</span><br><span class="line">		return this.length + 1;  </span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">console.log( obj.test1() );  	//11</span><br><span class="line">console.log( fn()===obj.test2() ); 	 //11 ！= 6 输出：false</span><br><span class="line">console.log( obj.test1() == obj.test2() ); //false</span><br></pre></td></tr></table></figure>]]></content>
       <categories>
-        <category>JS重难点突破</category>
+        <category>前端</category>
       </categories>
       <tags>
         <tag>JS</tag>
@@ -132,7 +129,7 @@
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">function fun(a) &#123;  //声明普通函数 &gt; 参数   </span><br><span class="line">        console.log(a); //输出：f a()&#123;&#125;</span><br><span class="line">        function a() &#123;&#125;</span><br><span class="line">&#125;</span><br><span class="line">fun(100);</span><br></pre></td></tr></table></figure>
 ]]></content>
       <categories>
-        <category>JS重难点突破</category>
+        <category>前端</category>
       </categories>
       <tags>
         <tag>JS</tag>
@@ -141,26 +138,17 @@
   <entry>
     <title>JS基础</title>
     <url>/2022/03/19/JS%E5%9F%BA%E7%A1%80/</url>
-    <content><![CDATA[<h5 id="js数据类型，区别"><a href="#js数据类型，区别" class="headerlink" title="js数据类型，区别"></a>js数据类型，区别</h5><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">8种</span><br><span class="line">基本类型：String、Number、Boolean、Undefined、Null、Symbol、bigint（后两个为ES6新增）</span><br><span class="line">引用类型：object(Function/Array/Date)</span><br><span class="line"></span><br><span class="line">NaN是一个数值类型，但是不是一个具体的数字。</span><br></pre></td></tr></table></figure>
+    <content><![CDATA[<h5 id="js数据类型，区别"><a href="#js数据类型，区别" class="headerlink" title="js数据类型，区别"></a>js数据类型，区别</h5><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">8种</span><br><span class="line">原始值：String、Number、Boolean、Undefined、Null、Symbol、bigint（后两个为ES6新增）</span><br><span class="line">引用值：object(Function/Array/Date)</span><br></pre></td></tr></table></figure>
 <span id="more"></span>
 
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">两种数据存储方式：</span><br><span class="line">基本数据类型存储在栈中，占据空间小、大小固定，属于被频繁使用的数据。栈是存储基本类型值和执行代码的空间。</span><br><span class="line">引用数据类型存储在堆中，占据空间大、大小不固定。引用数据类型在栈中存储了指针，该指针指向堆中该实体的起始地址，使用时，会检索其在栈中的地址，取得地址后从堆中获得实体。</span><br><span class="line"></span><br><span class="line">两种数据类型的区别：</span><br><span class="line">堆比栈空间大，栈比堆运行速度快。</span><br><span class="line">堆内存是无序存储，可以根据引用直接获取。</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">原始值存储在栈中，引用值存储在堆中</span><br><span class="line">原始值是以值的拷贝方式进行赋值，值是不可变的；引用值是以引用的拷贝方式进行赋值，值是可变的</span><br><span class="line">原始值的比较是值的比较，引用值的比较是引用的比较（比较引用的是否为同一对象）</span><br></pre></td></tr></table></figure>
 
 <h5 id="x3D-x3D-和-x3D-x3D-x3D-有什么不同？"><a href="#x3D-x3D-和-x3D-x3D-x3D-有什么不同？" class="headerlink" title="&#x3D;&#x3D;和&#x3D;&#x3D;&#x3D;有什么不同？"></a>&#x3D;&#x3D;和&#x3D;&#x3D;&#x3D;有什么不同？</h5><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">==  :  比较的是值		</span><br><span class="line">	string == number || boolean || number ....都会隐式转换</span><br><span class="line">=== ： 除了比较值，还比较类型</span><br></pre></td></tr></table></figure>
 
 <h5 id="null-和-undefined-的区别"><a href="#null-和-undefined-的区别" class="headerlink" title="null 和 undefined 的区别"></a>null 和 undefined 的区别</h5><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">undefined的字面意思就是：未定义的值。这个值的语义是，希望表示一个变量最原始的状态。</span><br><span class="line">这种原始状态会在以下 4 种场景中出现：</span><br><span class="line">1.声明了一个变量，但没有赋值</span><br><span class="line">2.访问对象上不存在的属性</span><br><span class="line">3.函数定义了形参，但没有传递实参</span><br><span class="line">4.使用 void 对表达式求值</span><br><span class="line"></span><br><span class="line">null的字面意思是：空值。这个值的语义是，希望表示一个对象被人为的重置为空对象。在内存里的表示就是，栈中的变量没有指向堆中的内存对象</span><br></pre></td></tr></table></figure>
 
-<h5 id="constructor的理解"><a href="#constructor的理解" class="headerlink" title="constructor的理解"></a>constructor的理解</h5><p><img src="https://s2.loli.net/2022/03/19/ErAuIOXLDkYwh2d.png" alt="382EDEFBB03758DE9F9FF4AF2A8F7B6D.png"></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">数组 constructor 属性返回 function Array() &#123; [native code] &#125;</span><br><span class="line">数字 constructor 属性返回 function Number() &#123; [native code] &#125;</span><br><span class="line">字符串 constructor 属性返回 function String() &#123; [native code] &#125;</span><br></pre></td></tr></table></figure>
-
-<h5 id="JavaScript有几种方法判断变量的类型-（3种）"><a href="#JavaScript有几种方法判断变量的类型-（3种）" class="headerlink" title="JavaScript有几种方法判断变量的类型?（3种）"></a>JavaScript有几种方法判断变量的类型?（3种）</h5><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">1.typeof</span><br><span class="line">使用typeof能判断出四种，分别是number，string，boolean，function,剩余的均被检测为object</span><br><span class="line">2.instanceof</span><br><span class="line">测试左边的对象是否是右边类或者该类的子类创建的实例对象，是则返回true，否则返回false。</span><br><span class="line">3.constructor</span><br><span class="line">construction指向构造函数。但是根据实例对象寻找属性的顺序，若实例对象上没有实例属性或方法时，就去原型链上寻找，因此，实例对象也是能使用constructor属性的。</span><br></pre></td></tr></table></figure>
-
-<p>举例：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">var p = new Date();</span><br><span class="line">console.log(typeof(p));   //Object</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">class Person&#123; </span><br><span class="line">        constructor(name)&#123;    //构造函数</span><br><span class="line">         this.name= name;   </span><br><span class="line">       &#125;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line">  let p = new Person(&#x27;张三&#x27;)</span><br><span class="line">  console.log(p instanceof  Person) //ture</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">class Stuent = &#123; </span><br><span class="line">              constructor(age)&#123; </span><br><span class="line">                this.age =age; </span><br><span class="line">      &#125; </span><br><span class="line">&#125; </span><br><span class="line">Student.prototype = new Person(&#x27;张三&#x27;)  </span><br><span class="line">//函数对象都有一个子对象 prototype对象，表示该函数的原型,prototype属性允许您向对象添加属性和方法</span><br><span class="line">Student.prototype.constructor === &#x27;Person&#x27;  //true</span><br></pre></td></tr></table></figure>
+<h5 id="JavaScript有几种方法判断变量的类型-（4种）"><a href="#JavaScript有几种方法判断变量的类型-（4种）" class="headerlink" title="JavaScript有几种方法判断变量的类型?（4种）"></a>JavaScript有几种方法判断变量的类型?（4种）</h5><p><a href="https://segmentfault.com/a/1190000015264821">答案</a></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">1.typeof</span><br><span class="line">使用typeof能判断出四种，对于null及数组、对象，typeof均检测出为object，不能进一步判断它们的类型。</span><br><span class="line">2.instanceof</span><br><span class="line">instanceof不能区别undefined和null，而且对于基本类型如果不是用new声明的则也测试不出来。</span><br><span class="line">3.constructor</span><br><span class="line">undefined和null没有contructor属性</span><br><span class="line">4.Object.prototype.toString.call</span><br></pre></td></tr></table></figure>
 
 <h5 id="let-const-var-中间的区别（5点）"><a href="#let-const-var-中间的区别（5点）" class="headerlink" title="let const var 中间的区别（5点）"></a>let const var 中间的区别（5点）</h5><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">1.变量提升</span><br><span class="line">var声明的变量存在变量提升，即变量可以在声明之前调用，值为undefined</span><br><span class="line">let和const不存在变量提升，即它们所声明的变量一定要在声明后使用，否则报错</span><br><span class="line"></span><br><span class="line">2.暂时性死区</span><br><span class="line">var不存在暂时性死区</span><br><span class="line">let和const存在暂时性死区，只有等到声明变量的那一行代码出现，才可以获取和使用该变量</span><br><span class="line"></span><br><span class="line">3.块级作用域</span><br><span class="line">var不存在块级作用域</span><br><span class="line">let和const存在块级作用域</span><br><span class="line"></span><br><span class="line">4.重复声明</span><br><span class="line">var允许重复声明变量</span><br><span class="line">let和const在同一作用域不允许重复声明变量</span><br><span class="line"></span><br><span class="line">5.修改声明的变量</span><br><span class="line">var和let可以</span><br><span class="line">const声明一个只读的常量。一旦声明，常量的值就不能改变</span><br><span class="line"></span><br><span class="line">能用const的情况尽量使用const，其他情况下大多数使用let，避免使用var</span><br></pre></td></tr></table></figure>
 
@@ -180,20 +168,18 @@
 <h5 id="indexof"><a href="#indexof" class="headerlink" title="indexof"></a>indexof</h5><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">返回某个指定的字符串值在字符串中首次出现的位置。</span><br><span class="line">如果要检索的字符串值没有出现，则该方法返回 -1。</span><br></pre></td></tr></table></figure>
 
 <h5 id="变量提升"><a href="#变量提升" class="headerlink" title="变量提升"></a>变量提升</h5><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">JavaScript是单线程语言，所以执行肯定是按顺序执行。但是并不是逐行的分析和执行，而是一段一段地分析执行，会先进行编译阶段然后才是执行阶段。</span><br><span class="line">在编译阶段阶段，会检测到所有的变量和函数声明，所有这些函数和变量声明都被添加内存中。所以这些变量和函数能在它们真正被声明之前使用。</span><br></pre></td></tr></table></figure>
-
 ]]></content>
       <categories>
-        <category>前端 —— 基础</category>
+        <category>前端</category>
       </categories>
       <tags>
-        <tag>面试</tag>
         <tag>JS</tag>
       </tags>
   </entry>
   <entry>
     <title>JS对象</title>
     <url>/2022/03/19/JS%E5%AF%B9%E8%B1%A1/</url>
-    <content><![CDATA[<h5 id="要点"><a href="#要点" class="headerlink" title="要点"></a>要点</h5><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">1. 对象是通过new操作符构建出来的，所以对象之间不想等(除了引用外)；</span><br><span class="line">2. 对象注意引用类型(共同一个地址)；</span><br><span class="line">3. 对象的key都是字符串类型；</span><br><span class="line">4. 对象如何找属性|方法；</span><br><span class="line">	查找规则：先在对象本身找 ===&gt; 构造函数中找 ===&gt; 对象原型中找 ===&gt; 构造函数原型中找 ===&gt; 对象上一层原型查找</span><br></pre></td></tr></table></figure>
+    <content><![CDATA[<h5 id="要点"><a href="#要点" class="headerlink" title="要点"></a>要点</h5><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">1. 对象是通过new操作符构建出来的，所以对象之间不相等(除了引用外)；</span><br><span class="line">2. 对象注意引用类型(共同一个地址)；</span><br><span class="line">3. 对象的key都是字符串类型；</span><br><span class="line">4. 对象如何找属性|方法；</span><br><span class="line">	查找规则：先在对象本身找 ===&gt; 构造函数中找 ===&gt; 对象原型中找 ===&gt; 构造函数原型中找 ===&gt; 对象上一层原型查找</span><br></pre></td></tr></table></figure>
 
 <span id="more"></span>
 
@@ -212,59 +198,11 @@
 <p>原理图：<br><img src="https://s2.loli.net/2022/03/19/ck1jtTEUxAzRi7K.png" alt="53EB9F73A503BD552BA7B6B5A792C1EE.png"></p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">function Fun()&#123;</span><br><span class="line">    this.a=&#x27;在Fun函数中添加的&#x27;;</span><br><span class="line">&#125;</span><br><span class="line">Fun.prototype.a=&#x27;这是Fun原型添加的&#x27;</span><br><span class="line">let obj = new Fun();</span><br><span class="line">obj.a=&#x27;对象本身&#x27;;</span><br><span class="line">obj._proto_.a=&#x27;这是对象原型添加的&#x27;；</span><br><span class="line"></span><br><span class="line">console.log( obj.a );</span><br><span class="line">//1.对象本身</span><br><span class="line">//2.在Fun函数中添加的</span><br><span class="line">//3.这是对象原型添加的</span><br><span class="line">//4.这是Fun原型添加的</span><br></pre></td></tr></table></figure>]]></content>
       <categories>
-        <category>JS重难点突破</category>
+        <category>前端</category>
       </categories>
       <tags>
         <tag>JS</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>JS数组去重</title>
-    <url>/2022/03/19/JS%E6%95%B0%E7%BB%84%E5%8E%BB%E9%87%8D/</url>
-    <content><![CDATA[<h5 id="Set去重"><a href="#Set去重" class="headerlink" title="Set去重"></a>Set去重</h5><p>.</p>
-<h5 id="利用indexOf去重"><a href="#利用indexOf去重" class="headerlink" title="利用indexOf去重"></a>利用indexOf去重</h5><h5 id="利用for嵌套for，然后splice去重"><a href="#利用for嵌套for，然后splice去重" class="headerlink" title="利用for嵌套for，然后splice去重"></a>利用for嵌套for，然后splice去重</h5><h5 id="利用sort"><a href="#利用sort" class="headerlink" title="利用sort()"></a>利用sort()</h5><h5 id="利用filter"><a href="#利用filter" class="headerlink" title="利用filter"></a>利用filter</h5><h5 id="利用Map数据结构去重"><a href="#利用Map数据结构去重" class="headerlink" title="利用Map数据结构去重"></a>利用Map数据结构去重</h5>]]></content>
-      <categories>
-        <category>前端 —— 基础</category>
-      </categories>
-      <tags>
-        <tag>JS</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>JS常见代码题</title>
-    <url>/2022/03/19/JS%E5%B8%B8%E8%A7%81%E4%BB%A3%E7%A0%81%E9%A2%98/</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
-    <title>vue-router安装使用</title>
-    <url>/2022/03/27/vue-router%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8/</url>
-    <content><![CDATA[<h4 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h4><p>在main.js中</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">// 1.导入</span><br><span class="line">import VueRouter from &#x27;vue-router&#x27;</span><br><span class="line">// 2.use一下</span><br><span class="line">Vue.use(VueRouter);</span><br><span class="line">// 3.创建路由</span><br><span class="line">let router = new VueRouter()</span><br><span class="line">//4.挂载到Vue实例上</span><br><span class="line">new Vue(&#123;</span><br><span class="line">    render: h =&gt; h(App),</span><br><span class="line">    router   //  可简写router:router</span><br><span class="line">&#125;).$mount(&#x27;#app&#x27;)</span><br></pre></td></tr></table></figure>
-
-<h4 id="配置规则"><a href="#配置规则" class="headerlink" title="配置规则"></a>配置规则</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">1.导入组件</span><br><span class="line">2.routers属性在进行配置关系</span><br><span class="line">3.path:设置地址</span><br><span class="line">4.component:设置组件</span><br><span class="line">5.可以配置多个</span><br></pre></td></tr></table></figure>
-
-<h4 id="路由出口"><a href="#路由出口" class="headerlink" title="路由出口"></a>路由出口</h4><h4 id="声明式导航"><a href="#声明式导航" class="headerlink" title="声明式导航"></a>声明式导航</h4><h4 id="编程式导航"><a href="#编程式导航" class="headerlink" title="编程式导航"></a>编程式导航</h4><h4 id="路由传参"><a href="#路由传参" class="headerlink" title="路由传参"></a>路由传参</h4>]]></content>
-      <tags>
-        <tag>vue-router</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>a</title>
-    <url>/2022/03/27/vue2%E5%AE%89%E8%A3%85vue-router%E6%8A%A5%E9%94%99%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/</url>
-    <content><![CDATA[<h4 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm install vue-router@4</span><br></pre></td></tr></table></figure>
-
-<p>在安装过程中报错，缺少依赖：</p>
-<span id="more"></span>
-
-<p><img src="https://s2.loli.net/2022/03/27/BWbUd94o7xYfRME.png" alt="屏幕截图 2022-03-27 203425.png"></p>
-<h4 id="原因分析"><a href="#原因分析" class="headerlink" title="原因分析"></a>原因分析</h4><p>查阅资料，大部分都说是npm版本问题，新版本对下载要求比较严格。</p>
-<h4 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h4><p>根据错误提示，在命令行中加入–legacy-peer-deps，由于vue与vue-router版本兼容的问题，需要在安装语句后加入需要下载vue-router版本，不然会下载最新的vue-router版本。</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm install vue-router@3</span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>项目 —— 网易云音乐</category>
-      </categories>
   </entry>
   <entry>
     <title>排序</title>
@@ -276,36 +214,5 @@
       <categories>
         <category>数据结构</category>
       </categories>
-      <tags>
-        <tag>JS</tag>
-        <tag>数据结构</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>创建网易云项目</title>
-    <url>/2022/03/27/%E5%88%9B%E5%BB%BA%E7%BD%91%E6%98%93%E4%BA%91%E9%A1%B9%E7%9B%AE/</url>
-    <content><![CDATA[<h4 id="项目搭建"><a href="#项目搭建" class="headerlink" title="项目搭建"></a>项目搭建</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm install -g @vue/cli		//安装vue-cli脚手架</span><br><span class="line">vue create 项目名		//创建一个新项目</span><br><span class="line">cd 项目名  //进入项目文件夹</span><br><span class="line">npm install vue-router@3		//安装路由</span><br><span class="line">npm i element-ui -S		//安装Element-UI</span><br></pre></td></tr></table></figure>
-
-<span id="more"></span>
-
-<p><strong>导入vue-router</strong></p>
-<p><strong>导入Element-UI</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">// 导入element-ui</span><br><span class="line">import ElementUI from &#x27;element-ui&#x27;;</span><br><span class="line">// 导入element-ui的样式</span><br><span class="line">import &#x27;element-ui/lib/theme-chalk/index.css&#x27;;</span><br><span class="line">// use一下</span><br><span class="line">Vue.use(ElementUI);</span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>项目 —— 网易云音乐</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>深拷贝与浅拷贝</title>
-    <url>/2022/03/19/%E6%B7%B1%E6%8B%B7%E8%B4%9D%E4%B8%8E%E6%B5%85%E6%8B%B7%E8%B4%9D/</url>
-    <content><![CDATA[]]></content>
-      <categories>
-        <category>JS重难点突破</category>
-      </categories>
-      <tags>
-        <tag>JS</tag>
-      </tags>
   </entry>
 </search>
