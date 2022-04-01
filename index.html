@@ -210,7 +210,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2022-04-01 21:25:48 / 修改时间：21:35:29" itemprop="dateCreated datePublished" datetime="2022-04-01T21:25:48+08:00">2022-04-01</time>
+              <time title="创建时间：2022-04-01 21:25:48 / 修改时间：21:39:56" itemprop="dateCreated datePublished" datetime="2022-04-01T21:25:48+08:00">2022-04-01</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -262,38 +262,14 @@
 
       
           <h4 id="TCP、UDP"><a href="#TCP、UDP" class="headerlink" title="TCP、UDP"></a>TCP、UDP</h4><h5 id="TCP连接三次握手的过程"><a href="#TCP连接三次握手的过程" class="headerlink" title="TCP连接三次握手的过程"></a>TCP连接三次握手的过程</h5><p><img src="https://s2.loli.net/2022/04/01/EMnj8ugNofbFJtV.png" alt="1d9042de40e64fd791af127ac279b55c.png"></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"> 初始状态客户端CLOSED，服务器LISTEN </span><br><span class="line"></span><br><span class="line">1. 客户端A向服务器B发送SYN数据包请求连接。此时状态为SYN_SENT，表示客户端已发送SYN报文。 </span><br><span class="line"></span><br><span class="line">2. 服务器B收到，发送SYN/ACK数据包回应。此时服务器状态由LISTEN变为SYN_RECV，表示收到SYN报文 </span><br><span class="line"></span><br><span class="line">3. 客户端A收到并发出确认ACK，连接成功。双方状态ESTABLISHED </span><br></pre></td></tr></table></figure>
-
-<h5 id="TCP四次挥手的过程"><a href="#TCP四次挥手的过程" class="headerlink" title="TCP四次挥手的过程"></a>TCP四次挥手的过程</h5><p><img src="https://s2.loli.net/2022/04/01/kOrYUWy8QgHfvTN.png" alt="屏幕截图 2022-04-01 111612.png"></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">初始状态双方ESTABLISHED </span><br><span class="line"></span><br><span class="line">1. 客户端A发送一个FIN，用来关闭客户A到服务器B的数据传送。客户端进入FIN_WAIT_1，等待对方的确认 </span><br><span class="line"></span><br><span class="line">2. 服务器B收到这个FIN，它发回一个ACK。客户端进入FIN_WAIT_2，表示半连接，而服务器可能还有数据要发，这边稍后关闭。服务器进入CLOSE_WAIT。</span><br><span class="line"></span><br><span class="line">3. 服务器B关闭与客户端A的连接，发送一个FIN给客户端A。服务器进入LAST_ACK，等待对面的ACK报文 </span><br><span class="line"></span><br><span class="line">4. 客户端A发回ACK报文确认，并将确认序号设置为收到序号加1。客户端进入TIME_WAIT，表示收到了对方的FIN报文，并发送出了ACK报文，就等2MSL后即可回到CLOSED可用状态了。 </span><br></pre></td></tr></table></figure>
-
-<h6 id="为何TIME-WAIT："><a href="#为何TIME-WAIT：" class="headerlink" title="为何TIME_WAIT："></a>为何TIME_WAIT：</h6><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">防止服务器在处于LAST_ACK状态下未收到ACK报文而重发FIN报文，这个TIME_WAIT 状态的作用就是用来重发可能丢失的ACK报文。 </span><br></pre></td></tr></table></figure>
-
-<h5 id="TCP和UDP的特点"><a href="#TCP和UDP的特点" class="headerlink" title="TCP和UDP的特点"></a>TCP和UDP的特点</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">TCP面向连接，UDP无连接 </span><br><span class="line">TCP可靠，保证安全，UDP尽最大努力交付，不保证安全 </span><br><span class="line">TCP是点对点的，UDP可以一对一 一对多 多对多 多对一 </span><br><span class="line">TCP面向字节流，UDP无拥塞控制 </span><br><span class="line">TCP开销较大，UDP开销小 </span><br></pre></td></tr></table></figure>
-
-<h5 id="TCP、UDP的应用场景"><a href="#TCP、UDP的应用场景" class="headerlink" title="TCP、UDP的应用场景"></a>TCP、UDP的应用场景</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">UDP使用场景 DNS协议（因为用UDP快），看视频、发语音、QQ聊天、多媒体教室屏幕广播 </span><br><span class="line"></span><br><span class="line">TCP使用场景 HTTP协议，QQ传文件，邮件，登陆 </span><br></pre></td></tr></table></figure>
-
-<h4 id="TCP怎么实现可靠传输"><a href="#TCP怎么实现可靠传输" class="headerlink" title="TCP怎么实现可靠传输"></a>TCP怎么实现可靠传输</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">确认和重传机制：校验，序号，确认，重传</span><br><span class="line"></span><br><span class="line">流量控制：滑动窗口和计时器 </span><br><span class="line"></span><br><span class="line">拥塞控制：慢启动、拥塞避免、快速重传、快速恢复 </span><br></pre></td></tr></table></figure>
-
-<h5 id="流量控制"><a href="#流量控制" class="headerlink" title="流量控制"></a>流量控制</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">作用于接收方，控制发送者的发送速度从而使接收者来得及接收，防止分组丢失的。 </span><br></pre></td></tr></table></figure>
-
-<p><strong>1.滑动窗口</strong> </p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">TCP进行流量控制的方式，接收方通过告诉对方自己的窗口大小，从而控制发送方的发送速度，以防止由于发送方发送速度过快而导致自己被淹没的现象 </span><br></pre></td></tr></table></figure>
-
-<p><strong>2.计时器</strong> </p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">发送端收到为0的窗口后开启一个计时器，时间到了之后发包询问现在的滑动窗口，防止死锁（接收端发回的不为0的窗口的包丢失，双方相互等待） </span><br></pre></td></tr></table></figure>
-
-<h5 id="拥塞控制"><a href="#拥塞控制" class="headerlink" title="拥塞控制"></a>拥塞控制</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">作用于网络，防止过多的数据注入到网络中，避免出现网络负载过大的情况。 </span><br><span class="line"></span><br><span class="line">拥塞：对网络中某一资源的需求超过了该资源所能提供的可用部分，影响到网络性能 </span><br><span class="line"></span><br><span class="line">拥塞控制：防止过多的数据注入到网络中，这样可以使网络中的路由器或链路不致过载。 </span><br></pre></td></tr></table></figure>
-
-<p><strong>1.拥塞窗口</strong> </p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">发送方使用的流量控制，另外考虑到接受方的接收能力，发送窗口可能小于拥塞窗口。 </span><br></pre></td></tr></table></figure>
-
-<p><strong>2.慢启动和拥塞避免</strong> </p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">慢启动：不要一开始就发送大量的数据，先探测一下网络的拥塞程度，也就是说由小到大逐渐增加拥塞窗口的大小。 </span><br><span class="line"></span><br><span class="line">拥塞窗口一开始设为1 ，每收到一次确认，就让拥塞窗口变为原来的两倍，当窗口值为16时（慢启动门限），改为加法增大，每次+1，直到网络拥塞。拥塞时让新的慢启动门限设为拥塞时的一半，并把拥塞窗口置为1，再让他重复，这时一瞬间会将网络数据量大量降低。 </span><br><span class="line"></span><br><span class="line">拥塞避免：拥塞避免[算法]()让拥塞窗口缓慢增长，即每经过一个往返时间RTT就把发送方的拥塞窗口cwnd加1，而不是加倍。 </span><br></pre></td></tr></table></figure>
-
-<p><strong>3.快重传和快恢复</strong> </p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">快重传：接收方每收到一个失序的报文段（收完2后就收到了4说明3丢了）就立即发出包2的重复确认，这样可以让发送方尽早知道丢包了。</span><br><span class="line"></span><br><span class="line">发送端连续收到三个重复确认就立即重传3 </span><br><span class="line"></span><br><span class="line">快恢复：发送方收到3个连续确认时，把慢开始门限减半，把拥塞窗口的值置为慢开始门限的一半，实行拥塞避免[算法]()，每次确认收到后+1</span><br></pre></td></tr></table></figure>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2022/04/01/TCP%E3%80%81UDP/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -337,7 +313,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2022-04-01 15:25:48 / 修改时间：21:36:03" itemprop="dateCreated datePublished" datetime="2022-04-01T15:25:48+08:00">2022-04-01</time>
+              <time title="创建时间：2022-04-01 15:25:48 / 修改时间：21:39:26" itemprop="dateCreated datePublished" datetime="2022-04-01T15:25:48+08:00">2022-04-01</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -389,22 +365,14 @@
 
       
           <h4 id="HTTP和HTTPS的区别"><a href="#HTTP和HTTPS的区别" class="headerlink" title="HTTP和HTTPS的区别"></a>HTTP和HTTPS的区别</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">https需要到ca申请证书，因而需要一定费用 </span><br><span class="line">http是超文本传输协议，明文传输，https协议是由ssl+http协议构建的可进行加密串苏，身份验证的网络协议</span><br><span class="line">http的连接很简单，是无状态的， </span><br><span class="line">http用的端口是80，https用的端口是443</span><br></pre></td></tr></table></figure>
-
-<h4 id="HTTP请求报文的内容"><a href="#HTTP请求报文的内容" class="headerlink" title="HTTP请求报文的内容"></a>HTTP请求报文的内容</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">请求行：包括请求方法（GET、POST…），URL，HTTP协议版本</span><br><span class="line">请求头：格式为：头部字段：值。</span><br><span class="line">请求正文</span><br></pre></td></tr></table></figure>
-<h4 id="HTTP请求头部主要字段"><a href="#HTTP请求头部主要字段" class="headerlink" title="HTTP请求头部主要字段"></a>HTTP请求头部主要字段</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Host：接受请求的服务器地址，可以是IP或者是域名 </span><br><span class="line">User-Agent：发送请求的应用名称 </span><br><span class="line">Connection：指定与连接相关的属性，例如（Keep_Alive，长连接） </span><br><span class="line">Accept-Charset：通知服务器端可以发送的编码格式 </span><br><span class="line">Accept-Encoding：通知服务器端可以发送的数据压缩格式 </span><br><span class="line">Accept-Language：通知服务器端可以发送的语言 </span><br></pre></td></tr></table></figure>
-
-<h4 id="HTTP响应报文"><a href="#HTTP响应报文" class="headerlink" title="HTTP响应报文"></a>HTTP响应报文</h4>  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">状态行：协议版本，状态码，状态码描述 </span><br><span class="line">响应头 </span><br><span class="line">响应正文</span><br></pre></td></tr></table></figure>
-
-<h4 id="HTTP响应头部主要字段"><a href="#HTTP响应头部主要字段" class="headerlink" title="HTTP响应头部主要字段"></a>HTTP响应头部主要字段</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Server：服务器应用软件的名称和版本 </span><br><span class="line">Content-Type：响应正文的类型 </span><br><span class="line">Content-Length：响应正文的长度 </span><br><span class="line">Content-Charset：响应正文所使用的编码 </span><br><span class="line">Content-Encoding：响应正文使用的数据压缩格式 </span><br><span class="line">Content-Language：响应正文使用的语言 </span><br></pre></td></tr></table></figure>
-
-<h4 id="HTTP状态码"><a href="#HTTP状态码" class="headerlink" title="HTTP状态码"></a>HTTP状态码</h4>  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">1xx 服务器收到请求，需要请求者继续执行操作 </span><br><span class="line">2xx  ok，请求成功 </span><br><span class="line">3xx 重定向，资源已经重新分配 </span><br><span class="line">4xx 客户端请求错误，403 forbidden请求资源被拒绝，404 not found找不到请求资源 </span><br><span class="line">5xx 服务器错误，500 服务器故障，503 服务器超载或停机维护 </span><br></pre></td></tr></table></figure>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">200，请求成功 </span><br><span class="line">301，资源（网页等）被永久转移到其它URL </span><br><span class="line">302，资源临时移动 </span><br><span class="line">403，forbidden 请求资源被拒绝，通常原因是服务器上某些文件或目录设置了权限，客户端权限不够 </span><br><span class="line">404，not found，用户输入错误的链接，该链接指向的网页不存在。除此之外，也可以在服务器端拒绝请求且不想说明理由时使用。 </span><br><span class="line">500，internal server error 服务器内部错误（比如浏览器代理除了问题，ip，端口不对等）该状态码表明服务器端在执行请求时发生了错误。也有可能是Web应用存在的bug或某些临时的故障。 </span><br><span class="line">502，Bad Gateway 从远程服务器接收到了一个无效的响应 </span><br><span class="line">503，服务器超载或停机维护 </span><br><span class="line">504，Gateway Timeout 网关超时 服务器作为网关或代理，未及时从上游服务器接收请求。 </span><br></pre></td></tr></table></figure>
-
-<h4 id="HTTP请求响应中断原因"><a href="#HTTP请求响应中断原因" class="headerlink" title="HTTP请求响应中断原因"></a>HTTP请求响应中断原因</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">网断了，网络阻塞，请求超时，浏览器出问题，服务器出问题 </span><br><span class="line">如何检查 :检查网络，检查本地… </span><br></pre></td></tr></table></figure>
-
-<h4 id="HTTP有几种请求方式"><a href="#HTTP有几种请求方式" class="headerlink" title="HTTP有几种请求方式"></a>HTTP有几种请求方式</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">HTTP1.0 定义了三种请求方法： GET, POST 和HEAD方法。 </span><br><span class="line">HTTP1.1 新增了六种请求方法：OPTIONS、PUT、PATCH、DELETE、TRACE 和CONNECT 方法。 </span><br></pre></td></tr></table></figure>
-
-<h4 id="GET和POST的区别"><a href="#GET和POST的区别" class="headerlink" title="GET和POST的区别"></a>GET和POST的区别</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">get是获取数据的，而post是提交数据的。</span><br><span class="line">GET参数通过URL传递，POST放在Request body中 GET比POST更不安全。</span><br><span class="line">GET用于获取信息，且可缓存，而POST用于修改服务器上的数据，不可缓存。</span><br><span class="line"></span><br><span class="line">应用场景 : GET用来查询数据，POST用来修改数据，以及其他更需要安全性的场景如密码</span><br></pre></td></tr></table></figure>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2022/04/01/HTTP/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -448,7 +416,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2022-04-01 14:25:48 / 修改时间：21:35:52" itemprop="dateCreated datePublished" datetime="2022-04-01T14:25:48+08:00">2022-04-01</time>
+              <time title="创建时间：2022-04-01 14:25:48 / 修改时间：21:39:36" itemprop="dateCreated datePublished" datetime="2022-04-01T14:25:48+08:00">2022-04-01</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -500,13 +468,14 @@
 
       
           <h4 id="HTTP劫持-、DNS劫持"><a href="#HTTP劫持-、DNS劫持" class="headerlink" title="HTTP劫持 、DNS劫持"></a>HTTP劫持 、DNS劫持</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">HTTP劫持的现象：你打开的是知乎的页面，右下角弹出：偶系渣渣辉</span><br><span class="line">DNS劫持的现象：你输入的网址是http://www.google.com，出来的是百度的页面</span><br></pre></td></tr></table></figure>
-
-<h5 id="DNS劫持"><a href="#DNS劫持" class="headerlink" title="DNS劫持"></a>DNS劫持</h5><p><img src="https://s2.loli.net/2022/04/01/E2yMJLR9K8Idvtz.jpg" alt="F946D35206D7EE5148F6CC665A0C0A26.png"></p>
-<h5 id="HTTP-劫持"><a href="#HTTP-劫持" class="headerlink" title="HTTP 劫持"></a>HTTP 劫持</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">在TCP连接中标识HTTP协议链接；改HTTP响应体；</span><br><span class="line">将篡改后的数据包抢先回发到用户，这样后面的数据包在到达后会被直接丢弃。而客户端显示改后的网页</span><br></pre></td></tr></table></figure>
-<p><img src="https://s2.loli.net/2022/04/01/1WbBUo7KJVgLdhA.jpg" alt="D830ABEF3A0B5C0D6A9BA4724C259573.png"></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">防范：</span><br><span class="line">事前加密：HTTPS，防止明文传输被挟持，（但防不了DNS挟持）</span><br><span class="line">事中加密：拆分HTTP请求数据包，运营商的旁路设备没有完整的TCP/IP协议栈，不能标记，web服务器有完整的TCP/IP协议栈，能把接收到的数据包拼成完整的HTTP请求，不影响服务</span><br><span class="line">事后屏蔽：前端显示HTTP时对内容进行检测，在DOM结构发生变化时触发回调</span><br></pre></td></tr></table></figure>
-
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2022/04/01/HTTP%E5%8A%AB%E6%8C%81%20%E3%80%81DNS%E5%8A%AB%E6%8C%81/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 

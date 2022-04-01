@@ -5,6 +5,8 @@
     <url>/2022/04/01/HTTP/</url>
     <content><![CDATA[<h4 id="HTTP和HTTPS的区别"><a href="#HTTP和HTTPS的区别" class="headerlink" title="HTTP和HTTPS的区别"></a>HTTP和HTTPS的区别</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">https需要到ca申请证书，因而需要一定费用 </span><br><span class="line">http是超文本传输协议，明文传输，https协议是由ssl+http协议构建的可进行加密串苏，身份验证的网络协议</span><br><span class="line">http的连接很简单，是无状态的， </span><br><span class="line">http用的端口是80，https用的端口是443</span><br></pre></td></tr></table></figure>
 
+<span id="more"></span>
+
 <h4 id="HTTP请求报文的内容"><a href="#HTTP请求报文的内容" class="headerlink" title="HTTP请求报文的内容"></a>HTTP请求报文的内容</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">请求行：包括请求方法（GET、POST…），URL，HTTP协议版本</span><br><span class="line">请求头：格式为：头部字段：值。</span><br><span class="line">请求正文</span><br></pre></td></tr></table></figure>
 <h4 id="HTTP请求头部主要字段"><a href="#HTTP请求头部主要字段" class="headerlink" title="HTTP请求头部主要字段"></a>HTTP请求头部主要字段</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Host：接受请求的服务器地址，可以是IP或者是域名 </span><br><span class="line">User-Agent：发送请求的应用名称 </span><br><span class="line">Connection：指定与连接相关的属性，例如（Keep_Alive，长连接） </span><br><span class="line">Accept-Charset：通知服务器端可以发送的编码格式 </span><br><span class="line">Accept-Encoding：通知服务器端可以发送的数据压缩格式 </span><br><span class="line">Accept-Language：通知服务器端可以发送的语言 </span><br></pre></td></tr></table></figure>
 
@@ -28,6 +30,8 @@
     <title>HTTP劫持 、DNS劫持</title>
     <url>/2022/04/01/HTTP%E5%8A%AB%E6%8C%81%20%E3%80%81DNS%E5%8A%AB%E6%8C%81/</url>
     <content><![CDATA[<h4 id="HTTP劫持-、DNS劫持"><a href="#HTTP劫持-、DNS劫持" class="headerlink" title="HTTP劫持 、DNS劫持"></a>HTTP劫持 、DNS劫持</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">HTTP劫持的现象：你打开的是知乎的页面，右下角弹出：偶系渣渣辉</span><br><span class="line">DNS劫持的现象：你输入的网址是http://www.google.com，出来的是百度的页面</span><br></pre></td></tr></table></figure>
+
+<span id="more"></span>
 
 <h5 id="DNS劫持"><a href="#DNS劫持" class="headerlink" title="DNS劫持"></a>DNS劫持</h5><p><img src="https://s2.loli.net/2022/04/01/E2yMJLR9K8Idvtz.jpg" alt="F946D35206D7EE5148F6CC665A0C0A26.png"></p>
 <h5 id="HTTP-劫持"><a href="#HTTP-劫持" class="headerlink" title="HTTP 劫持"></a>HTTP 劫持</h5><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">在TCP连接中标识HTTP协议链接；改HTTP响应体；</span><br><span class="line">将篡改后的数据包抢先回发到用户，这样后面的数据包在到达后会被直接丢弃。而客户端显示改后的网页</span><br></pre></td></tr></table></figure>
@@ -258,6 +262,7 @@
     <title>TCP、UDP</title>
     <url>/2022/04/01/TCP%E3%80%81UDP/</url>
     <content><![CDATA[<h4 id="TCP、UDP"><a href="#TCP、UDP" class="headerlink" title="TCP、UDP"></a>TCP、UDP</h4><h5 id="TCP连接三次握手的过程"><a href="#TCP连接三次握手的过程" class="headerlink" title="TCP连接三次握手的过程"></a>TCP连接三次握手的过程</h5><p><img src="https://s2.loli.net/2022/04/01/EMnj8ugNofbFJtV.png" alt="1d9042de40e64fd791af127ac279b55c.png"></p>
+<span id="more"></span>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"> 初始状态客户端CLOSED，服务器LISTEN </span><br><span class="line"></span><br><span class="line">1. 客户端A向服务器B发送SYN数据包请求连接。此时状态为SYN_SENT，表示客户端已发送SYN报文。 </span><br><span class="line"></span><br><span class="line">2. 服务器B收到，发送SYN/ACK数据包回应。此时服务器状态由LISTEN变为SYN_RECV，表示收到SYN报文 </span><br><span class="line"></span><br><span class="line">3. 客户端A收到并发出确认ACK，连接成功。双方状态ESTABLISHED </span><br></pre></td></tr></table></figure>
 
 <h5 id="TCP四次挥手的过程"><a href="#TCP四次挥手的过程" class="headerlink" title="TCP四次挥手的过程"></a>TCP四次挥手的过程</h5><p><img src="https://s2.loli.net/2022/04/01/kOrYUWy8QgHfvTN.png" alt="屏幕截图 2022-04-01 111612.png"></p>
