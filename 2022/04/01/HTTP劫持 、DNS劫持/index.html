@@ -22,15 +22,22 @@
     var CONFIG = {"hostname":"pwl.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="PWL">
-<meta property="og:url" content="http://pwl.com/archives/2022/index.html">
+  <meta name="description" content="HTTP劫持 、DNS劫持12HTTP劫持的现象：你打开的是知乎的页面，右下角弹出：偶系渣渣辉DNS劫持的现象：你输入的网址是http:&#x2F;&#x2F;www.google.com，出来的是百度的页面  DNS劫持 HTTP 劫持12在TCP连接中标识HTTP协议链接；改HTTP响应体；将篡改后的数据包抢先回发到用户，这样后面的数据包在到达后会被直接丢弃。而客户端显示改后的网页  1234防范：事前加密：HT">
+<meta property="og:type" content="article">
+<meta property="og:title" content="HTTP劫持 、DNS劫持">
+<meta property="og:url" content="http://pwl.com/2022/04/01/HTTP%E5%8A%AB%E6%8C%81%20%E3%80%81DNS%E5%8A%AB%E6%8C%81/index.html">
 <meta property="og:site_name" content="PWL">
+<meta property="og:description" content="HTTP劫持 、DNS劫持12HTTP劫持的现象：你打开的是知乎的页面，右下角弹出：偶系渣渣辉DNS劫持的现象：你输入的网址是http:&#x2F;&#x2F;www.google.com，出来的是百度的页面  DNS劫持 HTTP 劫持12在TCP连接中标识HTTP协议链接；改HTTP响应体；将篡改后的数据包抢先回发到用户，这样后面的数据包在到达后会被直接丢弃。而客户端显示改后的网页  1234防范：事前加密：HT">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://s2.loli.net/2022/04/01/E2yMJLR9K8Idvtz.jpg">
+<meta property="og:image" content="https://s2.loli.net/2022/04/01/1WbBUo7KJVgLdhA.jpg">
+<meta property="article:published_time" content="2022-04-01T06:25:48.000Z">
+<meta property="article:modified_time" content="2022-04-01T13:35:52.979Z">
 <meta property="article:author" content="PWL">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://s2.loli.net/2022/04/01/E2yMJLR9K8Idvtz.jpg">
 
-<link rel="canonical" href="http://pwl.com/archives/2022/">
+<link rel="canonical" href="http://pwl.com/2022/04/01/HTTP%E5%8A%AB%E6%8C%81%20%E3%80%81DNS%E5%8A%AB%E6%8C%81/">
 
 
 <script id="page-configurations">
@@ -38,12 +45,12 @@
   CONFIG.page = {
     sidebar: "",
     isHome : false,
-    isPost : false,
+    isPost : true,
     lang   : 'zh-CN'
   };
 </script>
 
-  <title>归档 | PWL</title>
+  <title>HTTP劫持 、DNS劫持 | PWL</title>
   
 
 
@@ -179,259 +186,137 @@
         <div class="content-wrap">
           
 
-          <div class="content archive">
+          <div class="content post posts-expand">
             
 
+    
   
   
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://pwl.com/2022/04/01/HTTP%E5%8A%AB%E6%8C%81%20%E3%80%81DNS%E5%8A%AB%E6%8C%81/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpeg">
+      <meta itemprop="name" content="PWL">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="PWL">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          HTTP劫持 、DNS劫持
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2022-04-01 14:25:48 / 修改时间：21:35:52" itemprop="dateCreated datePublished" datetime="2022-04-01T14:25:48+08:00">2022-04-01</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" itemprop="url" rel="index"><span itemprop="name">计算机网络</span></a>
+                </span>
+            </span>
+
+          
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
   
-  <div class="post-block">
-    <div class="posts-collapse">
-      <div class="collection-title">
-        <span class="collection-header">嗯..! 目前共计 11 篇日志。 继续努力。</span>
-      </div>
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2022/04/01/HTTP%E5%8A%AB%E6%8C%81%20%E3%80%81DNS%E5%8A%AB%E6%8C%81/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2022/04/01/HTTP%E5%8A%AB%E6%8C%81%20%E3%80%81DNS%E5%8A%AB%E6%8C%81/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>346</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>1 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-    <div class="collection-year">
-      <h1 class="collection-header">2022</h1>
-    </div>
+        <h4 id="HTTP劫持-、DNS劫持"><a href="#HTTP劫持-、DNS劫持" class="headerlink" title="HTTP劫持 、DNS劫持"></a>HTTP劫持 、DNS劫持</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">HTTP劫持的现象：你打开的是知乎的页面，右下角弹出：偶系渣渣辉</span><br><span class="line">DNS劫持的现象：你输入的网址是http://www.google.com，出来的是百度的页面</span><br></pre></td></tr></table></figure>
 
-  <article class="my-post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="my-post-header">
-
-      <div class="my-post-meta">
-        <time class="my-post-time" itemprop="dateCreated"
-              datetime="2022-04-01T21:25:48+08:00"
-              content="2022-04-01">
-          04-01
-        </time>
-      </div>
-
-      <h2 class="my-post-title">
-          <a class="my-post-title-link" href="/2022/04/01/TCP%E3%80%81UDP/" itemprop="url">
-            
-              <span itemprop="name">TCP、UDP</span>
-            
-          </a>
-      </h2>
-
-    </header>
-  </article>
-
-  <article class="my-post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="my-post-header">
-
-      <div class="my-post-meta">
-        <time class="my-post-time" itemprop="dateCreated"
-              datetime="2022-04-01T15:25:48+08:00"
-              content="2022-04-01">
-          04-01
-        </time>
-      </div>
-
-      <h2 class="my-post-title">
-          <a class="my-post-title-link" href="/2022/04/01/HTTP/" itemprop="url">
-            
-              <span itemprop="name">HTTP</span>
-            
-          </a>
-      </h2>
-
-    </header>
-  </article>
-
-  <article class="my-post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="my-post-header">
-
-      <div class="my-post-meta">
-        <time class="my-post-time" itemprop="dateCreated"
-              datetime="2022-04-01T14:25:48+08:00"
-              content="2022-04-01">
-          04-01
-        </time>
-      </div>
-
-      <h2 class="my-post-title">
-          <a class="my-post-title-link" href="/2022/04/01/HTTP%E5%8A%AB%E6%8C%81%20%E3%80%81DNS%E5%8A%AB%E6%8C%81/" itemprop="url">
-            
-              <span itemprop="name">HTTP劫持 、DNS劫持</span>
-            
-          </a>
-      </h2>
-
-    </header>
-  </article>
-
-  <article class="my-post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="my-post-header">
-
-      <div class="my-post-meta">
-        <time class="my-post-time" itemprop="dateCreated"
-              datetime="2022-03-19T12:25:48+08:00"
-              content="2022-03-19">
-          03-19
-        </time>
-      </div>
-
-      <h2 class="my-post-title">
-          <a class="my-post-title-link" href="/2022/03/19/JS%E4%BD%9C%E7%94%A8%E5%9F%9F+this%E6%8C%87%E5%90%91+%E5%8E%9F%E5%9E%8B%E8%80%83%E9%A2%98/" itemprop="url">
-            
-              <span itemprop="name">JS作用域+this指向+原型考题</span>
-            
-          </a>
-      </h2>
-
-    </header>
-  </article>
-
-  <article class="my-post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="my-post-header">
-
-      <div class="my-post-meta">
-        <time class="my-post-time" itemprop="dateCreated"
-              datetime="2022-03-19T12:25:13+08:00"
-              content="2022-03-19">
-          03-19
-        </time>
-      </div>
-
-      <h2 class="my-post-title">
-          <a class="my-post-title-link" href="/2022/03/19/JS%E4%BD%9C%E7%94%A8%E5%9F%9F/" itemprop="url">
-            
-              <span itemprop="name">JS作用域</span>
-            
-          </a>
-      </h2>
-
-    </header>
-  </article>
-
-  <article class="my-post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="my-post-header">
-
-      <div class="my-post-meta">
-        <time class="my-post-time" itemprop="dateCreated"
-              datetime="2022-03-19T12:15:30+08:00"
-              content="2022-03-19">
-          03-19
-        </time>
-      </div>
-
-      <h2 class="my-post-title">
-          <a class="my-post-title-link" href="/2022/03/19/JS%E5%AF%B9%E8%B1%A1/" itemprop="url">
-            
-              <span itemprop="name">JS对象</span>
-            
-          </a>
-      </h2>
-
-    </header>
-  </article>
-
-  <article class="my-post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="my-post-header">
-
-      <div class="my-post-meta">
-        <time class="my-post-time" itemprop="dateCreated"
-              datetime="2022-03-19T11:07:49+08:00"
-              content="2022-03-19">
-          03-19
-        </time>
-      </div>
-
-      <h2 class="my-post-title">
-          <a class="my-post-title-link" href="/2022/03/19/CSS%E4%BB%A3%E7%A0%81%E9%A2%98/" itemprop="url">
-            
-              <span itemprop="name">CSS代码题</span>
-            
-          </a>
-      </h2>
-
-    </header>
-  </article>
-
-  <article class="my-post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="my-post-header">
-
-      <div class="my-post-meta">
-        <time class="my-post-time" itemprop="dateCreated"
-              datetime="2022-03-19T11:05:52+08:00"
-              content="2022-03-19">
-          03-19
-        </time>
-      </div>
-
-      <h2 class="my-post-title">
-          <a class="my-post-title-link" href="/2022/03/19/JS%E5%9F%BA%E7%A1%80/" itemprop="url">
-            
-              <span itemprop="name">JS基础</span>
-            
-          </a>
-      </h2>
-
-    </header>
-  </article>
-
-  <article class="my-post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="my-post-header">
-
-      <div class="my-post-meta">
-        <time class="my-post-time" itemprop="dateCreated"
-              datetime="2022-03-19T10:56:14+08:00"
-              content="2022-03-19">
-          03-19
-        </time>
-      </div>
-
-      <h2 class="my-post-title">
-          <a class="my-post-title-link" href="/2022/03/19/CSS%E9%9D%A2%E8%AF%95%E9%A2%98/" itemprop="url">
-            
-              <span itemprop="name">CSS面试题</span>
-            
-          </a>
-      </h2>
-
-    </header>
-  </article>
-
-  <article class="my-post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="my-post-header">
-
-      <div class="my-post-meta">
-        <time class="my-post-time" itemprop="dateCreated"
-              datetime="2022-03-18T21:45:05+08:00"
-              content="2022-03-18">
-          03-18
-        </time>
-      </div>
-
-      <h2 class="my-post-title">
-          <a class="my-post-title-link" href="/2022/03/18/%E6%8E%92%E5%BA%8F/" itemprop="url">
-            
-              <span itemprop="name">排序</span>
-            
-          </a>
-      </h2>
-
-    </header>
-  </article>
+<h5 id="DNS劫持"><a href="#DNS劫持" class="headerlink" title="DNS劫持"></a>DNS劫持</h5><p><img src="https://s2.loli.net/2022/04/01/E2yMJLR9K8Idvtz.jpg" alt="F946D35206D7EE5148F6CC665A0C0A26.png"></p>
+<h5 id="HTTP-劫持"><a href="#HTTP-劫持" class="headerlink" title="HTTP 劫持"></a>HTTP 劫持</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">在TCP连接中标识HTTP协议链接；改HTTP响应体；</span><br><span class="line">将篡改后的数据包抢先回发到用户，这样后面的数据包在到达后会被直接丢弃。而客户端显示改后的网页</span><br></pre></td></tr></table></figure>
+<p><img src="https://s2.loli.net/2022/04/01/1WbBUo7KJVgLdhA.jpg" alt="D830ABEF3A0B5C0D6A9BA4724C259573.png"></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">防范：</span><br><span class="line">事前加密：HTTPS，防止明文传输被挟持，（但防不了DNS挟持）</span><br><span class="line">事中加密：拆分HTTP请求数据包，运营商的旁路设备没有完整的TCP/IP协议栈，不能标记，web服务器有完整的TCP/IP协议栈，能把接收到的数据包拼成完整的HTTP请求，不影响服务</span><br><span class="line">事后屏蔽：前端显示HTTP时对内容进行检测，在DOM结构发生变化时触发回调</span><br></pre></td></tr></table></figure>
 
 
     </div>
-  </div>
-  
-  
-  
 
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2022/03/19/JS%E4%BD%9C%E7%94%A8%E5%9F%9F+this%E6%8C%87%E5%90%91+%E5%8E%9F%E5%9E%8B%E8%80%83%E9%A2%98/" rel="prev" title="JS作用域+this指向+原型考题">
+      <i class="fa fa-chevron-left"></i> JS作用域+this指向+原型考题
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2022/04/01/HTTP/" rel="next" title="HTTP">
+      HTTP <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
   
-  <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/archives/2022/page/2/">2</a><a class="extend next" rel="next" href="/archives/2022/page/2/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
-  </nav>
+  
+  
 
 
 
           </div>
           
+    <div class="comments" id="valine-comments"></div>
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -478,6 +363,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#HTTP%E5%8A%AB%E6%8C%81-%E3%80%81DNS%E5%8A%AB%E6%8C%81"><span class="nav-number">1.</span> <span class="nav-text">HTTP劫持 、DNS劫持</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#DNS%E5%8A%AB%E6%8C%81"><span class="nav-number">1.1.</span> <span class="nav-text">DNS劫持</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#HTTP-%E5%8A%AB%E6%8C%81"><span class="nav-number">1.2.</span> <span class="nav-text">HTTP 劫持</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 

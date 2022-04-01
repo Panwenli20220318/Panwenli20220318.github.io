@@ -22,20 +22,22 @@
     var CONFIG = {"hostname":"pwl.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="前提123456789function fun()&amp;#123;	this.x &#x3D; 123;    console.log(111111);    return &amp;#x27;aaaaaa&amp;#x27;;&amp;#125;console.log(fun);  &#x2F;&#x2F;输出：函数体，不会执行函数console.log(fun());  &#x2F;&#x2F;输出：111111 aaaaaa 执行函数，this指向windowcons">
+  <meta name="description" content="TCP、UDPTCP连接三次握手的过程 1234567 初始状态客户端CLOSED，服务器LISTEN 1. 客户端A向服务器B发送SYN数据包请求连接。此时状态为SYN_SENT，表示客户端已发送SYN报文。 2. 服务器B收到，发送SYN&#x2F;ACK数据包回应。此时服务器状态由LISTEN变为SYN_RECV，表示收到SYN报文 3. 客户端A收到并发出确认ACK，连接成功。双方状态ESTABLI">
 <meta property="og:type" content="article">
-<meta property="og:title" content="JS作用域+this指向+原型考题">
-<meta property="og:url" content="http://pwl.com/2022/03/19/JS%E4%BD%9C%E7%94%A8%E5%9F%9F+this%E6%8C%87%E5%90%91+%E5%8E%9F%E5%9E%8B%E8%80%83%E9%A2%98/index.html">
+<meta property="og:title" content="TCP、UDP">
+<meta property="og:url" content="http://pwl.com/2022/04/01/TCP%E3%80%81UDP/index.html">
 <meta property="og:site_name" content="PWL">
-<meta property="og:description" content="前提123456789function fun()&amp;#123;	this.x &#x3D; 123;    console.log(111111);    return &amp;#x27;aaaaaa&amp;#x27;;&amp;#125;console.log(fun);  &#x2F;&#x2F;输出：函数体，不会执行函数console.log(fun());  &#x2F;&#x2F;输出：111111 aaaaaa 执行函数，this指向windowcons">
+<meta property="og:description" content="TCP、UDPTCP连接三次握手的过程 1234567 初始状态客户端CLOSED，服务器LISTEN 1. 客户端A向服务器B发送SYN数据包请求连接。此时状态为SYN_SENT，表示客户端已发送SYN报文。 2. 服务器B收到，发送SYN&#x2F;ACK数据包回应。此时服务器状态由LISTEN变为SYN_RECV，表示收到SYN报文 3. 客户端A收到并发出确认ACK，连接成功。双方状态ESTABLI">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2022-03-19T04:25:48.000Z">
-<meta property="article:modified_time" content="2022-03-31T11:00:34.312Z">
+<meta property="og:image" content="https://s2.loli.net/2022/04/01/EMnj8ugNofbFJtV.png">
+<meta property="og:image" content="https://s2.loli.net/2022/04/01/kOrYUWy8QgHfvTN.png">
+<meta property="article:published_time" content="2022-04-01T13:25:48.000Z">
+<meta property="article:modified_time" content="2022-04-01T13:35:29.981Z">
 <meta property="article:author" content="PWL">
-<meta property="article:tag" content="JS">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://s2.loli.net/2022/04/01/EMnj8ugNofbFJtV.png">
 
-<link rel="canonical" href="http://pwl.com/2022/03/19/JS%E4%BD%9C%E7%94%A8%E5%9F%9F+this%E6%8C%87%E5%90%91+%E5%8E%9F%E5%9E%8B%E8%80%83%E9%A2%98/">
+<link rel="canonical" href="http://pwl.com/2022/04/01/TCP%E3%80%81UDP/">
 
 
 <script id="page-configurations">
@@ -48,7 +50,7 @@
   };
 </script>
 
-  <title>JS作用域+this指向+原型考题 | PWL</title>
+  <title>TCP、UDP | PWL</title>
   
 
 
@@ -191,7 +193,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://pwl.com/2022/03/19/JS%E4%BD%9C%E7%94%A8%E5%9F%9F+this%E6%8C%87%E5%90%91+%E5%8E%9F%E5%9E%8B%E8%80%83%E9%A2%98/">
+    <link itemprop="mainEntityOfPage" href="http://pwl.com/2022/04/01/TCP%E3%80%81UDP/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.jpeg">
@@ -204,7 +206,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          JS作用域+this指向+原型考题
+          TCP、UDP
         </h1>
 
         <div class="post-meta">
@@ -213,23 +215,17 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
+              
 
-              <time title="创建时间：2022-03-19 12:25:48" itemprop="dateCreated datePublished" datetime="2022-03-19T12:25:48+08:00">2022-03-19</time>
+              <time title="创建时间：2022-04-01 21:25:48 / 修改时间：21:35:29" itemprop="dateCreated datePublished" datetime="2022-04-01T21:25:48+08:00">2022-04-01</time>
             </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-03-31 19:00:34" itemprop="dateModified" datetime="2022-03-31T19:00:34+08:00">2022-03-31</time>
-              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
               </span>
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%89%8D%E7%AB%AF/" itemprop="url" rel="index"><span itemprop="name">前端</span></a>
+                  <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" itemprop="url" rel="index"><span itemprop="name">计算机网络</span></a>
                 </span>
             </span>
 
@@ -249,8 +245,8 @@
       </span>
       <span class="post-meta-item-text">Valine：</span>
     
-    <a title="valine" href="/2022/03/19/JS%E4%BD%9C%E7%94%A8%E5%9F%9F+this%E6%8C%87%E5%90%91+%E5%8E%9F%E5%9E%8B%E8%80%83%E9%A2%98/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2022/03/19/JS%E4%BD%9C%E7%94%A8%E5%9F%9F+this%E6%8C%87%E5%90%91+%E5%8E%9F%E5%9E%8B%E8%80%83%E9%A2%98/" itemprop="commentCount"></span>
+    <a title="valine" href="/2022/04/01/TCP%E3%80%81UDP/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2022/04/01/TCP%E3%80%81UDP/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -260,14 +256,14 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>1.8k</span>
+              <span>1.6k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
                 <i class="far fa-clock"></i>
               </span>
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>2 分钟</span>
+              <span>1 分钟</span>
             </span>
 
         </div>
@@ -279,25 +275,39 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h5 id="前提"><a href="#前提" class="headerlink" title="前提"></a>前提</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">function fun()&#123;</span><br><span class="line">	this.x = 123;</span><br><span class="line">    console.log(111111);</span><br><span class="line">    return &#x27;aaaaaa&#x27;;</span><br><span class="line">&#125;</span><br><span class="line">console.log(fun);  //输出：函数体，不会执行函数</span><br><span class="line">console.log(fun());  //输出：111111 aaaaaa 执行函数，this指向window</span><br><span class="line">console.log(new fun());  //输出：111111 fun&#123;&#125; </span><br><span class="line">//new fun() 是一个对象，this指向这个对象</span><br></pre></td></tr></table></figure>
+        <h4 id="TCP、UDP"><a href="#TCP、UDP" class="headerlink" title="TCP、UDP"></a>TCP、UDP</h4><h5 id="TCP连接三次握手的过程"><a href="#TCP连接三次握手的过程" class="headerlink" title="TCP连接三次握手的过程"></a>TCP连接三次握手的过程</h5><p><img src="https://s2.loli.net/2022/04/01/EMnj8ugNofbFJtV.png" alt="1d9042de40e64fd791af127ac279b55c.png"></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"> 初始状态客户端CLOSED，服务器LISTEN </span><br><span class="line"></span><br><span class="line">1. 客户端A向服务器B发送SYN数据包请求连接。此时状态为SYN_SENT，表示客户端已发送SYN报文。 </span><br><span class="line"></span><br><span class="line">2. 服务器B收到，发送SYN/ACK数据包回应。此时服务器状态由LISTEN变为SYN_RECV，表示收到SYN报文 </span><br><span class="line"></span><br><span class="line">3. 客户端A收到并发出确认ACK，连接成功。双方状态ESTABLISHED </span><br></pre></td></tr></table></figure>
 
-<span id="more"></span>
+<h5 id="TCP四次挥手的过程"><a href="#TCP四次挥手的过程" class="headerlink" title="TCP四次挥手的过程"></a>TCP四次挥手的过程</h5><p><img src="https://s2.loli.net/2022/04/01/kOrYUWy8QgHfvTN.png" alt="屏幕截图 2022-04-01 111612.png"></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">初始状态双方ESTABLISHED </span><br><span class="line"></span><br><span class="line">1. 客户端A发送一个FIN，用来关闭客户A到服务器B的数据传送。客户端进入FIN_WAIT_1，等待对方的确认 </span><br><span class="line"></span><br><span class="line">2. 服务器B收到这个FIN，它发回一个ACK。客户端进入FIN_WAIT_2，表示半连接，而服务器可能还有数据要发，这边稍后关闭。服务器进入CLOSE_WAIT。</span><br><span class="line"></span><br><span class="line">3. 服务器B关闭与客户端A的连接，发送一个FIN给客户端A。服务器进入LAST_ACK，等待对面的ACK报文 </span><br><span class="line"></span><br><span class="line">4. 客户端A发回ACK报文确认，并将确认序号设置为收到序号加1。客户端进入TIME_WAIT，表示收到了对方的FIN报文，并发送出了ACK报文，就等2MSL后即可回到CLOSED可用状态了。 </span><br></pre></td></tr></table></figure>
 
-<p>考题一：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">function Foo()&#123;</span><br><span class="line">	getName = function()&#123;console.log(1)&#125; //注意是全局的window.  不是new Foo()的</span><br><span class="line">	return this;  //返回的是window</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">Foo.getName = function()&#123;console.log(2)&#125;  //Foo没加括号，函数并没有执行</span><br><span class="line">Foo.prototype.getName = function()&#123;console.log(3)&#125;</span><br><span class="line">var getName = function()&#123;console.log(4)&#125;</span><br><span class="line">  //声明变量 &gt; 声明普通函数 这句执行，下一句不会执行</span><br><span class="line">function getName()&#123;</span><br><span class="line">	console.log(5)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">Foo.getName();    //2</span><br><span class="line">getName(); 		  //4</span><br><span class="line"></span><br><span class="line">//这句话之前执行了getName = function()&#123;console.log(1)&#125;，</span><br><span class="line">将会覆盖var getName = function()&#123;console.log(4)&#125;</span><br><span class="line">//Foo()返回window</span><br><span class="line">Foo().getName();  //1     </span><br><span class="line">getName();		  //1</span><br><span class="line"></span><br><span class="line">new Foo().getName();//3</span><br></pre></td></tr></table></figure>
+<h6 id="为何TIME-WAIT："><a href="#为何TIME-WAIT：" class="headerlink" title="为何TIME_WAIT："></a>为何TIME_WAIT：</h6><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">防止服务器在处于LAST_ACK状态下未收到ACK报文而重发FIN报文，这个TIME_WAIT 状态的作用就是用来重发可能丢失的ACK报文。 </span><br></pre></td></tr></table></figure>
 
-<p>考题二：（头条考题）</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">var o = &#123;</span><br><span class="line">	a:10,</span><br><span class="line">	b:&#123;</span><br><span class="line">		a:2,</span><br><span class="line">		fn:function()&#123;</span><br><span class="line">			console.log( this.a ); // 2</span><br><span class="line">			console.log( this );   //代表b对象</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">o.b.fn();</span><br></pre></td></tr></table></figure>
+<h5 id="TCP和UDP的特点"><a href="#TCP和UDP的特点" class="headerlink" title="TCP和UDP的特点"></a>TCP和UDP的特点</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">TCP面向连接，UDP无连接 </span><br><span class="line">TCP可靠，保证安全，UDP尽最大努力交付，不保证安全 </span><br><span class="line">TCP是点对点的，UDP可以一对一 一对多 多对多 多对一 </span><br><span class="line">TCP面向字节流，UDP无拥塞控制 </span><br><span class="line">TCP开销较大，UDP开销小 </span><br></pre></td></tr></table></figure>
 
-<p>考题三：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">window.name = &#x27;ByteDance&#x27;;</span><br><span class="line">function A()&#123;</span><br><span class="line">	this.name = 123;</span><br><span class="line">&#125;</span><br><span class="line">A.prototype.getA = function()&#123;</span><br><span class="line">	console.log( this );</span><br><span class="line">	return this.name + 1;</span><br><span class="line">&#125;</span><br><span class="line">//注意函数加不加括号的区别</span><br></pre></td></tr></table></figure>
+<h5 id="TCP、UDP的应用场景"><a href="#TCP、UDP的应用场景" class="headerlink" title="TCP、UDP的应用场景"></a>TCP、UDP的应用场景</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">UDP使用场景 DNS协议（因为用UDP快），看视频、发语音、QQ聊天、多媒体教室屏幕广播 </span><br><span class="line"></span><br><span class="line">TCP使用场景 HTTP协议，QQ传文件，邮件，登陆 </span><br></pre></td></tr></table></figure>
 
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">let a = new A();</span><br><span class="line">let funcA = a.getA; </span><br><span class="line"></span><br><span class="line">//a.getA后面不加括号，返回的是函数体</span><br><span class="line">相对于let funcA = function()&#123;</span><br><span class="line">	console.log( this );  //this指的是window</span><br><span class="line">	return this.name + 1;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">funcA();  //输出：window</span><br><span class="line">console.log(funcA());  //输出：ByteDance1</span><br></pre></td></tr></table></figure>
+<h4 id="TCP怎么实现可靠传输"><a href="#TCP怎么实现可靠传输" class="headerlink" title="TCP怎么实现可靠传输"></a>TCP怎么实现可靠传输</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">确认和重传机制：校验，序号，确认，重传</span><br><span class="line"></span><br><span class="line">流量控制：滑动窗口和计时器 </span><br><span class="line"></span><br><span class="line">拥塞控制：慢启动、拥塞避免、快速重传、快速恢复 </span><br></pre></td></tr></table></figure>
 
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">let a = new A();</span><br><span class="line">let funcA = a.getA(); //执行函数，this指的是A</span><br><span class="line">console.log(funcA);    //输出：124</span><br></pre></td></tr></table></figure>
+<h5 id="流量控制"><a href="#流量控制" class="headerlink" title="流量控制"></a>流量控制</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">作用于接收方，控制发送者的发送速度从而使接收者来得及接收，防止分组丢失的。 </span><br></pre></td></tr></table></figure>
 
-<p>考题四：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">var length = 10;</span><br><span class="line">function fn()&#123;</span><br><span class="line">	return this.length + 1;   //this指向window</span><br><span class="line">&#125;</span><br><span class="line">var obj = &#123;</span><br><span class="line">	length:5,</span><br><span class="line">	test1:function()&#123;</span><br><span class="line">		return fn();</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">obj.test2 = fn;</span><br><span class="line">//相对于在obj里面加了一个</span><br><span class="line">test2:function()&#123;</span><br><span class="line">		return this.length + 1;  </span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">console.log( obj.test1() );  	//11</span><br><span class="line">console.log( fn()===obj.test2() ); 	 //11 ！= 6 输出：false</span><br><span class="line">console.log( obj.test1() == obj.test2() ); //false</span><br></pre></td></tr></table></figure>
+<p><strong>1.滑动窗口</strong> </p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">TCP进行流量控制的方式，接收方通过告诉对方自己的窗口大小，从而控制发送方的发送速度，以防止由于发送方发送速度过快而导致自己被淹没的现象 </span><br></pre></td></tr></table></figure>
+
+<p><strong>2.计时器</strong> </p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">发送端收到为0的窗口后开启一个计时器，时间到了之后发包询问现在的滑动窗口，防止死锁（接收端发回的不为0的窗口的包丢失，双方相互等待） </span><br></pre></td></tr></table></figure>
+
+<h5 id="拥塞控制"><a href="#拥塞控制" class="headerlink" title="拥塞控制"></a>拥塞控制</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">作用于网络，防止过多的数据注入到网络中，避免出现网络负载过大的情况。 </span><br><span class="line"></span><br><span class="line">拥塞：对网络中某一资源的需求超过了该资源所能提供的可用部分，影响到网络性能 </span><br><span class="line"></span><br><span class="line">拥塞控制：防止过多的数据注入到网络中，这样可以使网络中的路由器或链路不致过载。 </span><br></pre></td></tr></table></figure>
+
+<p><strong>1.拥塞窗口</strong> </p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">发送方使用的流量控制，另外考虑到接受方的接收能力，发送窗口可能小于拥塞窗口。 </span><br></pre></td></tr></table></figure>
+
+<p><strong>2.慢启动和拥塞避免</strong> </p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">慢启动：不要一开始就发送大量的数据，先探测一下网络的拥塞程度，也就是说由小到大逐渐增加拥塞窗口的大小。 </span><br><span class="line"></span><br><span class="line">拥塞窗口一开始设为1 ，每收到一次确认，就让拥塞窗口变为原来的两倍，当窗口值为16时（慢启动门限），改为加法增大，每次+1，直到网络拥塞。拥塞时让新的慢启动门限设为拥塞时的一半，并把拥塞窗口置为1，再让他重复，这时一瞬间会将网络数据量大量降低。 </span><br><span class="line"></span><br><span class="line">拥塞避免：拥塞避免[算法]()让拥塞窗口缓慢增长，即每经过一个往返时间RTT就把发送方的拥塞窗口cwnd加1，而不是加倍。 </span><br></pre></td></tr></table></figure>
+
+<p><strong>3.快重传和快恢复</strong> </p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">快重传：接收方每收到一个失序的报文段（收完2后就收到了4说明3丢了）就立即发出包2的重复确认，这样可以让发送方尽早知道丢包了。</span><br><span class="line"></span><br><span class="line">发送端连续收到三个重复确认就立即重传3 </span><br><span class="line"></span><br><span class="line">快恢复：发送方收到3个连续确认时，把慢开始门限减半，把拥塞窗口的值置为慢开始门限的一半，实行拥塞避免[算法]()，每次确认收到后+1</span><br></pre></td></tr></table></figure>
+
     </div>
 
     
@@ -305,9 +315,6 @@
     
 
       <footer class="post-footer">
-          <div class="post-tags">
-              <a href="/tags/JS/" rel="tag"># JS</a>
-          </div>
 
         
 
@@ -315,13 +322,10 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2022/03/19/JS%E4%BD%9C%E7%94%A8%E5%9F%9F/" rel="prev" title="JS作用域">
-      <i class="fa fa-chevron-left"></i> JS作用域
+    <a href="/2022/04/01/HTTP/" rel="prev" title="HTTP">
+      <i class="fa fa-chevron-left"></i> HTTP
     </a></div>
-      <div class="post-nav-item">
-    <a href="/2022/04/01/HTTP%E5%8A%AB%E6%8C%81%20%E3%80%81DNS%E5%8A%AB%E6%8C%81/" rel="next" title="HTTP劫持 、DNS劫持">
-      HTTP劫持 、DNS劫持 <i class="fa fa-chevron-right"></i>
-    </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
@@ -381,7 +385,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%89%8D%E6%8F%90"><span class="nav-number">1.</span> <span class="nav-text">前提</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#TCP%E3%80%81UDP"><span class="nav-number">1.</span> <span class="nav-text">TCP、UDP</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#TCP%E8%BF%9E%E6%8E%A5%E4%B8%89%E6%AC%A1%E6%8F%A1%E6%89%8B%E7%9A%84%E8%BF%87%E7%A8%8B"><span class="nav-number">1.1.</span> <span class="nav-text">TCP连接三次握手的过程</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#TCP%E5%9B%9B%E6%AC%A1%E6%8C%A5%E6%89%8B%E7%9A%84%E8%BF%87%E7%A8%8B"><span class="nav-number">1.2.</span> <span class="nav-text">TCP四次挥手的过程</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#%E4%B8%BA%E4%BD%95TIME-WAIT%EF%BC%9A"><span class="nav-number">1.2.1.</span> <span class="nav-text">为何TIME_WAIT：</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#TCP%E5%92%8CUDP%E7%9A%84%E7%89%B9%E7%82%B9"><span class="nav-number">1.3.</span> <span class="nav-text">TCP和UDP的特点</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#TCP%E3%80%81UDP%E7%9A%84%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF"><span class="nav-number">1.4.</span> <span class="nav-text">TCP、UDP的应用场景</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#TCP%E6%80%8E%E4%B9%88%E5%AE%9E%E7%8E%B0%E5%8F%AF%E9%9D%A0%E4%BC%A0%E8%BE%93"><span class="nav-number">2.</span> <span class="nav-text">TCP怎么实现可靠传输</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E6%B5%81%E9%87%8F%E6%8E%A7%E5%88%B6"><span class="nav-number">2.1.</span> <span class="nav-text">流量控制</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E6%8B%A5%E5%A1%9E%E6%8E%A7%E5%88%B6"><span class="nav-number">2.2.</span> <span class="nav-text">拥塞控制</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
