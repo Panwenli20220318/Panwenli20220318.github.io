@@ -16,21 +16,21 @@
   <meta name="author" content="Panda">
   <meta name="keywords" content="">
   
-    <meta name="description" content="Flex 布局教程：语法篇 - 阮一峰123451.flex-direction  主轴的方向  row | row-reverse | column | column-reverse2.justify-content  主轴上的对齐方式 flex-start | flex-end | center | space-between | space-around3.flex-wrap  子元素是否换">
+    <meta name="description" content="他们都是 CSS 预处理器，是 CSS 上的一种抽象层。他们是一种特殊的语法&#x2F;语言编译成 CSS。 例如 Less 是一种动态样式语言，将 CSS 赋予了动态语言的特性，如变量，继承，运算， 函数，LESS 既可以在客户端上运行 (支持 IE 6+, Webkit, Firefox)，也可以在服务端运行 (借助 Node.js)。 为什么要使用它们？  结构清晰，便于扩展。 可以方便地屏蔽浏览器私">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Flex布局">
-<meta property="og:url" content="http://example.com/2023/11/06/flex%E5%B8%83%E5%B1%80/index.html">
+<meta property="og:title" content="Sass和Less">
+<meta property="og:url" content="http://example.com/2023/11/12/Sass%E5%92%8CLess/index.html">
 <meta property="og:site_name" content="Panda碎碎念">
-<meta property="og:description" content="Flex 布局教程：语法篇 - 阮一峰123451.flex-direction  主轴的方向  row | row-reverse | column | column-reverse2.justify-content  主轴上的对齐方式 flex-start | flex-end | center | space-between | space-around3.flex-wrap  子元素是否换">
+<meta property="og:description" content="他们都是 CSS 预处理器，是 CSS 上的一种抽象层。他们是一种特殊的语法&#x2F;语言编译成 CSS。 例如 Less 是一种动态样式语言，将 CSS 赋予了动态语言的特性，如变量，继承，运算， 函数，LESS 既可以在客户端上运行 (支持 IE 6+, Webkit, Firefox)，也可以在服务端运行 (借助 Node.js)。 为什么要使用它们？  结构清晰，便于扩展。 可以方便地屏蔽浏览器私">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2023-11-06T02:00:00.000Z">
-<meta property="article:modified_time" content="2023-11-09T07:15:50.316Z">
+<meta property="article:published_time" content="2023-11-12T02:00:00.000Z">
+<meta property="article:modified_time" content="2023-11-09T08:01:08.879Z">
 <meta property="article:author" content="Panda">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>Flex布局 - Panda碎碎念</title>
+  <title>Sass和Less - Panda碎碎念</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -208,7 +208,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="Flex布局"></span>
+            <span id="subtitle" data-typed-text="Sass和Less"></span>
           
         </div>
 
@@ -219,8 +219,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2023-11-06 10:00" pubdate>
-          2023年11月6日 上午
+        <time datetime="2023-11-12 10:00" pubdate>
+          2023年11月12日 上午
         </time>
       </span>
     
@@ -231,7 +231,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          767 字
+          879 字
         
       </span>
     
@@ -242,7 +242,7 @@
         
         
         
-          7 分钟
+          8 分钟
         
       </span>
     
@@ -279,18 +279,23 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">Flex布局</h1>
+            <h1 id="seo-header">Sass和Less</h1>
             
             
               <div class="markdown-body">
                 
-                <h2 id="Flex-布局教程：语法篇-阮一峰"><a href="#Flex-布局教程：语法篇-阮一峰" class="headerlink" title="Flex 布局教程：语法篇 - 阮一峰"></a><a target="_blank" rel="noopener" href="https://www.ruanyifeng.com/blog/2015/07/flex-grammar.html">Flex 布局教程：语法篇 - 阮一峰</a></h2><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs css"><span class="hljs-number">1</span><span class="hljs-selector-class">.flex-direction</span>  主轴的方向  row | row-reverse | column | column-reverse<br><span class="hljs-number">2</span><span class="hljs-selector-class">.justify-content</span>  主轴上的对齐方式 <span class="hljs-attribute">flex</span>-start | <span class="hljs-attribute">flex</span>-end | center | space-between | space-around<br><span class="hljs-number">3</span><span class="hljs-selector-class">.flex-wrap</span>  子元素是否换行 nowrap | wrap | wrap-reverse<br><span class="hljs-number">4</span><span class="hljs-selector-class">.align-items</span> 交叉轴上如何对齐 <span class="hljs-attribute">flex</span>-start | <span class="hljs-attribute">flex</span>-end | center | baseline | stretch<br><span class="hljs-number">5</span><span class="hljs-selector-class">.align-content</span> 多根轴线的对齐方式  <span class="hljs-attribute">flex</span>-start | <span class="hljs-attribute">flex</span>-end | center | space-between | space-around | stretch<br></code></pre></td></tr></table></figure>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs css"><span class="hljs-number">1</span><span class="hljs-selector-class">.order</span>  定义项目的排列顺序。数值越小，排列越靠前，默认为<span class="hljs-number">0</span>。<br><span class="hljs-number">2</span><span class="hljs-selector-class">.flex-grow</span>  定义项目的放大比例，默认为<span class="hljs-number">0</span>，即如果存在剩余空间，也不放大。<br>			如果所有项目的<span class="hljs-attribute">flex-grow</span>属性都为<span class="hljs-number">1</span>，则它们将等分剩余空间（如果有的话）。<br>			如果一个项目的<span class="hljs-attribute">flex-grow</span>属性为<span class="hljs-number">2</span>，其他项目都为<span class="hljs-number">1</span>，则前者占据的剩余空间将比其他项多一倍。<br><span class="hljs-number">3</span><span class="hljs-selector-class">.flex-shrink</span>  定义了项目的缩小比例，默认为<span class="hljs-number">1</span>，即如果空间不足，该项目将缩小。<br>			  如果所有项目的<span class="hljs-attribute">flex-shrink</span>属性都为<span class="hljs-number">1</span>，当空间不足时，都将等比例缩小。<br>			  如果一个项目的<span class="hljs-attribute">flex-shrink</span>属性为<span class="hljs-number">0</span>，其他项目都为<span class="hljs-number">1</span>，则空间不足时，前者不缩小。<br><span class="hljs-number">4</span><span class="hljs-selector-class">.flex-basis</span><br><span class="hljs-number">5</span><span class="hljs-selector-class">.flex</span>  <span class="hljs-attribute">flex</span>属性是<span class="hljs-attribute">flex-grow</span>, <span class="hljs-attribute">flex-shrink</span> 和 <span class="hljs-attribute">flex-basis</span>的简写，auto (<span class="hljs-number">1</span> <span class="hljs-number">1</span> auto) 和 <span class="hljs-attribute">none</span> (<span class="hljs-number">0</span> <span class="hljs-number">0</span> auto)。<br><span class="hljs-number">6</span><span class="hljs-selector-class">.align-self</span> 允许单个项目有与其他项目不一样的对齐方式<br></code></pre></td></tr></table></figure>
-
-
-
-
-
+                <p>他们都是 CSS 预处理器，是 CSS 上的一种抽象层。他们是一种特殊的语法/语言编译成 CSS。 例如 Less 是一种动态样式语言，将 CSS 赋予了动态语言的特性，如变量，继承，运算， 函数，LESS 既可以在客户端上运行 (支持 IE 6+, Webkit, Firefox)，也可以在服务端运行 (借助 Node.js)。</p>
+<p><strong>为什么要使用它们？</strong></p>
+<ul>
+<li>结构清晰，便于扩展。 可以方便地屏蔽浏览器私有语法差异。封装对浏览器语法差异的重复处理， 减少无意义的机械劳动。</li>
+<li>可以轻松实现多重继承。 完全兼容 CSS 代码，可以方便地应用到老项目中。LESS 只是在 CSS 语法上做了扩展，所以老的 CSS 代码也可以与 LESS 代码一同编译。</li>
+</ul>
+<p><strong>Sass和Less的例子包括：</strong></p>
+<ul>
+<li>在Sass中，可以使用变量来存储颜色值或字体堆栈，并在整个样式表中重复使用。例如：<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs css">$primary-<span class="hljs-attribute">color</span>: <span class="hljs-number">#333333</span>;<br>$<span class="hljs-attribute">font</span>-stack: Helvetica, sans-serif;<br>$<span class="hljs-attribute">margin</span>: <span class="hljs-number">10px</span>;<br><br><span class="hljs-selector-tag">body</span> &#123;<br>  <span class="hljs-attribute">background-color</span>: $primary-color;<br>  <span class="hljs-attribute">font</span>: <span class="hljs-number">100%</span> $font-stack;<br>  <span class="hljs-attribute">margin</span>: $margin;<br>&#125;<br></code></pre></td></tr></table></figure></li>
+<li>在Less中，也可以使用变量来存储颜色值或字体堆栈，并在整个样式表中重复使用。例如：<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs less"><span class="hljs-variable">@primary-color:</span> <span class="hljs-number">#333333</span>;<br><span class="hljs-variable">@font-stack:</span> Helvetica, sans-serif;<br><span class="hljs-variable">@margin:</span> <span class="hljs-number">10px</span>;<br><br><span class="hljs-selector-tag">body</span> &#123;<br>  <span class="hljs-attribute">background-color</span>: <span class="hljs-variable">@primary-color</span>;<br>  <span class="hljs-attribute">font</span>: <span class="hljs-number">100%</span> <span class="hljs-variable">@font-stack</span>;<br>  <span class="hljs-attribute">margin</span>: <span class="hljs-variable">@margin</span>;<br>&#125;<br></code></pre></td></tr></table></figure></li>
+<li>在Sass和Less中，都可以使用嵌套来避免重复编写相同的选择器。例如：<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs css"><span class="hljs-selector-tag">nav</span> &#123;<br>  <span class="hljs-selector-tag">ul</span> &#123;<br>    <span class="hljs-attribute">margin</span>: <span class="hljs-number">0</span>;<br>    <span class="hljs-attribute">padding</span>: <span class="hljs-number">0</span>;<br>    <span class="hljs-attribute">list-style</span>: none;<br>  &#125;<br>  <span class="hljs-selector-tag">li</span> &#123; <span class="hljs-attribute">display</span>: inline-block; &#125;<br>  <span class="hljs-selector-tag">a</span> &#123; <span class="hljs-attribute">display</span>: block; &#125;<br>&#125;<br></code></pre></td></tr></table></figure></li>
+</ul>
 
                 
               </div>
@@ -329,8 +334,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>Flex布局</div>
-      <div>http://example.com/2023/11/06/flex布局/</div>
+      <div>Sass和Less</div>
+      <div>http://example.com/2023/11/12/Sass和Less/</div>
     </div>
     <div class="license-meta">
       
@@ -342,7 +347,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2023年11月6日</div>
+          <div>2023年11月12日</div>
         </div>
       
       
@@ -374,18 +379,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2023/11/06/BFC/" title="BFC">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">BFC</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2023/11/06/%E4%B8%89%E6%A0%8F%E5%B8%83%E5%B1%80/" title="三栏布局">
-                        <span class="hidden-mobile">三栏布局</span>
+                      <a href="/2023/11/09/before%20%E5%92%8C%20after%20%E7%9A%84%E5%8F%8C%E5%86%92%E5%8F%B7%E5%92%8C%E5%8D%95%E5%86%92%E5%8F%B7%E6%9C%89%E4%BB%80%E4%B9%88%E5%8C%BA%E5%88%AB%EF%BC%9F/" title="::before 和 :after 的双冒号和单冒号有什么区别？">
+                        <span class="hidden-mobile">::before 和 :after 的双冒号和单冒号有什么区别？</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
