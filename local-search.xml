@@ -464,6 +464,25 @@
   
   
   <entry>
+    <title>数据类型</title>
+    <link href="/2023/11/04/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/"/>
+    <url>/2023/11/04/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/</url>
+    
+    <content type="html"><![CDATA[<h1 id="1-数据类型"><a href="#1-数据类型" class="headerlink" title="1.数据类型"></a>1.数据类型</h1><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs js">-基本数据类型（<span class="hljs-number">7</span>种）:number,string,boolean,<span class="hljs-literal">null</span>,<span class="hljs-literal">undefined</span>,symbol,bigInt<br>-引用数据类型（<span class="hljs-number">5</span>种）:<span class="hljs-title class_">Object</span>,<span class="hljs-title class_">Array</span>,<span class="hljs-title class_">Function</span>,<span class="hljs-title class_">Date</span>,<span class="hljs-title class_">RegExp</span><br></code></pre></td></tr></table></figure><h1 id="2-堆栈内存"><a href="#2-堆栈内存" class="headerlink" title="2.堆栈内存"></a>2.堆栈内存</h1><p><strong>存储数据</strong>的不同：</p><ul><li>原始数据类型直接存储在栈（stack）中的简单数据段，占据空间小，大小固定，属于被频繁使用的数据，所以存储在栈中； </li><li>引用数据类型存储在堆（heap）中的对象，占据空间大，大小不固定，如果存储在栈中，将会影响程序运行的性能。引用数据类型在栈中存储了指针，该指针指向堆中该实体的起始地址，当解释器寻找引用值时，会首先检索其在栈中的地址，取得地址后，从堆中获得实体。</li></ul><p>堆和栈的概念存在于数据结构和操作系统内存中，在<strong>数据结构</strong>中：</p><ul><li>在数据结构中，栈中数据的存取方式为先进后出。</li><li>堆是一个优先队列，是按优先级来进行排序的，优先级可以按照大小来规定。</li></ul><p>在<strong>操作系统</strong>中，内存被分为栈区和堆区：</p><ul><li>栈区内存由编译器自动分配释放，存放函数的参数值，局部变量的值等。其操作方式类似于数据结构中的栈。</li><li>堆区内存一般由开发着分配释放，若开发者不释放，程序结束时可能由垃圾回收机制回收。</li></ul><h1 id="3-数据类型转换"><a href="#3-数据类型转换" class="headerlink" title="3.数据类型转换"></a>3.数据类型转换</h1><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs js">其他数值转换为字符串：<span class="hljs-title class_">String</span>(xxx)函数、xxx.<span class="hljs-title function_">toString</span>()方法、拼串<br>非数值转换为数值：<span class="hljs-title class_">Number</span>(xxx)函数、<span class="hljs-built_in">parseInt</span>(xxx)和<span class="hljs-built_in">parseFloat</span>(xxx)<br>布尔型转换 <span class="hljs-title class_">Boolean</span>(xxx);<br></code></pre></td></tr></table></figure><ol><li><strong>Boolean类型转换</strong></li></ol><table><thead><tr><th align="center"></th><th align="center">String</th><th align="center">Number</th><th align="center">Object</th><th align="center">Function</th><th align="center">NUll</th><th align="center">Undefined</th></tr></thead><tbody><tr><td align="center">true</td><td align="center">任何非空字符串包括” “</td><td align="center">除了0和NaN</td><td align="center">不为null，包括{}</td><td align="center">√</td><td align="center"></td><td align="center"></td></tr><tr><td align="center">false</td><td align="center">“”或‘’</td><td align="center"><strong>0和NaN</strong></td><td align="center">null</td><td align="center"></td><td align="center">√</td><td align="center">√</td></tr></tbody></table><ol start="2"><li><p><strong>Number类型转换</strong></p><ul><li><p>字符串：看是否包含非有效数字字符，包含结果就是NaN；空字符串：0</p></li><li><p>null：0 </p></li><li><p>undefined：NaN</p></li><li><p>object类型都要先转换为字符串再转换为数字    </p></li></ul></li></ol> <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs javascript">- &#123;&#125;/正则/函数等：<span class="hljs-title class_">NaN</span>    <br>- [ ] -&gt;<span class="hljs-string">&#x27;&#x27;</span>-&gt;<span class="hljs-number">0</span>    <br>- [<span class="hljs-string">&#x27;12&#x27;</span>] -&gt;<span class="hljs-string">&#x27;12&#x27;</span> -&gt;<span class="hljs-number">12</span>   <br>- [<span class="hljs-number">12</span>,<span class="hljs-number">23</span>] -&gt;<span class="hljs-string">&#x27;12,23&#x27;</span> -&gt;<span class="hljs-title class_">NaN</span><br></code></pre></td></tr></table></figure><blockquote><p>Number(xxx)函数、parseInt(xxx)和parseFloat(xxx)</p><ul><li><p>parseInt/parseFloat() 遵循按照字符串从左到右查找的机制找有效数字字符（所以传递的值一定是字符串,不是也要转换为字符串然后再查找）</p></li><li><p>parseInt(undefined) -&gt;parseInt(‘undefined’) -&gt;NaN </p></li><li><p>parseInt(‘’) -&gt;NaN</p></li></ul></blockquote>]]></content>
+    
+    
+    <categories>
+      
+      <category>JS</category>
+      
+    </categories>
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>数组去重</title>
     <link href="/2023/11/04/%E6%95%B0%E7%BB%84%E5%8E%BB%E9%87%8D/"/>
     <url>/2023/11/04/%E6%95%B0%E7%BB%84%E5%8E%BB%E9%87%8D/</url>
@@ -483,25 +502,6 @@
       <tag>手写代码</tag>
       
     </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>数据类型</title>
-    <link href="/2023/11/04/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/"/>
-    <url>/2023/11/04/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/</url>
-    
-    <content type="html"><![CDATA[<h1 id="1-数据类型"><a href="#1-数据类型" class="headerlink" title="1.数据类型"></a>1.数据类型</h1><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs js">-基本数据类型（<span class="hljs-number">7</span>种）:number,string,boolean,<span class="hljs-literal">null</span>,<span class="hljs-literal">undefined</span>,symbol,bigInt<br>-引用数据类型（<span class="hljs-number">5</span>种）:<span class="hljs-title class_">Object</span>,<span class="hljs-title class_">Array</span>,<span class="hljs-title class_">Function</span>,<span class="hljs-title class_">Date</span>,<span class="hljs-title class_">RegExp</span><br></code></pre></td></tr></table></figure><h1 id="2-堆栈内存"><a href="#2-堆栈内存" class="headerlink" title="2.堆栈内存"></a>2.堆栈内存</h1><p><strong>存储数据</strong>的不同：</p><ul><li>原始数据类型直接存储在栈（stack）中的简单数据段，占据空间小，大小固定，属于被频繁使用的数据，所以存储在栈中； </li><li>引用数据类型存储在堆（heap）中的对象，占据空间大，大小不固定，如果存储在栈中，将会影响程序运行的性能。引用数据类型在栈中存储了指针，该指针指向堆中该实体的起始地址，当解释器寻找引用值时，会首先检索其在栈中的地址，取得地址后，从堆中获得实体。</li></ul><p>堆和栈的概念存在于数据结构和操作系统内存中，在<strong>数据结构</strong>中：</p><ul><li>在数据结构中，栈中数据的存取方式为先进后出。</li><li>堆是一个优先队列，是按优先级来进行排序的，优先级可以按照大小来规定。</li></ul><p>在<strong>操作系统</strong>中，内存被分为栈区和堆区：</p><ul><li>栈区内存由编译器自动分配释放，存放函数的参数值，局部变量的值等。其操作方式类似于数据结构中的栈。</li><li>堆区内存一般由开发着分配释放，若开发者不释放，程序结束时可能由垃圾回收机制回收。</li></ul><h1 id="3-数据类型转换"><a href="#3-数据类型转换" class="headerlink" title="3.数据类型转换"></a>3.数据类型转换</h1><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs js">其他数值转换为字符串：<span class="hljs-title class_">String</span>(xxx)函数、xxx.<span class="hljs-title function_">toString</span>()方法、拼串<br>非数值转换为数值：<span class="hljs-title class_">Number</span>(xxx)函数、<span class="hljs-built_in">parseInt</span>(xxx)和<span class="hljs-built_in">parseFloat</span>(xxx)<br>布尔型转换 <span class="hljs-title class_">Boolean</span>(xxx);<br></code></pre></td></tr></table></figure><ol><li><strong>Boolean类型转换</strong></li></ol><table><thead><tr><th align="center"></th><th align="center">String</th><th align="center">Number</th><th align="center">Object</th><th align="center">Function</th><th align="center">NUll</th><th align="center">Undefined</th></tr></thead><tbody><tr><td align="center">true</td><td align="center">任何非空字符串包括” “</td><td align="center">除了0和NaN</td><td align="center">不为null，包括{}</td><td align="center">√</td><td align="center"></td><td align="center"></td></tr><tr><td align="center">false</td><td align="center">“”或‘’</td><td align="center"><strong>0和NaN</strong></td><td align="center">null</td><td align="center"></td><td align="center">√</td><td align="center">√</td></tr></tbody></table><ol start="2"><li><p><strong>Number类型转换</strong></p><ul><li><p>字符串：看是否包含非有效数字字符，包含结果就是NaN；空字符串：0</p></li><li><p>null：0 </p></li><li><p>undefined：NaN</p></li><li><p>object类型都要先转换为字符串再转换为数字    </p></li></ul></li></ol> <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs javascript">- &#123;&#125;/正则/函数等：<span class="hljs-title class_">NaN</span>    <br>- [ ] -&gt;<span class="hljs-string">&#x27;&#x27;</span>-&gt;<span class="hljs-number">0</span>    <br>- [<span class="hljs-string">&#x27;12&#x27;</span>] -&gt;<span class="hljs-string">&#x27;12&#x27;</span> -&gt;<span class="hljs-number">12</span>   <br>- [<span class="hljs-number">12</span>,<span class="hljs-number">23</span>] -&gt;<span class="hljs-string">&#x27;12,23&#x27;</span> -&gt;<span class="hljs-title class_">NaN</span><br></code></pre></td></tr></table></figure><blockquote><p>Number(xxx)函数、parseInt(xxx)和parseFloat(xxx)</p><ul><li><p>parseInt/parseFloat() 遵循按照字符串从左到右查找的机制找有效数字字符（所以传递的值一定是字符串,不是也要转换为字符串然后再查找）</p></li><li><p>parseInt(undefined) -&gt;parseInt(‘undefined’) -&gt;NaN </p></li><li><p>parseInt(‘’) -&gt;NaN</p></li></ul></blockquote>]]></content>
-    
-    
-    <categories>
-      
-      <category>JS</category>
-      
-    </categories>
-    
     
   </entry>
   
