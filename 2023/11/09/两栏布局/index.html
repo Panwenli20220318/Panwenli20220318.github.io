@@ -24,7 +24,7 @@
 <meta property="og:description" content="一般两栏布局指的是左边一栏宽度固定，右边一栏宽度自适应，两栏布局的具体实现： 浮动 将左边元素宽度设置为200px，并且设置向左浮动。将右边元素的margin-left设置为200px，宽度设置为auto（默认为auto，撑满整个父元素）。  12345678910111213.outer &amp;#123;  height: 100px;&amp;#125;.left &amp;#123;  float: left;">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-11-09T02:00:00.000Z">
-<meta property="article:modified_time" content="2023-11-10T02:47:59.998Z">
+<meta property="article:modified_time" content="2023-11-10T04:02:29.421Z">
 <meta property="article:author" content="Panda">
 <meta property="article:tag" content="手写代码">
 <meta name="twitter:card" content="summary_large_image">
@@ -296,10 +296,10 @@
 <p>这样右边就触发了BFC，BFC的区域不会与浮动元素发生重叠，所以两侧就不会发生重叠。</p>
 </li>
 </ol>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs css"><span class="hljs-selector-class">.left</span>&#123;<br>     <span class="hljs-attribute">width</span>: <span class="hljs-number">100px</span>;<br>     <span class="hljs-attribute">height</span>: <span class="hljs-number">200px</span>;<br>     <span class="hljs-attribute">background</span>: red;<br>     <span class="hljs-attribute">float</span>: left;<br> &#125;<br> <span class="hljs-selector-class">.right</span>&#123;<br>     <span class="hljs-attribute">height</span>: <span class="hljs-number">300px</span>;<br>     <span class="hljs-attribute">background</span>: blue;<br>     <span class="hljs-attribute">overflow</span>: hidden;<br> &#125;<br></code></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs css"><span class="hljs-selector-class">.left</span>&#123;<br>     <span class="hljs-attribute">float</span>: left;<br>     <span class="hljs-attribute">width</span>: <span class="hljs-number">100px</span>;<br>     <span class="hljs-attribute">height</span>: <span class="hljs-number">200px</span>;<br>     <span class="hljs-attribute">background</span>: red;<br> &#125;<br> <span class="hljs-selector-class">.right</span>&#123;<br>     <span class="hljs-attribute">height</span>: <span class="hljs-number">300px</span>;<br>     <span class="hljs-attribute">background</span>: blue;<br>     <span class="hljs-attribute">overflow</span>: hidden;<br> &#125;<br></code></pre></td></tr></table></figure>
 
 <h2 id="flex布局"><a href="#flex布局" class="headerlink" title="flex布局"></a>flex布局</h2><p>将左边元素设置为固定宽度200px，将右边的元素设置为flex:1。</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs css">css复制代码<span class="hljs-selector-class">.outer</span> &#123;<br>  <span class="hljs-attribute">display</span>: flex;<br>  <span class="hljs-attribute">height</span>: <span class="hljs-number">100px</span>;<br>&#125;<br><span class="hljs-selector-class">.left</span> &#123;<br>  <span class="hljs-attribute">width</span>: <span class="hljs-number">200px</span>;<br>  <span class="hljs-attribute">background</span>: red;<br>&#125;<br><span class="hljs-selector-class">.right</span> &#123;<br>  <span class="hljs-attribute">flex</span>: <span class="hljs-number">1</span>;<br>  <span class="hljs-attribute">background</span>: blue;<br>&#125;<br></code></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs css"><span class="hljs-selector-class">.outer</span> &#123;<br>  <span class="hljs-attribute">display</span>: flex;<br>  <span class="hljs-attribute">height</span>: <span class="hljs-number">100px</span>;<br>&#125;<br><span class="hljs-selector-class">.left</span> &#123;<br>  <span class="hljs-attribute">width</span>: <span class="hljs-number">200px</span>;<br>  <span class="hljs-attribute">background</span>: red;<br>&#125;<br><span class="hljs-selector-class">.right</span> &#123;<br>  <span class="hljs-attribute">flex</span>: <span class="hljs-number">1</span>;<br>  <span class="hljs-attribute">background</span>: blue;<br>&#125;<br></code></pre></td></tr></table></figure>
 
 <h2 id="绝对定位"><a href="#绝对定位" class="headerlink" title="绝对定位"></a>绝对定位</h2><ol>
 <li>将父级元素设置为相对定位。左边元素设置为absolute定位，并且宽度设置为200px。将右边元素的margin-left的值设置为200px。</li>
@@ -399,9 +399,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2023/11/09/before%20%E5%92%8C%20after%20%E7%9A%84%E5%8F%8C%E5%86%92%E5%8F%B7%E5%92%8C%E5%8D%95%E5%86%92%E5%8F%B7%E6%9C%89%E4%BB%80%E4%B9%88%E5%8C%BA%E5%88%AB%EF%BC%9F/" title="::before 和 :after 的双冒号和单冒号有什么区别？">
+                      <a href="/2023/11/09/before%20%E5%92%8C%20after%20%E7%9A%84%E5%8F%8C%E5%86%92%E5%8F%B7%E5%92%8C%E5%8D%95%E5%86%92%E5%8F%B7%E6%9C%89%E4%BB%80%E4%B9%88%E5%8C%BA%E5%88%AB%EF%BC%9F/" title="::before 和 ::after 的双冒号和单冒号有什么区别？">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">::before 和 :after 的双冒号和单冒号有什么区别？</span>
+                        <span class="hidden-mobile">::before 和 ::after 的双冒号和单冒号有什么区别？</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
