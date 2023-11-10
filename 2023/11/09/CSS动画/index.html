@@ -16,21 +16,21 @@
   <meta name="author" content="Panda">
   <meta name="keywords" content="">
   
-    <meta name="description" content="行内元素12水平居中：text-align：center;垂直居中：line-height:center; 块级元素1.定宽高1margin:0 auto;  2.flex布局123display:flex;justify-align:center;align-items:center；  3.grid布局12display:grid;place-item:center;  4.子绝父相(3种)1">
+    <meta name="description" content="CSS 动画1.CSS TransitionCSS 过渡，属于补间动画，即设置关键帧的初始状态，然后在另一个关键帧改变这个状态，比如大小、颜色、透明度等，浏览器将自动根据二者之间帧的值创建的动画。  transition-property    指定使用过渡效果的css属性 transition-duration    设置过渡动画持续时间 transition-timing-function">
 <meta property="og:type" content="article">
-<meta property="og:title" content="居中对齐">
-<meta property="og:url" content="http://example.com/2023/11/06/%E5%B1%85%E4%B8%AD%E5%AF%B9%E9%BD%90/index.html">
+<meta property="og:title" content="CSS动画">
+<meta property="og:url" content="http://example.com/2023/11/09/CSS%E5%8A%A8%E7%94%BB/index.html">
 <meta property="og:site_name" content="Panda碎碎念">
-<meta property="og:description" content="行内元素12水平居中：text-align：center;垂直居中：line-height:center; 块级元素1.定宽高1margin:0 auto;  2.flex布局123display:flex;justify-align:center;align-items:center；  3.grid布局12display:grid;place-item:center;  4.子绝父相(3种)1">
+<meta property="og:description" content="CSS 动画1.CSS TransitionCSS 过渡，属于补间动画，即设置关键帧的初始状态，然后在另一个关键帧改变这个状态，比如大小、颜色、透明度等，浏览器将自动根据二者之间帧的值创建的动画。  transition-property    指定使用过渡效果的css属性 transition-duration    设置过渡动画持续时间 transition-timing-function">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2023-11-06T02:00:00.000Z">
-<meta property="article:modified_time" content="2023-11-09T05:20:58.780Z">
+<meta property="article:published_time" content="2023-11-09T02:00:00.000Z">
+<meta property="article:modified_time" content="2023-11-10T02:31:23.334Z">
 <meta property="article:author" content="Panda">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>居中对齐 - Panda碎碎念</title>
+  <title>CSS动画 - Panda碎碎念</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -208,7 +208,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="居中对齐"></span>
+            <span id="subtitle" data-typed-text="CSS动画"></span>
           
         </div>
 
@@ -219,8 +219,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2023-11-06 10:00" pubdate>
-          2023年11月6日 上午
+        <time datetime="2023-11-09 10:00" pubdate>
+          2023年11月9日 上午
         </time>
       </span>
     
@@ -231,7 +231,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          753 字
+          1.3k 字
         
       </span>
     
@@ -242,7 +242,7 @@
         
         
         
-          7 分钟
+          11 分钟
         
       </span>
     
@@ -279,22 +279,80 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">居中对齐</h1>
+            <h1 id="seo-header">CSS动画</h1>
             
             
               <div class="markdown-body">
                 
-                <h1 id="行内元素"><a href="#行内元素" class="headerlink" title="行内元素"></a>行内元素</h1><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs css">水平居中：<span class="hljs-attribute">text-align</span>：center;<br>垂直居中：<span class="hljs-attribute">line-height</span>:center;<br></code></pre></td></tr></table></figure>
-<h1 id="块级元素"><a href="#块级元素" class="headerlink" title="块级元素"></a>块级元素</h1><h2 id="1-定宽高"><a href="#1-定宽高" class="headerlink" title="1.定宽高"></a>1.定宽高</h2><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs css"><span class="hljs-attribute">margin</span>:<span class="hljs-number">0</span> auto;<br></code></pre></td></tr></table></figure>
+                <h1 id="CSS-动画"><a href="#CSS-动画" class="headerlink" title="CSS 动画"></a>CSS 动画</h1><h2 id="1-CSS-Transition"><a href="#1-CSS-Transition" class="headerlink" title="1.CSS Transition"></a>1.CSS Transition</h2><p>CSS 过渡，属于<strong>补间动画</strong>，即设置关键帧的初始状态，然后在另一个关键帧改变这个状态，比如大小、颜色、透明度等，浏览器将自动根据二者之间帧的值创建的动画。</p>
+<ul>
+<li><code>transition-property</code>    指定使用过渡效果的css属性</li>
+<li><code>transition-duration</code>    设置过渡动画持续时间</li>
+<li><code>transition-timing-function</code>    设置动画的时间函数。</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="left">属性</th>
+<th align="left">含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">linear</td>
+<td align="left">动画从头到尾的速度是相同的</td>
+</tr>
+<tr>
+<td align="left">ease</td>
+<td align="left">动画以低速开始，然后加快，在结束前变慢</td>
+</tr>
+<tr>
+<td align="left">ease-in</td>
+<td align="left">动画以低速开始</td>
+</tr>
+<tr>
+<td align="left">ease-out</td>
+<td align="left">动画以低速结束</td>
+</tr>
+<tr>
+<td align="left">ease-in-out</td>
+<td align="left">动画以低速开始和结束</td>
+</tr>
+</tbody></table>
+<ul>
+<li><code>transition-delay</code>    设置动画的延迟时间</li>
+</ul>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs css"><span class="hljs-selector-tag">div</span> &#123;<br>  <span class="hljs-attribute">transition</span>: &lt;property&gt; &lt;duration&gt; &lt;timing-function&gt; &lt;delay&gt;;<br>&#125;<br></code></pre></td></tr></table></figure>
 
-<h2 id="2-flex布局"><a href="#2-flex布局" class="headerlink" title="2.flex布局"></a>2.flex布局</h2><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs css"><span class="hljs-attribute">display</span>:flex;<br>justify-align:center;<br><span class="hljs-attribute">align-items</span>:center；<br></code></pre></td></tr></table></figure>
+<h2 id="2-CSS-Animation"><a href="#2-CSS-Animation" class="headerlink" title="2.CSS Animation"></a>2.CSS Animation</h2><p>CSS 动画，可以理解是 <code>CSS Transition</code> 的加强版，它既可以实现 <strong>补间动画</strong> 的动画效果，也可以使其以 <strong>逐帧动画</strong> 的方式进行绘制。</p>
+<ol>
+<li><p> 通过<code>@keyframes</code>自定义关键帧动画并为动画命名，可以在其中对每一帧进行设置。</p>
+</li>
+<li><p> 使用自定义动画的元素，通过<code>animation</code>相关属性进行配置:</p>
+</li>
+</ol>
+<ul>
+<li><p><code>animation-name</code>   规定需要绑定到选择器的 keyframe 名称。</p>
+</li>
+<li><p><code>animation-duration</code>   规定完成动画所花费的时间，以秒或毫秒计。</p>
+</li>
+<li><p><code>animation-timing-function</code>   规定动画的速度曲线。</p>
+</li>
+<li><p><code>animation-delay</code>   规定在动画开始之前的延迟。</p>
+</li>
+<li><p><code>animation-iteration-count</code>   规定动画应该播放的次数。</p>
+</li>
+<li><p><code>animation-direction</code>   规定是否应该轮流反向播放动画。</p>
+</li>
+</ul>
+<h3 id="keyframes"><a href="#keyframes" class="headerlink" title="@keyframes"></a>@keyframes</h3><p>keyframes(关键帧)，在css样式表中可以通过<code>@keyframes</code>来设置关键帧动画，并指定动画名称供使用者锁定。</p>
+<p>其语法如下：</p>
+<p>我们可以通过百分比来设置具体帧数的样式。</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs CSS"><span class="hljs-keyword">@keyframes</span> animateName&#123;<br>    <span class="hljs-number">0%</span>   &#123; <span class="hljs-attribute">width</span>:<span class="hljs-number">50px</span>; <span class="hljs-attribute">height</span>:<span class="hljs-number">50px</span>; &#125;	<br>    <span class="hljs-number">50%</span>  &#123; <span class="hljs-attribute">width</span>:<span class="hljs-number">100px</span>; <span class="hljs-attribute">height</span>:<span class="hljs-number">100px</span>; &#125;	<br>    <span class="hljs-number">100%</span> &#123; <span class="hljs-attribute">width</span>:<span class="hljs-number">50px</span>; <span class="hljs-attribute">height</span>:<span class="hljs-number">50px</span>; &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
 
-<h2 id="3-grid布局"><a href="#3-grid布局" class="headerlink" title="3.grid布局"></a>3.grid布局</h2><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs css"><span class="hljs-attribute">display</span>:grid;<br>place-item:center;<br></code></pre></td></tr></table></figure>
+<p><code>0%</code>和<code>100%</code>代表<code>首尾帧</code>,也可分别使用<code>from</code>、<code>to</code>替代。下面代码与上述代码效果相同</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs CSS"><span class="hljs-keyword">@keyframes</span> animateName&#123;<br>    <span class="hljs-selector-tag">from</span> &#123; <span class="hljs-attribute">width</span>:<span class="hljs-number">50px</span>; <span class="hljs-attribute">height</span>:<span class="hljs-number">50px</span>; &#125;	<br>    <span class="hljs-number">50%</span>  &#123; <span class="hljs-attribute">width</span>:<span class="hljs-number">100px</span>; <span class="hljs-attribute">height</span>:<span class="hljs-number">100px</span>; &#125;	<br>    <span class="hljs-selector-tag">to</span>	 &#123; <span class="hljs-attribute">width</span>:<span class="hljs-number">50px</span>; <span class="hljs-attribute">height</span>:<span class="hljs-number">50px</span>; &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
 
-<h2 id="4-子绝父相-3种"><a href="#4-子绝父相-3种" class="headerlink" title="4.子绝父相(3种)"></a>4.子绝父相(3种)</h2><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><code class="hljs css">- 已知子元素宽高<br>父元素&#123;<br>    <span class="hljs-attribute">position</span>：relative·;<br>&#125;<br>子元素&#123;<br>    <span class="hljs-attribute">position</span>：absolute;<br>    <span class="hljs-attribute">left</span>:<span class="hljs-number">50%</span>;<br>    <span class="hljs-attribute">top</span>:<span class="hljs-number">50%</span>;<br>    <span class="hljs-attribute">margin-left</span>: - px; //自身宽度的一半<br>    <span class="hljs-attribute">margin-top</span>:- px; //自身高度的一半<br>&#125;<br><br>- 子元素宽高未知<br>父元素&#123;<br>    <span class="hljs-attribute">position</span>：relative·;<br>&#125;<br>子元素&#123;<br>    <span class="hljs-attribute">position</span>：absolute;<br>    <span class="hljs-attribute">left</span>:<span class="hljs-number">50%</span>;<br>    <span class="hljs-attribute">top</span>:<span class="hljs-number">50%</span>;<br>    <span class="hljs-attribute">transform</span>:<span class="hljs-built_in">translate</span>(-<span class="hljs-number">50%</span>,-<span class="hljs-number">50%</span>);<br>&#125;<br><br>父元素&#123;<br>    <span class="hljs-attribute">position</span>：relative·;<br>&#125;<br>子元素&#123;<br>    <span class="hljs-attribute">position</span>：absolute;<br>    <span class="hljs-attribute">left</span>:<span class="hljs-number">0</span>;<br>    <span class="hljs-attribute">top</span>:<span class="hljs-number">0</span>;<br>    <span class="hljs-attribute">right</span>:<span class="hljs-number">0</span>;<br>    <span class="hljs-attribute">bottom</span>:<span class="hljs-number">0</span>;<br>    <span class="hljs-attribute">margin</span>:auto;<br>&#125;<br></code></pre></td></tr></table></figure>
-
-<h2 id="5-table-cell"><a href="#5-table-cell" class="headerlink" title="5.table-cell"></a>5.table-cell</h2><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs css">父元素&#123;<br>    <span class="hljs-attribute">display</span>:table-cell;<br>    <span class="hljs-attribute">vertical-align</span>:middle;<br>    <span class="hljs-attribute">text-align</span>:center;<br>&#125;<br>子元素&#123;<br>    <span class="hljs-attribute">display</span>:inline-block;<br>&#125;<br></code></pre></td></tr></table></figure>
-
+<p>需要注意的是： 若自定义动画<strong>未定义首尾帧</strong>，则首尾帧将会<strong>应用使用者的原有样式</strong>，现在动画定义完毕，使用者需要配置<code>animation</code>相关属性对动画进行配置。</p>
 
                 
               </div>
@@ -333,8 +391,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>居中对齐</div>
-      <div>http://example.com/2023/11/06/居中对齐/</div>
+      <div>CSS动画</div>
+      <div>http://example.com/2023/11/09/CSS动画/</div>
     </div>
     <div class="license-meta">
       
@@ -346,7 +404,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2023年11月6日</div>
+          <div>2023年11月9日</div>
         </div>
       
       
@@ -378,9 +436,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2023/11/06/%E5%B0%8F%E6%8A%80%E5%B7%A7/" title="小技巧">
+                      <a href="/2023/11/11/transform/" title="transform">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">小技巧</span>
+                        <span class="hidden-mobile">transform</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -388,8 +446,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2023/11/06/%E6%B8%85%E9%99%A4%E6%B5%AE%E5%8A%A8/" title="清除浮动">
-                        <span class="hidden-mobile">清除浮动</span>
+                      <a href="/2023/11/09/before%20%E5%92%8C%20after%20%E7%9A%84%E5%8F%8C%E5%86%92%E5%8F%B7%E5%92%8C%E5%8D%95%E5%86%92%E5%8F%B7%E6%9C%89%E4%BB%80%E4%B9%88%E5%8C%BA%E5%88%AB%EF%BC%9F/" title="::before 和 :after 的双冒号和单冒号有什么区别？">
+                        <span class="hidden-mobile">::before 和 :after 的双冒号和单冒号有什么区别？</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
