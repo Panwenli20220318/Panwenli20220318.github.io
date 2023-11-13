@@ -4,6 +4,19 @@
   
   
   <entry>
+    <title></title>
+    <link href="/2023/11/13/%E7%89%A9%E7%90%86%E5%B1%82/"/>
+    <url>/2023/11/13/%E7%89%A9%E7%90%86%E5%B1%82/</url>
+    
+    <content type="html"><![CDATA[]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>数组常用方法</title>
     <link href="/2023/11/13/%E6%95%B0%E7%BB%84%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95/"/>
     <url>/2023/11/13/%E6%95%B0%E7%BB%84%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95/</url>
@@ -33,6 +46,44 @@
     <categories>
       
       <category>JS</category>
+      
+    </categories>
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>OSI参考模型</title>
+    <link href="/2023/11/13/OSI%E5%8F%82%E8%80%83%E6%A8%A1%E5%9E%8B/"/>
+    <url>/2023/11/13/OSI%E5%8F%82%E8%80%83%E6%A8%A1%E5%9E%8B/</url>
+    
+    <content type="html"><![CDATA[<h2 id="OSI参考模型"><a href="#OSI参考模型" class="headerlink" title="OSI参考模型"></a>OSI参考模型</h2><p><img src="/img/OSI%E7%9A%84%E7%BB%93%E6%9E%84.png"></p><h3 id="1-应用层"><a href="#1-应用层" class="headerlink" title="1.应用层"></a>1.应用层</h3><ul><li>因为用户的实际应用多种多样，就要求应用层采用不同的协议来解决不同应用类型的需求</li><li>典型的协议有：文件传输协议FTP、电子邮件协议SMTP、万维网HTTP等</li></ul><h3 id="2-表示层"><a href="#2-表示层" class="headerlink" title="2.表示层"></a>2.表示层</h3><ul><li>主要处理两个通信系统中交换信息的表示方式</li><li>不同机器采用的编码和表示方法不同，使用的数据结构不同</li><li>为了使不同的数据和信息之间能够互相交换，表示层采用抽象的标准方法定义数据结构<br><img src="/img/%E8%A1%A8%E7%A4%BA%E5%B1%82.png"></li></ul><h3 id="3-会话层"><a href="#3-会话层" class="headerlink" title="3.会话层"></a>3.会话层</h3><ul><li>会话层允许不同主机上的各个进程进行会话</li><li>会话层利用传输层提供的<code>端到端</code>的服务，向表示层提供它的增值服务</li></ul><h3 id="4-传输层"><a href="#4-传输层" class="headerlink" title="4.传输层"></a>4.传输层</h3><ul><li>单位是报文段（TCP）或用户数据报（UDP）</li><li>负责主机中两个进程之间的通信，功能是为<code>端到端</code>连接提供可靠的传输服务，为端到端连接提供流量控制、差错控制、服务质量、数据传输管理等服务。<br><img src="/img/%E4%BC%A0%E8%BE%93%E5%B1%82.png"></li></ul><h3 id="5-网络层"><a href="#5-网络层" class="headerlink" title="5.网络层"></a>5.网络层</h3><ul><li><code>无连接</code>的网际协议和许多<code>路由</code>选择协议，因此因特网的网络层也称<code>网际层</code>或IP层</li></ul><p><img src="/img/%E7%BD%91%E7%BB%9C%E5%B1%82.png"></p><h3 id="6-数据链路层"><a href="#6-数据链路层" class="headerlink" title="6.数据链路层"></a>6.数据链路层</h3><ul><li><code>点到点</code>通信</li></ul><p><img src="/img/%E6%95%B0%E6%8D%AE%E9%93%BE%E8%B7%AF%E5%B1%82.png"></p><h3 id="7-物理层"><a href="#7-物理层" class="headerlink" title="7.物理层"></a>7.物理层</h3><p><img src="/img/%E7%89%A9%E7%90%86%E5%B1%82.png"></p><h2 id="OSI数据传输图"><a href="#OSI数据传输图" class="headerlink" title="OSI数据传输图"></a>OSI数据传输图</h2><p><img src="/img/OSI%E6%95%B0%E6%8D%AE%E4%BC%A0%E8%BE%93%E5%9B%BE.png"></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>计算机网络</category>
+      
+    </categories>
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>计算机网络体系结构</title>
+    <link href="/2023/11/13/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84/"/>
+    <url>/2023/11/13/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84/</url>
+    
+    <content type="html"><![CDATA[<p><a href="https://blog.csdn.net/weixin_43914604/article/details/104722679?spm=1001.2014.3001.5506">《王道计算机网络》学习笔记总目录+思维导图</a></p><h2 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h2><p>计算机网络是一些<code>互联的、自治的计算机系统的集合</code></p><h2 id="组成"><a href="#组成" class="headerlink" title="组成"></a>组成</h2><ol><li><code>硬件</code>主要由主机(也称端系统)，通信链路(如双绞线、光纤)、交换设备(如路由、交换机等)和通信处理机(如网卡)等组成</li><li><code>软件</code>主要包括各种实现资源共享的软件和方便用户使用的各种工具软件(如网络操作系统、邮件收发程序、FTP程序、聊天程序等)。</li><li><code>协议</code>是计算机网络的<strong>核心</strong>，协议规定了网络传输数据时所遵循的规范。就如同我们现实生活中的法律一样，网络世界也必须遵循一定的规则。</li></ol><h2 id="功能组成"><a href="#功能组成" class="headerlink" title="功能组成"></a>功能组成</h2><p>计算机网络由<code>通信子网和资源子网</code>组成</p><p><img src="/img/%E5%8A%9F%E8%83%BD%E7%BB%84%E6%88%90.png"></p><h2 id="功能"><a href="#功能" class="headerlink" title="功能"></a>功能</h2><ul><li>数据通信：计算机网络最基本和最重要的功能</li><li>资源共享：软件共享、数据共享和硬件共享</li><li>分布式处理</li><li>提高可靠性</li><li>负载均衡</li></ul><h2 id="分类"><a href="#分类" class="headerlink" title="分类"></a>分类</h2><h3 id="1-分布范围分类"><a href="#1-分布范围分类" class="headerlink" title="1.分布范围分类"></a>1.分布范围分类</h3><table><thead><tr><th>类型</th><th>概念</th></tr></thead><tbody><tr><td>广域网（WAN）</td><td><code>几十千米到几千千米</code>的区域</td></tr><tr><td>城域网（MAN）</td><td>跨越几个街区甚至整个城市，覆盖范围约<code>5~50km</code></td></tr><tr><td>局域网（LAN）</td><td><code>几十米到几千米</code>的区域</td></tr><tr><td>个人区域网（PAN）</td><td><code>十米</code>左右</td></tr></tbody></table><h3 id="2-传输技术分类"><a href="#2-传输技术分类" class="headerlink" title="2.传输技术分类"></a>2.传输技术分类</h3><ul><li><code>广播式网络</code>：所有联网计算机都共享一个<code>公共通信信道</code>。当一台计算机利用<code>共享通信信道</code>发送报文分组时，所有其他计算机都会收听到这个分组。接受到该分组的计算机将通过检查目的地之来决定是否接受该分组。</li><li><code>点对点网络</code>：每条物理线路连接一对计算机。</li></ul><h3 id="3-拓扑结构分类"><a href="#3-拓扑结构分类" class="headerlink" title="3.拓扑结构分类"></a>3.拓扑结构分类</h3><p>总线形、星形、环形、网状形</p><p><img src="/img/%E6%8B%93%E6%89%91%E7%BB%93%E6%9E%84%E5%88%86%E7%B1%BB.png"></p><h3 id="4-交换技术分类"><a href="#4-交换技术分类" class="headerlink" title="4.交换技术分类"></a>4.交换技术分类</h3><ul><li><p><code>电路交换网络</code>：在源结点和目的结点之间建立起一条专用的通路用于传输数据，包括建立连接（占用通信资源）、传输数据（一直占用通信资源）和断开连接（释放通信资源）三个阶段。最典型的电路交换网是<strong>传统电话网络</strong>。该类网络的特点是整个报文的比特流连续的从源点直达终点，好像在一条管道中传送。</p></li><li><p><code>报文交换网络</code>：也称<code>存储-转发网络</code>。用户数据加上源地址、目的地址、校验码等辅助信息，然后封装成报文、这个报文传送到相邻结点，全部存储后，再转发给下一个结点，重复这一过程直到到达目的结点，每个报文可以单独选择到达目的结点的路径。</p></li><li><p><code>分组交换网络</code>：也称<code>包交换网络</code>。其原理是将数据分成较短的固定长度的数据块，在每个数据块中加上目的地址、源地址等辅助信息组成分组（包），以<code>储存-转发方式</code>传输。</p></li></ul><p><img src="/img/%E4%BA%A4%E6%8D%A2%E6%8A%80%E6%9C%AF%E5%88%86%E7%B1%BB.png"></p><h2 id="协议的组成"><a href="#协议的组成" class="headerlink" title="协议的组成"></a>协议的组成</h2><ul><li><code>语义</code>：做什么</li><li><code>语法</code>：怎么做</li><li><code>同步</code>：什么时候做</li></ul>]]></content>
+    
+    
+    <categories>
+      
+      <category>计算机网络</category>
       
     </categories>
     
