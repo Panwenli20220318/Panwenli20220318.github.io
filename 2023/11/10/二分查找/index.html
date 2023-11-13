@@ -16,21 +16,21 @@
   <meta name="author" content="Panda">
   <meta name="keywords" content="">
   
-    <meta name="description" content="方法 特点    forEach() 不改变原数组，没有返回值   map() 不改变原数组，有返回值，可链式调用   filter() 过滤数组，返回包含符合条件的元素的数组，可链式调用   for…of 返回的是数组的元素、对象的属性值，不能遍历普通的obj对象，将异步循环变成同步循环   every() 和 some() some()只要有一个是true，便返回true；而every(">
+    <meta name="description" content="二分查找(数组有序) 二分查找 - 力扣（LeetCode） 12345678910var search &#x3D; function(nums, target) &amp;#123;  let low &#x3D; 0,high &#x3D; nums.length -1,middle&#x3D;null;  while(low&lt;&#x3D;high)&amp;#123;    middle &#x3D; Math.floor((low+high)&#x2F;2);">
 <meta property="og:type" content="article">
-<meta property="og:title" content="数组的遍历方法">
-<meta property="og:url" content="http://example.com/2023/11/13/%E6%95%B0%E7%BB%84%E7%9A%84%E9%81%8D%E5%8E%86%E6%96%B9%E6%B3%95/index.html">
+<meta property="og:title" content="二分查找">
+<meta property="og:url" content="http://example.com/2023/11/10/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/index.html">
 <meta property="og:site_name" content="Panda碎碎念">
-<meta property="og:description" content="方法 特点    forEach() 不改变原数组，没有返回值   map() 不改变原数组，有返回值，可链式调用   filter() 过滤数组，返回包含符合条件的元素的数组，可链式调用   for…of 返回的是数组的元素、对象的属性值，不能遍历普通的obj对象，将异步循环变成同步循环   every() 和 some() some()只要有一个是true，便返回true；而every(">
+<meta property="og:description" content="二分查找(数组有序) 二分查找 - 力扣（LeetCode） 12345678910var search &#x3D; function(nums, target) &amp;#123;  let low &#x3D; 0,high &#x3D; nums.length -1,middle&#x3D;null;  while(low&lt;&#x3D;high)&amp;#123;    middle &#x3D; Math.floor((low+high)&#x2F;2);">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2023-11-13T03:00:00.000Z">
-<meta property="article:modified_time" content="2023-11-10T11:42:12.185Z">
+<meta property="article:published_time" content="2023-11-10T03:00:00.000Z">
+<meta property="article:modified_time" content="2023-11-13T07:45:38.517Z">
 <meta property="article:author" content="Panda">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>数组的遍历方法 - Panda碎碎念</title>
+  <title>二分查找 - Panda碎碎念</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -208,7 +208,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="数组的遍历方法"></span>
+            <span id="subtitle" data-typed-text="二分查找"></span>
           
         </div>
 
@@ -219,8 +219,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2023-11-13 11:00" pubdate>
-          2023年11月13日 上午
+        <time datetime="2023-11-10 11:00" pubdate>
+          2023年11月10日 上午
         </time>
       </span>
     
@@ -231,7 +231,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          453 字
+          1.8k 字
         
       </span>
     
@@ -242,7 +242,7 @@
         
         
         
-          4 分钟
+          16 分钟
         
       </span>
     
@@ -279,52 +279,26 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">数组的遍历方法</h1>
+            <h1 id="seo-header">二分查找</h1>
             
             
               <div class="markdown-body">
                 
-                <table>
-<thead>
-<tr>
-<th>方法</th>
-<th>特点</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>forEach()</td>
-<td>不改变原数组，没有返回值</td>
-</tr>
-<tr>
-<td>map()</td>
-<td>不改变原数组，有返回值，可链式调用</td>
-</tr>
-<tr>
-<td>filter()</td>
-<td>过滤数组，返回包含符合条件的元素的数组，可链式调用</td>
-</tr>
-<tr>
-<td>for…of</td>
-<td>返回的是数组的元素、对象的属性值，不能遍历普通的obj对象，将异步循环变成同步循环</td>
-</tr>
-<tr>
-<td>every() 和 some()</td>
-<td>some()只要有一个是true，便返回true；而every()只要有一个是false，便返回false</td>
-</tr>
-<tr>
-<td>find() 和 findIndex()</td>
-<td>find()返回的是第一个符合条件的值；findIndex()返回的是第一个返回条件的值的索引值</td>
-</tr>
-<tr>
-<td>reduce() 和 reduceRight()</td>
-<td>reduce()对数组正序操作；reduceRight()对数组逆序操作</td>
-</tr>
-</tbody></table>
-<h2 id="1-forEach和map方法有什么区别"><a href="#1-forEach和map方法有什么区别" class="headerlink" title="1.forEach和map方法有什么区别"></a>1.forEach和map方法有什么区别</h2><p>这方法都是用来遍历数组的，两者区别如下：</p>
-<ul>
-<li>forEach()方法会针对每一个元素执行提供的函数，对数据的操作会改变原数组，该方法<strong>没有返回值</strong>；</li>
-<li>map()方法不会改变原数组的值，<strong>返回一个新数组</strong>，新数组中的值为原数组调用函数处理之后的值；</li>
-</ul>
+                <h2 id="二分查找-数组有序"><a href="#二分查找-数组有序" class="headerlink" title="二分查找(数组有序)"></a>二分查找(数组有序)</h2><p><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/binary-search/"> 二分查找 - 力扣（LeetCode）</a></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-keyword">var</span> search = <span class="hljs-keyword">function</span>(<span class="hljs-params">nums, target</span>) &#123;<br>  <span class="hljs-keyword">let</span> low = <span class="hljs-number">0</span>,high = nums.<span class="hljs-property">length</span> -<span class="hljs-number">1</span>,middle=<span class="hljs-literal">null</span>;<br>  <span class="hljs-keyword">while</span>(low&lt;=high)&#123;<br>    middle = <span class="hljs-title class_">Math</span>.<span class="hljs-title function_">floor</span>((low+high)/<span class="hljs-number">2</span>);<br>    <span class="hljs-keyword">if</span>(target&gt;nums[middle]) low = middle+<span class="hljs-number">1</span>;<br>    <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(target&lt;nums[middle]) high = middle-<span class="hljs-number">1</span>;<br>    <span class="hljs-keyword">else</span> <span class="hljs-keyword">return</span> middle;<br>  &#125;<br>  <span class="hljs-keyword">return</span> -<span class="hljs-number">1</span>;<br>&#125;;<br></code></pre></td></tr></table></figure>
+<h2 id="相关题目"><a href="#相关题目" class="headerlink" title="相关题目"></a>相关题目</h2><ol>
+<li><a target="_blank" rel="noopener" href="https://programmercarl.com/0035.%E6%90%9C%E7%B4%A2%E6%8F%92%E5%85%A5%E4%BD%8D%E7%BD%AE.html">搜索插入位置</a></li>
+</ol>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-keyword">var</span> searchInsert = <span class="hljs-keyword">function</span>(<span class="hljs-params">nums, target</span>) &#123;<br>    <span class="hljs-keyword">let</span> low=<span class="hljs-number">0</span>,high=nums.<span class="hljs-property">length</span>-<span class="hljs-number">1</span>,middle=<span class="hljs-literal">null</span>;<br>    <span class="hljs-keyword">while</span>(low&lt;=high)&#123;<br>        middle = <span class="hljs-title class_">Math</span>.<span class="hljs-title function_">floor</span>((low+high)/<span class="hljs-number">2</span>);<br>        <span class="hljs-keyword">if</span>(target&gt;nums[middle]) low = middle+<span class="hljs-number">1</span>;<br>        <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(target&lt;nums[middle]) high = middle-<span class="hljs-number">1</span>;<br>        <span class="hljs-keyword">else</span> <span class="hljs-keyword">return</span> middle;<br>    &#125;<br>    <span class="hljs-keyword">return</span> low;  <span class="hljs-comment">//退出循环的时候，high+1=low，并且low和high指向和target数值大小最接近的值的索引</span><br>&#125;;<br></code></pre></td></tr></table></figure>
+
+<ol start="2">
+<li><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1wy4y1k76F/?spm_id_from=333.337.search-card.all.click&vd_source=23bd401d624705d861aac58086950d57">在排序数组中查找元素的第一个和最后一个位置</a></li>
+</ol>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-keyword">var</span> searchRange = <span class="hljs-keyword">function</span>(<span class="hljs-params">nums, target</span>) &#123;<br>    <br>    <span class="hljs-comment">//左边界</span><br>    <span class="hljs-keyword">var</span> searchLeftBoard = <span class="hljs-keyword">function</span>(<span class="hljs-params">nums,target</span>)&#123;<br>        <span class="hljs-keyword">let</span> left= <span class="hljs-number">0</span> , right = nums.<span class="hljs-property">length</span> - <span class="hljs-number">1</span>;<br>        <span class="hljs-keyword">while</span>(left&lt;=right)&#123;<br>            <span class="hljs-keyword">let</span> middle = <span class="hljs-title class_">Math</span>.<span class="hljs-title function_">floor</span>((right+left)/<span class="hljs-number">2</span>);<br>            <span class="hljs-keyword">if</span>(target==nums[middle])&#123;<br>         <span class="hljs-comment">//mid为第一个元素或者mid前一个元素不等于target</span><br>                <span class="hljs-keyword">if</span>(middle==<span class="hljs-number">0</span> || nums[middle-<span class="hljs-number">1</span>]!=target)&#123;<br>                    <span class="hljs-keyword">return</span> middle;  <br>                &#125;<span class="hljs-keyword">else</span>&#123;<br>                    right = middle - <span class="hljs-number">1</span>;  <span class="hljs-comment">//缩小查找区间</span><br>                &#125;<br>            &#125;<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(target&gt;nums[middle]) left = middle+<span class="hljs-number">1</span>;<br>            <span class="hljs-keyword">else</span>  <span class="hljs-keyword">if</span>(target&lt;nums[middle]) right = middle-<span class="hljs-number">1</span>;<br>        &#125;<br>        <span class="hljs-keyword">return</span> -<span class="hljs-number">1</span>;<br>    &#125;<br>    <br>    <span class="hljs-comment">//右边界</span><br>    <span class="hljs-keyword">var</span> searchRightBoard = <span class="hljs-keyword">function</span>(<span class="hljs-params">nums,target</span>)&#123;<br>        <span class="hljs-keyword">let</span> left= <span class="hljs-number">0</span> , right = nums.<span class="hljs-property">length</span> - <span class="hljs-number">1</span>; <br>        <span class="hljs-keyword">while</span>(left&lt;=right)&#123;<br>            <span class="hljs-keyword">let</span> middle = <span class="hljs-title class_">Math</span>.<span class="hljs-title function_">floor</span>((right+left)/<span class="hljs-number">2</span>);<br>            <span class="hljs-keyword">if</span>(target==nums[middle])&#123;<br>          <span class="hljs-comment">//mid为最后一个元素或者mid后一个元素不等于target</span><br>                <span class="hljs-keyword">if</span>(middle==nums.<span class="hljs-property">length</span>-<span class="hljs-number">1</span> || nums[middle+<span class="hljs-number">1</span>]!=target)&#123;<br>                    <span class="hljs-keyword">return</span> middle;  <br>                &#125;<span class="hljs-keyword">else</span>&#123;<br>                    left = middle + <span class="hljs-number">1</span>;  <span class="hljs-comment">//缩小查找区间</span><br>                &#125;<br>            &#125;<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(target&gt;nums[middle]) left = middle+<span class="hljs-number">1</span>;<br>            <span class="hljs-keyword">else</span>  <span class="hljs-keyword">if</span>(target&lt;nums[middle]) right = middle-<span class="hljs-number">1</span>;<br>        &#125;<br>        <span class="hljs-keyword">return</span> -<span class="hljs-number">1</span>;<br>    &#125;<br><br>   <span class="hljs-keyword">var</span> leftboard = <span class="hljs-title function_">searchLeftBoard</span>(nums,target);<br>   <span class="hljs-keyword">var</span> rightboard = <span class="hljs-title function_">searchRightBoard</span>(nums,target);<br>   <span class="hljs-keyword">return</span> [leftboard,rightboard]; <br>&#125;;<br></code></pre></td></tr></table></figure>
+<ol start="3">
+<li><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/sqrtx/">x 的平方根</a></li>
+</ol>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-string">``</span><span class="hljs-string">`</span><br><span class="hljs-string">4. [有效的完全平方数](https://leetcode.cn/problems/valid-perfect-square/)</span><br><span class="hljs-string"></span><br><span class="hljs-string">`</span><span class="hljs-string">``</span>js<br></code></pre></td></tr></table></figure>
 
                 
               </div>
@@ -343,7 +317,7 @@
     
       <span class="category-chain">
         
-  <a href="/categories/JS/" class="category-chain-item">JS</a>
+  <a href="/categories/%E7%AE%97%E6%B3%95/" class="category-chain-item">算法</a>
   
   
 
@@ -363,8 +337,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>数组的遍历方法</div>
-      <div>http://example.com/2023/11/13/数组的遍历方法/</div>
+      <div>二分查找</div>
+      <div>http://example.com/2023/11/10/二分查找/</div>
     </div>
     <div class="license-meta">
       
@@ -376,7 +350,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2023年11月13日</div>
+          <div>2023年11月10日</div>
         </div>
       
       
@@ -408,9 +382,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2023/11/13/%E7%89%A9%E7%90%86%E5%B1%82/" title="">
+                      <a href="/2023/11/11/transform/" title="transform">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile"></span>
+                        <span class="hidden-mobile">transform</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -418,8 +392,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2023/11/13/%E6%95%B0%E7%BB%84%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95/" title="数组常用方法">
-                        <span class="hidden-mobile">数组常用方法</span>
+                      <a href="/2023/11/10/%E5%B8%B8%E7%94%A8%E7%9A%84%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/" title="常用的正则表达式">
+                        <span class="hidden-mobile">常用的正则表达式</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
