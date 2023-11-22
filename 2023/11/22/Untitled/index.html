@@ -16,22 +16,19 @@
   <meta name="author" content="Panda">
   <meta name="keywords" content="">
   
-    <meta name="description" content="螺旋数组练习：54. 螺旋矩阵 - 力扣（LeetCode） 解析：54. 螺旋矩阵 | 手写图解版思路 + 代码讲解_哔哩哔哩_bilibili 12345678910111213141516var spiralOrder &#x3D; function (matrix) &amp;#123;    let m &#x3D; matrix.length, n &#x3D; matrix[0].length;    let newAr">
-<meta property="og:type" content="article">
-<meta property="og:title" content="螺旋数组">
-<meta property="og:url" content="http://example.com/2023/11/20/%E8%9E%BA%E6%97%8B%E6%95%B0%E7%BB%84/index.html">
+    <meta property="og:type" content="article">
+<meta property="og:title" content="Panda碎碎念">
+<meta property="og:url" content="http://example.com/2023/11/22/Untitled/index.html">
 <meta property="og:site_name" content="Panda碎碎念">
-<meta property="og:description" content="螺旋数组练习：54. 螺旋矩阵 - 力扣（LeetCode） 解析：54. 螺旋矩阵 | 手写图解版思路 + 代码讲解_哔哩哔哩_bilibili 12345678910111213141516var spiralOrder &#x3D; function (matrix) &amp;#123;    let m &#x3D; matrix.length, n &#x3D; matrix[0].length;    let newAr">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2023-11-20T04:00:00.000Z">
-<meta property="article:modified_time" content="2023-11-20T12:58:38.062Z">
+<meta property="article:published_time" content="2023-11-22T03:33:14.304Z">
+<meta property="article:modified_time" content="2023-11-22T03:33:14.304Z">
 <meta property="article:author" content="Panda">
-<meta property="article:tag" content="数组">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>螺旋数组 - Panda碎碎念</title>
+  <title>Panda碎碎念</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -209,7 +206,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="螺旋数组"></span>
+            <span id="subtitle" data-typed-text=""></span>
           
         </div>
 
@@ -220,8 +217,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2023-11-20 12:00" pubdate>
-          2023年11月20日 中午
+        <time datetime="2023-11-22 11:33" pubdate>
+          2023年11月22日 中午
         </time>
       </span>
     
@@ -232,7 +229,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          644 字
+          0 字
         
       </span>
     
@@ -243,7 +240,7 @@
         
         
         
-          6 分钟
+          1 分钟
         
       </span>
     
@@ -280,16 +277,12 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">螺旋数组</h1>
+            <h1 id="seo-header"></h1>
             
             
               <div class="markdown-body">
                 
-                <h2 id="螺旋数组"><a href="#螺旋数组" class="headerlink" title="螺旋数组"></a>螺旋数组</h2><p>练习：<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/spiral-matrix/description/">54. 螺旋矩阵 - 力扣（LeetCode）</a></p>
-<p>解析：<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Bb4y1x7xX/">54. 螺旋矩阵 | 手写图解版思路 + 代码讲解_哔哩哔哩_bilibili</a></p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-keyword">var</span> spiralOrder = <span class="hljs-keyword">function</span> (<span class="hljs-params">matrix</span>) &#123;<br>    <span class="hljs-keyword">let</span> m = matrix.<span class="hljs-property">length</span>, n = matrix[<span class="hljs-number">0</span>].<span class="hljs-property">length</span>;<br>    <span class="hljs-keyword">let</span> newArr = [];<br>    <span class="hljs-keyword">let</span> top = <span class="hljs-number">0</span>, bottom = m - <span class="hljs-number">1</span>, left = <span class="hljs-number">0</span>, right = n - <span class="hljs-number">1</span>;  <span class="hljs-comment">//四个围栏</span><br>    <span class="hljs-keyword">while</span> (<span class="hljs-literal">true</span>) &#123;  <span class="hljs-comment">//用一个无限循环来控制螺旋遍历的流程，直到某个边界条件不满足为止</span><br>        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = left; i &lt;= right; i++) newArr.<span class="hljs-title function_">push</span>(matrix[top][i]);<br>        <span class="hljs-keyword">if</span> (++top &gt; bottom) <span class="hljs-keyword">break</span>;<br>        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = top; i &lt;= bottom; i++) newArr.<span class="hljs-title function_">push</span>(matrix[i][right]);<br>        <span class="hljs-keyword">if</span> (--right &lt; left) <span class="hljs-keyword">break</span>;<br>        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = right; i &gt;= left; i--) newArr.<span class="hljs-title function_">push</span>(matrix[bottom][i]);<br>        <span class="hljs-keyword">if</span> (--bottom &lt; top) <span class="hljs-keyword">break</span>;<br>        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = bottom; i &gt;= top; i--) newArr.<span class="hljs-title function_">push</span>(matrix[i][left]);<br>        <span class="hljs-keyword">if</span> (++left &gt; right) <span class="hljs-keyword">break</span>;<br>    &#125;<br>    <span class="hljs-keyword">return</span> newArr;<br>&#125;;<br></code></pre></td></tr></table></figure>
-
-<h2 id="相关习题"><a href="#相关习题" class="headerlink" title="相关习题"></a>相关习题</h2><h3 id="1-螺旋矩阵-II"><a href="#1-螺旋矩阵-II" class="headerlink" title="1.  螺旋矩阵 II"></a>1. <a target="_blank" rel="noopener" href="https://leetcode.cn/problems/spiral-matrix-ii/"> 螺旋矩阵 II</a></h3>
+                
                 
               </div>
             
@@ -297,34 +290,6 @@
             <div>
               <div class="post-metas my-3">
   
-    <div class="post-meta mr-3 d-flex align-items-center">
-      <i class="iconfont icon-category"></i>
-      
-
-<span class="category-chains">
-  
-  
-    
-      <span class="category-chain">
-        
-  <a href="/categories/%E7%AE%97%E6%B3%95/" class="category-chain-item">算法</a>
-  
-  
-
-      </span>
-    
-  
-</span>
-
-    </div>
-  
-  
-    <div class="post-meta">
-      <i class="iconfont icon-tags"></i>
-      
-        <a href="/tags/%E6%95%B0%E7%BB%84/" class="print-no-link">#数组</a>
-      
-    </div>
   
 </div>
 
@@ -334,8 +299,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>螺旋数组</div>
-      <div>http://example.com/2023/11/20/螺旋数组/</div>
+      <div></div>
+      <div>http://example.com/2023/11/22/Untitled/</div>
     </div>
     <div class="license-meta">
       
@@ -347,7 +312,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2023年11月20日</div>
+          <div>2023年11月22日</div>
         </div>
       
       
@@ -379,12 +344,18 @@
                   <article class="post-prev col-6">
                     
                     
+                      <a href="/2023/11/22/%E9%93%BE%E8%A1%A8/" title="链表">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">链表</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2023/11/20/%E5%AF%B9%E8%B1%A1%E9%81%8D%E5%8E%86%E6%96%B9%E6%B3%95/" title="对象遍历方法">
-                        <span class="hidden-mobile">对象遍历方法</span>
+                      <a href="/2023/11/21/%E8%9E%BA%E6%97%8B%E6%95%B0%E7%BB%84/" title="螺旋数组">
+                        <span class="hidden-mobile">螺旋数组</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>

@@ -16,21 +16,23 @@
   <meta name="author" content="Panda">
   <meta name="keywords" content="">
   
-    <meta name="description" content="学习：前端必需知道的7种JS对象遍历方法 - 知乎 (zhihu.com)">
+    <meta name="description" content="1. 创建节点1234function ListNode(val, next) &amp;#123;  &#x2F;&#x2F;构造函数    this.val &#x3D; (val &#x3D;&#x3D;&#x3D; undefined ? 0 : val)    this.next &#x3D; (next &#x3D;&#x3D;&#x3D; undefined ? null : next)&amp;#125;  2. 移除链表元素带哨兵头的链表：给链表的头节点之前增加一个节点，这个节点的数据域不存储">
 <meta property="og:type" content="article">
-<meta property="og:title" content="对象遍历方法">
-<meta property="og:url" content="http://example.com/2023/11/20/%E5%AF%B9%E8%B1%A1%E9%81%8D%E5%8E%86%E6%96%B9%E6%B3%95/index.html">
+<meta property="og:title" content="链表">
+<meta property="og:url" content="http://example.com/2023/11/22/%E9%93%BE%E8%A1%A8/index.html">
 <meta property="og:site_name" content="Panda碎碎念">
-<meta property="og:description" content="学习：前端必需知道的7种JS对象遍历方法 - 知乎 (zhihu.com)">
+<meta property="og:description" content="1. 创建节点1234function ListNode(val, next) &amp;#123;  &#x2F;&#x2F;构造函数    this.val &#x3D; (val &#x3D;&#x3D;&#x3D; undefined ? 0 : val)    this.next &#x3D; (next &#x3D;&#x3D;&#x3D; undefined ? null : next)&amp;#125;  2. 移除链表元素带哨兵头的链表：给链表的头节点之前增加一个节点，这个节点的数据域不存储">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2023-11-20T03:00:00.000Z">
-<meta property="article:modified_time" content="2023-11-20T13:19:13.295Z">
+<meta property="og:image" content="http://example.com/img/%E9%80%92%E5%BD%92_%E5%8F%8D%E8%BD%AC%E5%8D%95%E9%93%BE%E8%A1%A8.png">
+<meta property="article:published_time" content="2023-11-22T04:00:00.000Z">
+<meta property="article:modified_time" content="2023-11-22T07:15:19.062Z">
 <meta property="article:author" content="Panda">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="http://example.com/img/%E9%80%92%E5%BD%92_%E5%8F%8D%E8%BD%AC%E5%8D%95%E9%93%BE%E8%A1%A8.png">
   
   
   
-  <title>对象遍历方法 - Panda碎碎念</title>
+  <title>链表 - Panda碎碎念</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -208,7 +210,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="对象遍历方法"></span>
+            <span id="subtitle" data-typed-text="链表"></span>
           
         </div>
 
@@ -219,8 +221,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2023-11-20 11:00" pubdate>
-          2023年11月20日 上午
+        <time datetime="2023-11-22 12:00" pubdate>
+          2023年11月22日 中午
         </time>
       </span>
     
@@ -231,7 +233,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          34 字
+          1k 字
         
       </span>
     
@@ -242,7 +244,7 @@
         
         
         
-          1 分钟
+          9 分钟
         
       </span>
     
@@ -279,12 +281,20 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">对象遍历方法</h1>
+            <h1 id="seo-header">链表</h1>
             
             
               <div class="markdown-body">
                 
-                <p>学习：<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/566208201?utm_id=0">前端必需知道的7种JS对象遍历方法 - 知乎 (zhihu.com)</a></p>
+                <h2 id="1-创建节点"><a href="#1-创建节点" class="headerlink" title="1. 创建节点"></a>1. 创建节点</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">ListNode</span>(<span class="hljs-params">val, next</span>) &#123;  <span class="hljs-comment">//构造函数</span><br>    <span class="hljs-variable language_">this</span>.<span class="hljs-property">val</span> = (val === <span class="hljs-literal">undefined</span> ? <span class="hljs-number">0</span> : val)<br>    <span class="hljs-variable language_">this</span>.<span class="hljs-property">next</span> = (next === <span class="hljs-literal">undefined</span> ? <span class="hljs-literal">null</span> : next)<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<h2 id="2-移除链表元素"><a href="#2-移除链表元素" class="headerlink" title="2. 移除链表元素"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/remove-linked-list-elements/">2. 移除链表元素</a></h2><p>带哨兵头的链表：给链表的头节点之前增加一个节点，这个节点的数据域不存储任何有效数据，其指针域存放的是指向链表头节点的指针head</p>
+<p>优势：对于单链表的操作，我们每次都需要分空链表和非空链表两种情况讨论，但当存在带哨兵头链表这种结构后，我们就不需要考虑空链表的情况</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-keyword">var</span> removeElements = <span class="hljs-keyword">function</span> (<span class="hljs-params">head, val</span>) &#123;<br>    <span class="hljs-keyword">const</span> result = <span class="hljs-keyword">new</span> <span class="hljs-title class_">ListNode</span>(-<span class="hljs-number">1</span>, head); <span class="hljs-comment">// 创建一个虚拟头节点，用于保存原始链表的长度</span><br>    <span class="hljs-keyword">let</span> current = result;<br>    <span class="hljs-keyword">while</span> (current.<span class="hljs-property">next</span>) &#123;<br>        <span class="hljs-keyword">if</span> (current.<span class="hljs-property">next</span>.<span class="hljs-property">val</span> == val) &#123;<br>            current.<span class="hljs-property">next</span> = current.<span class="hljs-property">next</span>.<span class="hljs-property">next</span>;<br>            <span class="hljs-keyword">continue</span>;<br>            <span class="hljs-comment">//删除操作之后，current.next指针已经&quot;跳过&quot;了一个节点，要再次进行检查</span><br>        &#125;<br>        current = current.<span class="hljs-property">next</span><br>    &#125;<br>    <span class="hljs-keyword">return</span> result.<span class="hljs-property">next</span>;  <span class="hljs-comment">// 返回去除值为val的节点后的链表头节点</span><br>&#125;;<br></code></pre></td></tr></table></figure>
+
+<h2 id="3-反转链表"><a href="#3-反转链表" class="headerlink" title="3. 反转链表"></a>3. <a target="_blank" rel="noopener" href="https://leetcode.cn/problems/reverse-linked-list/description/">反转链表</a></h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-comment">//1.迭代</span><br><span class="hljs-keyword">var</span> reverseList = <span class="hljs-keyword">function</span> (<span class="hljs-params">head</span>) &#123;<br>    <span class="hljs-keyword">let</span> prev = <span class="hljs-literal">null</span>, current = head;<br>    <span class="hljs-keyword">while</span> (current) &#123;<br>        <span class="hljs-keyword">let</span> next = current.<span class="hljs-property">next</span>;  <span class="hljs-comment">//需要进行储存</span><br>        current.<span class="hljs-property">next</span> = prev;<br>        prev = current;<br>        current = next;<br>    &#125;<br>    <span class="hljs-keyword">return</span> prev;<br>&#125;;<br><br><span class="hljs-comment">//2.递归</span><br><span class="hljs-keyword">var</span> reverseList = <span class="hljs-keyword">function</span> (<span class="hljs-params">head</span>) &#123;<br>    <span class="hljs-comment">//递归终止条件</span><br>    <span class="hljs-keyword">if</span> (head == <span class="hljs-literal">null</span> || head.<span class="hljs-property">next</span> == <span class="hljs-literal">null</span>) &#123;<br>        <span class="hljs-keyword">return</span> head;<br>    &#125;<br>    <span class="hljs-keyword">const</span> p = <span class="hljs-title function_">reverseList</span>(head.<span class="hljs-property">next</span>);<br>    <span class="hljs-comment">//归的动作</span><br>    head.<span class="hljs-property">next</span>.<span class="hljs-property">next</span> = head;<br>    head.<span class="hljs-property">next</span> = <span class="hljs-literal">null</span>;<br>    <span class="hljs-keyword">return</span> p<br>&#125;;<br></code></pre></td></tr></table></figure>
+
+<p><img src="/img/%E9%80%92%E5%BD%92_%E5%8F%8D%E8%BD%AC%E5%8D%95%E9%93%BE%E8%A1%A8.png" srcset="/img/loading.gif" lazyload></p>
 
                 
               </div>
@@ -303,7 +313,7 @@
     
       <span class="category-chain">
         
-  <a href="/categories/JS/" class="category-chain-item">JS</a>
+  <a href="/categories/%E7%AE%97%E6%B3%95/" class="category-chain-item">算法</a>
   
   
 
@@ -323,8 +333,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>对象遍历方法</div>
-      <div>http://example.com/2023/11/20/对象遍历方法/</div>
+      <div>链表</div>
+      <div>http://example.com/2023/11/22/链表/</div>
     </div>
     <div class="license-meta">
       
@@ -336,7 +346,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2023年11月20日</div>
+          <div>2023年11月22日</div>
         </div>
       
       
@@ -368,18 +378,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2023/11/21/%E8%9E%BA%E6%97%8B%E6%95%B0%E7%BB%84/" title="螺旋数组">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">螺旋数组</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2023/11/19/%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3/" title="滑动窗口">
-                        <span class="hidden-mobile">滑动窗口</span>
+                      <a href="/2023/11/22/Untitled/" title="">
+                        <span class="hidden-mobile"></span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
