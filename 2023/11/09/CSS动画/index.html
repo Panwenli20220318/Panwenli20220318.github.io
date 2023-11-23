@@ -24,7 +24,7 @@
 <meta property="og:description" content="CSS 动画1.CSS TransitionCSS 过渡，属于补间动画，即设置关键帧的初始状态，然后在另一个关键帧改变这个状态，比如大小、颜色、透明度等，浏览器将自动根据二者之间帧的值创建的动画。  transition-property    指定使用过渡效果的css属性 transition-duration    设置过渡动画持续时间 transition-timing-function">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-11-09T02:00:00.000Z">
-<meta property="article:modified_time" content="2023-11-10T02:31:23.334Z">
+<meta property="article:modified_time" content="2023-11-23T02:49:46.923Z">
 <meta property="article:author" content="Panda">
 <meta name="twitter:card" content="summary_large_image">
   
@@ -284,7 +284,7 @@
             
               <div class="markdown-body">
                 
-                <h1 id="CSS-动画"><a href="#CSS-动画" class="headerlink" title="CSS 动画"></a>CSS 动画</h1><h2 id="1-CSS-Transition"><a href="#1-CSS-Transition" class="headerlink" title="1.CSS Transition"></a>1.CSS Transition</h2><p>CSS 过渡，属于<strong>补间动画</strong>，即设置关键帧的初始状态，然后在另一个关键帧改变这个状态，比如大小、颜色、透明度等，浏览器将自动根据二者之间帧的值创建的动画。</p>
+                <h2 id="CSS-动画"><a href="#CSS-动画" class="headerlink" title="CSS 动画"></a>CSS 动画</h2><h3 id="1-CSS-Transition"><a href="#1-CSS-Transition" class="headerlink" title="1.CSS Transition"></a>1.CSS Transition</h3><p>CSS 过渡，属于<strong>补间动画</strong>，即设置关键帧的初始状态，然后在另一个关键帧改变这个状态，比如大小、颜色、透明度等，浏览器将自动根据二者之间帧的值创建的动画。</p>
 <ul>
 <li><code>transition-property</code>    指定使用过渡效果的css属性</li>
 <li><code>transition-duration</code>    设置过渡动画持续时间</li>
@@ -323,7 +323,7 @@
 </ul>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs css"><span class="hljs-selector-tag">div</span> &#123;<br>  <span class="hljs-attribute">transition</span>: &lt;property&gt; &lt;duration&gt; &lt;timing-function&gt; &lt;delay&gt;;<br>&#125;<br></code></pre></td></tr></table></figure>
 
-<h2 id="2-CSS-Animation"><a href="#2-CSS-Animation" class="headerlink" title="2.CSS Animation"></a>2.CSS Animation</h2><p>CSS 动画，可以理解是 <code>CSS Transition</code> 的加强版，它既可以实现 <strong>补间动画</strong> 的动画效果，也可以使其以 <strong>逐帧动画</strong> 的方式进行绘制。</p>
+<h3 id="2-CSS-Animation"><a href="#2-CSS-Animation" class="headerlink" title="2.CSS Animation"></a>2.CSS Animation</h3><p>CSS 动画，可以理解是 <code>CSS Transition</code> 的加强版，它既可以实现 <strong>补间动画</strong> 的动画效果，也可以使其以 <strong>逐帧动画</strong> 的方式进行绘制。</p>
 <ol>
 <li><p> 通过<code>@keyframes</code>自定义关键帧动画并为动画命名，可以在其中对每一帧进行设置。</p>
 </li>
@@ -344,7 +344,8 @@
 <li><p><code>animation-direction</code>   规定是否应该轮流反向播放动画。</p>
 </li>
 </ul>
-<h3 id="keyframes"><a href="#keyframes" class="headerlink" title="@keyframes"></a>@keyframes</h3><p>keyframes(关键帧)，在css样式表中可以通过<code>@keyframes</code>来设置关键帧动画，并指定动画名称供使用者锁定。</p>
+<p><strong>@keyframes</strong></p>
+<p>keyframes(关键帧)，在css样式表中可以通过<code>@keyframes</code>来设置关键帧动画，并指定动画名称供使用者锁定。</p>
 <p>其语法如下：</p>
 <p>我们可以通过百分比来设置具体帧数的样式。</p>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs CSS"><span class="hljs-keyword">@keyframes</span> animateName&#123;<br>    <span class="hljs-number">0%</span>   &#123; <span class="hljs-attribute">width</span>:<span class="hljs-number">50px</span>; <span class="hljs-attribute">height</span>:<span class="hljs-number">50px</span>; &#125;	<br>    <span class="hljs-number">50%</span>  &#123; <span class="hljs-attribute">width</span>:<span class="hljs-number">100px</span>; <span class="hljs-attribute">height</span>:<span class="hljs-number">100px</span>; &#125;	<br>    <span class="hljs-number">100%</span> &#123; <span class="hljs-attribute">width</span>:<span class="hljs-number">50px</span>; <span class="hljs-attribute">height</span>:<span class="hljs-number">50px</span>; &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
