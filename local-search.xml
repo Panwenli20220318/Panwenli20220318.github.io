@@ -15,6 +15,8 @@
       
       <category>算法</category>
       
+      <category>链表</category>
+      
     </categories>
     
     
@@ -34,14 +36,10 @@
       
       <category>算法</category>
       
+      <category>数组</category>
+      
     </categories>
     
-    
-    <tags>
-      
-      <tag>数组</tag>
-      
-    </tags>
     
   </entry>
   
@@ -78,14 +76,10 @@
       
       <category>算法</category>
       
+      <category>数组</category>
+      
     </categories>
     
-    
-    <tags>
-      
-      <tag>数组</tag>
-      
-    </tags>
     
   </entry>
   
@@ -118,12 +112,12 @@
     <content type="html"><![CDATA[<h2 id="区别"><a href="#区别" class="headerlink" title="区别"></a>区别</h2><ol><li>const是常量，不能重复赋值。</li><li><strong>初始值设置：</strong> 在变量声明时，var 和 let 可以不用设置初始值。而const声明变量必须设置初始值。</li><li><strong>块作用域</strong>：let和const具有块级作用域，var不存在块级作用域。块级作用域解决了两个问题：<ul><li>内层变量可能覆盖外层变量</li><li>用来计数的循环变量泄露为全局变量</li></ul></li><li><strong>变量提升：</strong> var存在变量提升，let和const不存在变量提升，即在变量只能在声明之后使用，否在会报错。</li><li><strong>暂时性死区：</strong> 在使用let、const命令声明变量之前，该变量都是不可用的。这在语法上，称为暂时性死区。使用var声明的变量不存在暂时性死区。</li></ol><table><thead><tr><th align="left"><strong>区别</strong></th><th align="center"><strong>var</strong></th><th align="center"><strong>let</strong></th><th align="center"><strong>const</strong></th></tr></thead><tbody><tr><td align="left">是否必须设置初始值</td><td align="center">×</td><td align="center">×</td><td align="center">✔️</td></tr><tr><td align="left">能否重复声明变量</td><td align="center">✔️</td><td align="center">×</td><td align="center">×</td></tr><tr><td align="left">是否有块级作用域</td><td align="center">×</td><td align="center">✔️</td><td align="center">✔️</td></tr><tr><td align="left">是否存在变量提升</td><td align="center">✔️</td><td align="center">×</td><td align="center">×</td></tr><tr><td align="left">是否存在暂时性死区</td><td align="center">×</td><td align="center">✔️</td><td align="center">✔️</td></tr></tbody></table><p>建议：默认用const，需要变化的时候用let</p>]]></content>
     
     
-    <categories>
-      
-      <category>ES6</category>
-      
-    </categories>
     
+    <tags>
+      
+      <tag>ES6</tag>
+      
+    </tags>
     
   </entry>
   
@@ -137,12 +131,12 @@
     <content type="html"><![CDATA[<ol><li>能够使函数的写法更简洁(一行写完一个函数!)</li><li>函数返回值可以被隐式返回(不需要写return了)<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-keyword">const</span> <span class="hljs-title function_">identity</span> = (<span class="hljs-params"></span>) =&gt;  <span class="hljs-keyword">return</span> <span class="hljs-string">&#x27;I am an identity function&#x27;</span>;<br><br><span class="hljs-keyword">const</span> <span class="hljs-title function_">square</span> = a =&gt; a * a;<br><br><span class="hljs-keyword">const</span> <span class="hljs-title function_">add</span> = (<span class="hljs-params">a, b</span>) =&gt; a + b;<br></code></pre></td></tr></table></figure></li><li>没有 <code>this</code> 属性：箭头函数不会拥有自己的 <code>this</code> 值，而是继承父作用域的 <code>this</code>。在一些情况下可能会导致意外的结果，例如在事件处理程序中。在处理这种情况时，可以使用 <code>bind</code> 方法将箭头函数的 <code>this</code> 值绑定到特定对象，以避免意外结果。</li></ol><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-keyword">const</span> button = <span class="hljs-variable language_">document</span>.<span class="hljs-title function_">querySelector</span>(<span class="hljs-string">&#x27;button&#x27;</span>);<br><br><span class="hljs-comment">//箭头函数的 this 值默认指向全局对象（在浏览器中是 window 对象），因此输出的是按钮元素的文本内容。</span><br>button.<span class="hljs-title function_">addEventListener</span>(<span class="hljs-string">&#x27;click&#x27;</span>, <span class="hljs-function">(<span class="hljs-params">event</span>) =&gt;</span> &#123;<br>  <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(event.<span class="hljs-property">target</span>.<span class="hljs-property">textContent</span>);<br>&#125;);<br><br><span class="hljs-comment">// 绑定箭头函数的 this 值到 button ，元素即在点击按钮时输出按钮的文本内容。</span><br>button.<span class="hljs-title function_">addEventListener</span>(<span class="hljs-string">&#x27;click&#x27;</span>, <span class="hljs-function">(<span class="hljs-params">event</span>) =&gt;</span> &#123;<br>  <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(event.<span class="hljs-property">target</span>.<span class="hljs-property">textContent</span>);<br>&#125;.<span class="hljs-title function_">bind</span>(button));<br></code></pre></td></tr></table></figure>]]></content>
     
     
-    <categories>
-      
-      <category>ES6</category>
-      
-    </categories>
     
+    <tags>
+      
+      <tag>ES6</tag>
+      
+    </tags>
     
   </entry>
   
@@ -156,12 +150,12 @@
     <content type="html"><![CDATA[<p>官方文档：<a href="https://www.axios-http.cn/docs/api_intro">Axios API | Axios中文文档 | Axios中文网 (axios-http.cn)</a></p><h2 id="Vue项目中全局调用"><a href="#Vue项目中全局调用" class="headerlink" title="Vue项目中全局调用"></a>Vue项目中全局调用</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs vue">import axios from &#x27;axios&#x27;<br><br>Vue.prototype.$axios = axios;<br></code></pre></td></tr></table></figure><h2 id="方法中调用"><a href="#方法中调用" class="headerlink" title="方法中调用"></a>方法中调用</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-attr">methods</span>:&#123;<br>       <span class="hljs-title function_">addList</span>(<span class="hljs-params"></span>)&#123;<br>           <span class="hljs-variable language_">this</span>.<span class="hljs-property">$axios</span>.<span class="hljs-title function_">post</span>(<span class="hljs-string">&quot;http://localhost:3002/api/list/add&quot;</span>,&#123;<span class="hljs-attr">content</span>:<span class="hljs-variable language_">this</span>.<span class="hljs-property">content</span>&#125;)<br>           .<span class="hljs-title function_">then</span>(<span class="hljs-function"><span class="hljs-params">response</span> =&gt;</span>&#123;<br>               <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">&#x27;待办事项发布成功&#x27;</span>, response.<span class="hljs-property">data</span>);<br>           &#125;)<br>           .<span class="hljs-title function_">catch</span>(<span class="hljs-function"><span class="hljs-params">error</span> =&gt;</span> &#123;  <br>               <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">error</span>(<span class="hljs-string">&#x27;发布待办事项失败&#x27;</span>, error);  <br>           &#125;);<br>       &#125;,<br>   &#125;<br></code></pre></td></tr></table></figure>]]></content>
     
     
-    <categories>
-      
-      <category>Axios</category>
-      
-    </categories>
     
+    <tags>
+      
+      <tag>Axios</tag>
+      
+    </tags>
     
   </entry>
   
@@ -217,14 +211,10 @@
       
       <category>算法</category>
       
+      <category>数组</category>
+      
     </categories>
     
-    
-    <tags>
-      
-      <tag>数组</tag>
-      
-    </tags>
     
   </entry>
   
@@ -242,14 +232,10 @@
       
       <category>算法</category>
       
+      <category>数组</category>
+      
     </categories>
     
-    
-    <tags>
-      
-      <tag>数组</tag>
-      
-    </tags>
     
   </entry>
   
@@ -301,12 +287,12 @@
     <content type="html"><![CDATA[<h2 id="OSI参考模型"><a href="#OSI参考模型" class="headerlink" title="OSI参考模型"></a>OSI参考模型</h2><p><img src="/img/OSI%E7%9A%84%E7%BB%93%E6%9E%84.png"></p><h3 id="1-应用层"><a href="#1-应用层" class="headerlink" title="1.应用层"></a>1.应用层</h3><ul><li>因为用户的实际应用多种多样，就要求应用层采用不同的协议来解决不同应用类型的需求</li><li>典型的协议有：文件传输协议FTP、电子邮件协议SMTP、万维网HTTP等</li></ul><h3 id="2-表示层"><a href="#2-表示层" class="headerlink" title="2.表示层"></a>2.表示层</h3><ul><li>主要处理两个通信系统中交换信息的表示方式</li><li>不同机器采用的编码和表示方法不同，使用的数据结构不同</li><li>为了使不同的数据和信息之间能够互相交换，表示层采用抽象的标准方法定义数据结构<br><img src="/img/%E8%A1%A8%E7%A4%BA%E5%B1%82.png"></li></ul><h3 id="3-会话层"><a href="#3-会话层" class="headerlink" title="3.会话层"></a>3.会话层</h3><ul><li>会话层允许不同主机上的各个进程进行会话</li><li>会话层利用传输层提供的<code>端到端</code>的服务，向表示层提供它的增值服务</li></ul><h3 id="4-传输层"><a href="#4-传输层" class="headerlink" title="4.传输层"></a>4.传输层</h3><ul><li>单位是报文段（TCP）或用户数据报（UDP）</li><li>负责主机中两个进程之间的通信，功能是为<code>端到端</code>连接提供可靠的传输服务，为端到端连接提供流量控制、差错控制、服务质量、数据传输管理等服务。<br><img src="/img/%E4%BC%A0%E8%BE%93%E5%B1%82.png"></li></ul><h3 id="5-网络层"><a href="#5-网络层" class="headerlink" title="5.网络层"></a>5.网络层</h3><ul><li><code>无连接</code>的网际协议和许多<code>路由</code>选择协议，因此因特网的网络层也称<code>网际层</code>或IP层</li></ul><p><img src="/img/%E7%BD%91%E7%BB%9C%E5%B1%82.png"></p><h3 id="6-数据链路层"><a href="#6-数据链路层" class="headerlink" title="6.数据链路层"></a>6.数据链路层</h3><ul><li><code>点到点</code>通信</li></ul><p><img src="/img/%E6%95%B0%E6%8D%AE%E9%93%BE%E8%B7%AF%E5%B1%82.png"></p><h3 id="7-物理层"><a href="#7-物理层" class="headerlink" title="7.物理层"></a>7.物理层</h3><p><img src="/img/%E7%89%A9%E7%90%86%E5%B1%82.png"></p><h2 id="OSI数据传输图"><a href="#OSI数据传输图" class="headerlink" title="OSI数据传输图"></a>OSI数据传输图</h2><p><img src="/img/OSI%E6%95%B0%E6%8D%AE%E4%BC%A0%E8%BE%93%E5%9B%BE.png"></p>]]></content>
     
     
-    <categories>
-      
-      <category>计算机网络</category>
-      
-    </categories>
     
+    <tags>
+      
+      <tag>计算机网络</tag>
+      
+    </tags>
     
   </entry>
   
@@ -320,12 +306,12 @@
     <content type="html"><![CDATA[<p><a href="https://blog.csdn.net/weixin_43914604/article/details/104722679?spm=1001.2014.3001.5506">《王道计算机网络》学习笔记总目录+思维导图</a></p><h2 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h2><p>计算机网络是一些<code>互联的、自治的计算机系统的集合</code></p><h2 id="组成"><a href="#组成" class="headerlink" title="组成"></a>组成</h2><ol><li><code>硬件</code>主要由主机(也称端系统)，通信链路(如双绞线、光纤)、交换设备(如路由、交换机等)和通信处理机(如网卡)等组成</li><li><code>软件</code>主要包括各种实现资源共享的软件和方便用户使用的各种工具软件(如网络操作系统、邮件收发程序、FTP程序、聊天程序等)。</li><li><code>协议</code>是计算机网络的<strong>核心</strong>，协议规定了网络传输数据时所遵循的规范。就如同我们现实生活中的法律一样，网络世界也必须遵循一定的规则。</li></ol><h2 id="功能组成"><a href="#功能组成" class="headerlink" title="功能组成"></a>功能组成</h2><p>计算机网络由<code>通信子网和资源子网</code>组成</p><p><img src="/img/%E5%8A%9F%E8%83%BD%E7%BB%84%E6%88%90.png"></p><h2 id="功能"><a href="#功能" class="headerlink" title="功能"></a>功能</h2><ul><li>数据通信：计算机网络最基本和最重要的功能</li><li>资源共享：软件共享、数据共享和硬件共享</li><li>分布式处理</li><li>提高可靠性</li><li>负载均衡</li></ul><h2 id="分类"><a href="#分类" class="headerlink" title="分类"></a>分类</h2><h3 id="1-分布范围分类"><a href="#1-分布范围分类" class="headerlink" title="1.分布范围分类"></a>1.分布范围分类</h3><table><thead><tr><th>类型</th><th>概念</th></tr></thead><tbody><tr><td>广域网（WAN）</td><td><code>几十千米到几千千米</code>的区域</td></tr><tr><td>城域网（MAN）</td><td>跨越几个街区甚至整个城市，覆盖范围约<code>5~50km</code></td></tr><tr><td>局域网（LAN）</td><td><code>几十米到几千米</code>的区域</td></tr><tr><td>个人区域网（PAN）</td><td><code>十米</code>左右</td></tr></tbody></table><h3 id="2-传输技术分类"><a href="#2-传输技术分类" class="headerlink" title="2.传输技术分类"></a>2.传输技术分类</h3><ul><li><code>广播式网络</code>：所有联网计算机都共享一个<code>公共通信信道</code>。当一台计算机利用<code>共享通信信道</code>发送报文分组时，所有其他计算机都会收听到这个分组。接受到该分组的计算机将通过检查目的地之来决定是否接受该分组。</li><li><code>点对点网络</code>：每条物理线路连接一对计算机。</li></ul><h3 id="3-拓扑结构分类"><a href="#3-拓扑结构分类" class="headerlink" title="3.拓扑结构分类"></a>3.拓扑结构分类</h3><p>总线形、星形、环形、网状形</p><p><img src="/img/%E6%8B%93%E6%89%91%E7%BB%93%E6%9E%84%E5%88%86%E7%B1%BB.png"></p><h3 id="4-交换技术分类"><a href="#4-交换技术分类" class="headerlink" title="4.交换技术分类"></a>4.交换技术分类</h3><ul><li><p><code>电路交换网络</code>：在源结点和目的结点之间建立起一条专用的通路用于传输数据，包括建立连接（占用通信资源）、传输数据（一直占用通信资源）和断开连接（释放通信资源）三个阶段。最典型的电路交换网是<strong>传统电话网络</strong>。该类网络的特点是整个报文的比特流连续的从源点直达终点，好像在一条管道中传送。</p></li><li><p><code>报文交换网络</code>：也称<code>存储-转发网络</code>。用户数据加上源地址、目的地址、校验码等辅助信息，然后封装成报文、这个报文传送到相邻结点，全部存储后，再转发给下一个结点，重复这一过程直到到达目的结点，每个报文可以单独选择到达目的结点的路径。</p></li><li><p><code>分组交换网络</code>：也称<code>包交换网络</code>。其原理是将数据分成较短的固定长度的数据块，在每个数据块中加上目的地址、源地址等辅助信息组成分组（包），以<code>储存-转发方式</code>传输。</p></li></ul><p><img src="/img/%E4%BA%A4%E6%8D%A2%E6%8A%80%E6%9C%AF%E5%88%86%E7%B1%BB.png"></p><h2 id="协议的组成"><a href="#协议的组成" class="headerlink" title="协议的组成"></a>协议的组成</h2><ul><li><code>语义</code>：做什么</li><li><code>语法</code>：怎么做</li><li><code>同步</code>：什么时候做</li></ul>]]></content>
     
     
-    <categories>
-      
-      <category>计算机网络</category>
-      
-    </categories>
     
+    <tags>
+      
+      <tag>计算机网络</tag>
+      
+    </tags>
     
   </entry>
   
@@ -441,12 +427,6 @@
     </categories>
     
     
-    <tags>
-      
-      <tag>手写代码</tag>
-      
-    </tags>
-    
   </entry>
   
   
@@ -482,14 +462,10 @@
       
       <category>算法</category>
       
+      <category>数组</category>
+      
     </categories>
     
-    
-    <tags>
-      
-      <tag>数组</tag>
-      
-    </tags>
     
   </entry>
   
@@ -505,16 +481,12 @@
     
     <categories>
       
-      <category>JS</category>
+      <category>算法</category>
+      
+      <category>字符串</category>
       
     </categories>
     
-    
-    <tags>
-      
-      <tag>字符串</tag>
-      
-    </tags>
     
   </entry>
   
@@ -554,12 +526,6 @@
     </categories>
     
     
-    <tags>
-      
-      <tag>手写代码</tag>
-      
-    </tags>
-    
   </entry>
   
   
@@ -597,12 +563,6 @@
       
     </categories>
     
-    
-    <tags>
-      
-      <tag>手写代码</tag>
-      
-    </tags>
     
   </entry>
   
@@ -680,12 +640,6 @@
     </categories>
     
     
-    <tags>
-      
-      <tag>手写代码</tag>
-      
-    </tags>
-    
   </entry>
   
   
@@ -759,14 +713,10 @@
       
       <category>算法</category>
       
+      <category>字符串</category>
+      
     </categories>
     
-    
-    <tags>
-      
-      <tag>字符串</tag>
-      
-    </tags>
     
   </entry>
   
@@ -844,12 +794,6 @@
     </categories>
     
     
-    <tags>
-      
-      <tag>手写代码</tag>
-      
-    </tags>
-    
   </entry>
   
   
@@ -862,12 +806,12 @@
     <content type="html"><![CDATA[<h2 id="进程和线程的区别"><a href="#进程和线程的区别" class="headerlink" title="进程和线程的区别"></a>进程和线程的区别</h2><h3 id="进程是资源分配的最小单位，线程是CPU调度的最小单位"><a href="#进程是资源分配的最小单位，线程是CPU调度的最小单位" class="headerlink" title="进程是资源分配的最小单位，线程是CPU调度的最小单位"></a>进程是资源分配的最小单位，线程是CPU调度的最小单位</h3><p>做个简单的比喻：进程=火车，线程=车厢</p><ul><li><p><strong>线程在进程下行进</strong>（单纯的车厢无法运行）</p></li><li><p><strong>一个进程可以包含多个线程</strong>（一辆火车可以有多个车厢）</p></li><li><p><strong>不同进程间数据很难共享</strong>（一辆火车上的乘客很难换到另外一辆火车，比如站点换乘）</p></li><li><p><strong>同一进程下不同线程间数据很易共享</strong>（A车厢换到B车厢很容易）</p></li><li><p><strong>进程要比线程消耗更多的计算机资源</strong>（采用多列火车相比多个车厢更耗资源）</p></li><li><p><strong>进程间不会相互影响，一个线程挂掉将导致整个进程挂掉</strong>（一列火车不会影响到另外一列火车，但是如果一列火车上中间的一节车厢着火了，将影响到所有车厢）</p></li><li><p><strong>进程可以拓展到多机，进程最多适合多核</strong>（不同火车可以开在多个轨道上，同一火车的车厢不能在行进的不同的轨道上）</p></li><li><p><strong>进程使用的内存地址可以上锁，即一个线程使用某些共享内存时，其他线程必须等它结束，才能使用这一块内存。</strong>（比如火车上的洗手间）－”互斥锁”</p></li><li><p><strong>进程使用的内存地址可以限定使用量</strong>（比如火车上的餐厅，最多只允许多少人进入，如果满了需要在门口等，等有人出来了才能进去）－”信号量”</p></li></ul>]]></content>
     
     
-    <categories>
-      
-      <category>操作系统</category>
-      
-    </categories>
     
+    <tags>
+      
+      <tag>操作系统</tag>
+      
+    </tags>
     
   </entry>
   
@@ -900,12 +844,12 @@
     <content type="html"><![CDATA[<p><img src="/img/localstorage.jpg"></p><h2 id="相同点："><a href="#相同点：" class="headerlink" title="相同点："></a>相同点：</h2><p>三者都是开发过程中最常用的临时存储数据的方式。</p><h2 id="不同点："><a href="#不同点：" class="headerlink" title="不同点："></a>不同点：</h2><h3 id="1-存储的时间有效期不同"><a href="#1-存储的时间有效期不同" class="headerlink" title="1.存储的时间有效期不同"></a>1.存储的时间有效期不同</h3><ul><li>cookie的有效期是可以进行设置的，它能够跨页面存储数据，在默认的时间内，只要不关闭当前浏览器窗口，cookie就是一直有效的。</li><li>sessionStorage的有效期是仅保持在当前页面，关闭当前会话页或者浏览器后就会失效</li><li>localStorage的有效期除非人工手动删除，否则一直存在，关闭当前会话页或者关闭浏览器是依然存在的。</li></ul><h3 id="2-存储的大小不同"><a href="#2-存储的大小不同" class="headerlink" title="2.存储的大小不同"></a>2.存储的大小不同</h3><ul><li>cookie的存储量较小，存储容量是4kb左右，一般页面最多存储20条左右信息。</li><li>localStorage和sessionStorage的存储容量是5Mb，不同的浏览器有一些差异不同。</li></ul><h3 id="3-与服务端的通信的差异"><a href="#3-与服务端的通信的差异" class="headerlink" title="3.与服务端的通信的差异"></a>3.与服务端的通信的差异</h3><ul><li>localStorage和sessionStorage是不会进行服务器通信的，他们只会在客户端进行数据的保存。</li><li>cookie会参与到与服务端的通信中，一般会携带在http请求的头部中，会消耗一部分带宽。一般可用于验证登陆者信息的凭证。</li></ul>]]></content>
     
     
-    <categories>
-      
-      <category>计算机网络</category>
-      
-    </categories>
     
+    <tags>
+      
+      <tag>计算机网络</tag>
+      
+    </tags>
     
   </entry>
   
@@ -919,12 +863,12 @@
     <content type="html"><![CDATA[<h2 id="常用的API"><a href="#常用的API" class="headerlink" title="常用的API"></a>常用的API</h2><table><thead><tr><th align="center">名称</th><th align="center">作用</th></tr></thead><tbody><tr><td align="center">clear</td><td align="center">清空localStorage上存储的数据</td></tr><tr><td align="center">getItem</td><td align="center">读取数据</td></tr><tr><td align="center">setItem</td><td align="center">存储数据</td></tr><tr><td align="center">hasOwnPropertykey</td><td align="center">检查localStorage上是否保存了变量x，需要传入x</td></tr><tr><td align="center">key</td><td align="center">读取第i个数据的名字或称为键值(从0开始计数)</td></tr><tr><td align="center">length</td><td align="center">localStorage存储变量的个数</td></tr><tr><td align="center">propertyIsEnumerable</td><td align="center">用来检测属性是否属于某个对象的</td></tr><tr><td align="center">removeItem</td><td align="center">删除某个具体变量</td></tr><tr><td align="center">toLocaleString</td><td align="center">将（数组）转为本地字符串</td></tr><tr><td align="center">valueOf</td><td align="center">获取所有存储的数据</td></tr></tbody></table><h2 id="存储对象"><a href="#存储对象" class="headerlink" title="存储对象"></a>存储对象</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-keyword">var</span> students = &#123;<br>    <span class="hljs-attr">xiaomin</span>: &#123;<br>        <span class="hljs-attr">name</span>: <span class="hljs-string">&quot;xiaoming&quot;</span>,<br>        <span class="hljs-attr">grade</span>: <span class="hljs-number">1</span><br>    &#125;,<br>    <span class="hljs-attr">teemo</span>: &#123;<br>        <span class="hljs-attr">name</span>: <span class="hljs-string">&quot;teemo&quot;</span>,<br>        <span class="hljs-attr">grade</span>: <span class="hljs-number">3</span><br>    &#125;<br>&#125;<br><br><span class="hljs-variable language_">localStorage</span>.<span class="hljs-title function_">setItem</span>(<span class="hljs-string">&quot;students&quot;</span>,<span class="hljs-title class_">JSON</span>.<span class="hljs-title function_">stringify</span>(students)); <span class="hljs-comment">//将变量存到localStorage里</span><br><span class="hljs-keyword">var</span> newStudents =<span class="hljs-title class_">JSON</span>.<span class="hljs-title function_">parse</span>(<span class="hljs-variable language_">localStorage</span>.<span class="hljs-title function_">getItem</span>(<span class="hljs-string">&quot;students&quot;</span>)); <span class="hljs-comment">//打印出原先对象</span><br></code></pre></td></tr></table></figure>]]></content>
     
     
-    <categories>
-      
-      <category>计算机网络</category>
-      
-    </categories>
     
+    <tags>
+      
+      <tag>计算机网络</tag>
+      
+    </tags>
     
   </entry>
   
