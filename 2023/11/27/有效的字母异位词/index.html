@@ -16,21 +16,21 @@
   <meta name="author" content="Panda">
   <meta name="keywords" content="">
   
-    <meta name="description" content="清除浮动主要是为了解决：当父元素不给高度的时候，内部元素不浮动的时候会撑开，而浮动时父元素会变成一条线，所以这个时候就需要解决浮动 1.给父元素定义好height高度2.父级添加overflow方法可以通过触发BFC的方式，实现清除浮动效果。 必须定义width，同时不能定义height，使用overflow:hidden时，浏览器会自动检查浮动区域的高度 12345.fahter&amp;#123;">
+    <meta name="description" content="1.  有效的字母异位词 1234567891011121314151617181920&#x2F;&#x2F;方法一：数组，排列，比较var isAnagram &#x3D; function (s, t) &amp;#123;    if ([...s].sort().toString() &#x3D;&#x3D; [...t].sort().toString()) return true;    else return false; &amp;#125;;">
 <meta property="og:type" content="article">
-<meta property="og:title" content="清除浮动">
-<meta property="og:url" content="http://example.com/2023/11/06/%E6%B8%85%E9%99%A4%E6%B5%AE%E5%8A%A8/index.html">
+<meta property="og:title" content="有效的字母异位词">
+<meta property="og:url" content="http://example.com/2023/11/27/%E6%9C%89%E6%95%88%E7%9A%84%E5%AD%97%E6%AF%8D%E5%BC%82%E4%BD%8D%E8%AF%8D/index.html">
 <meta property="og:site_name" content="Panda碎碎念">
-<meta property="og:description" content="清除浮动主要是为了解决：当父元素不给高度的时候，内部元素不浮动的时候会撑开，而浮动时父元素会变成一条线，所以这个时候就需要解决浮动 1.给父元素定义好height高度2.父级添加overflow方法可以通过触发BFC的方式，实现清除浮动效果。 必须定义width，同时不能定义height，使用overflow:hidden时，浏览器会自动检查浮动区域的高度 12345.fahter&amp;#123;">
+<meta property="og:description" content="1.  有效的字母异位词 1234567891011121314151617181920&#x2F;&#x2F;方法一：数组，排列，比较var isAnagram &#x3D; function (s, t) &amp;#123;    if ([...s].sort().toString() &#x3D;&#x3D; [...t].sort().toString()) return true;    else return false; &amp;#125;;">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2023-11-06T02:00:00.000Z">
-<meta property="article:modified_time" content="2023-11-24T03:37:47.935Z">
+<meta property="article:published_time" content="2023-11-27T04:00:00.000Z">
+<meta property="article:modified_time" content="2023-11-28T08:06:50.737Z">
 <meta property="article:author" content="Panda">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>清除浮动 - Panda碎碎念</title>
+  <title>有效的字母异位词 - Panda碎碎念</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -208,7 +208,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="清除浮动"></span>
+            <span id="subtitle" data-typed-text="有效的字母异位词"></span>
           
         </div>
 
@@ -219,8 +219,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2023-11-06 10:00" pubdate>
-          2023年11月6日 上午
+        <time datetime="2023-11-27 12:00" pubdate>
+          2023年11月27日 中午
         </time>
       </span>
     
@@ -231,7 +231,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          1k 字
+          1.8k 字
         
       </span>
     
@@ -242,7 +242,7 @@
         
         
         
-          9 分钟
+          15 分钟
         
       </span>
     
@@ -279,22 +279,18 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">清除浮动</h1>
+            <h1 id="seo-header">有效的字母异位词</h1>
             
             
               <div class="markdown-body">
                 
-                <p><strong>清除浮动</strong>主要是为了解决：当父元素不给高度的时候，内部元素不浮动的时候会撑开，而浮动时父元素会变成一条线，所以这个时候就需要解决浮动</p>
-<h2 id="1-给父元素定义好height高度"><a href="#1-给父元素定义好height高度" class="headerlink" title="1.给父元素定义好height高度"></a>1.给父元素定义好height高度</h2><h2 id="2-父级添加overflow方法"><a href="#2-父级添加overflow方法" class="headerlink" title="2.父级添加overflow方法"></a>2.父级添加overflow方法</h2><p>可以通过触发BFC的方式，实现清除浮动效果。</p>
-<p><strong>必须定义width</strong>，同时<strong>不能定义height</strong>，使用overflow:hidden时，浏览器会自动检查浮动区域的高度</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs css"><span class="hljs-selector-class">.fahter</span>&#123;<br>    <span class="hljs-attribute">width</span>: <span class="hljs-number">400px</span>;<br>    <span class="hljs-attribute">border</span>: <span class="hljs-number">1px</span> solid black;<br>    <span class="hljs-attribute">overflow</span>: hidden;<br>&#125;<br></code></pre></td></tr></table></figure>
-<h2 id="3-额外标签法"><a href="#3-额外标签法" class="headerlink" title="3.额外标签法"></a>3.额外标签法</h2><p>给谁清除浮动，就在其后额外添加一个空白div标签 。</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs css"><span class="hljs-selector-class">.clear</span>&#123;<br>        <span class="hljs-attribute">clear</span>:both;<br>    &#125;<br><br>&lt;<span class="hljs-selector-tag">div</span> class=&quot;fahter&quot;&gt;<br>        &lt;<span class="hljs-selector-tag">div</span> class=&quot;<span class="hljs-attribute">float</span>&quot;&gt;浮动了&lt;/<span class="hljs-selector-tag">div</span>&gt;<br>        &lt;<span class="hljs-selector-tag">div</span> class=&quot;<span class="hljs-attribute">clear</span>&quot;&gt;额外标签法&lt;/<span class="hljs-selector-tag">div</span>&gt;<br>&lt;/<span class="hljs-selector-tag">div</span>&gt;<br></code></pre></td></tr></table></figure>
+                <h2 id="1-有效的字母异位词"><a href="#1-有效的字母异位词" class="headerlink" title="1.  有效的字母异位词 "></a>1. <a target="_blank" rel="noopener" href="https://leetcode.cn/problems/valid-anagram/"> 有效的字母异位词 </a></h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-comment">//方法一：数组，排列，比较</span><br><span class="hljs-keyword">var</span> isAnagram = <span class="hljs-keyword">function</span> (<span class="hljs-params">s, t</span>) &#123;<br>    <span class="hljs-keyword">if</span> ([...s].<span class="hljs-title function_">sort</span>().<span class="hljs-title function_">toString</span>() == [...t].<span class="hljs-title function_">sort</span>().<span class="hljs-title function_">toString</span>()) <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;<br>    <span class="hljs-keyword">else</span> <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>; <br>&#125;;<br><br><span class="hljs-comment">//方法二：ES6的Map()方法</span><br><span class="hljs-keyword">var</span> isAnagram = <span class="hljs-keyword">function</span> (<span class="hljs-params">s, t</span>) &#123;<br>    <span class="hljs-keyword">if</span> (s.<span class="hljs-property">length</span> != t.<span class="hljs-property">length</span>)<br>        <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;<br>    <span class="hljs-keyword">let</span> map = <span class="hljs-keyword">new</span> <span class="hljs-title class_">Map</span>();<br>    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> char <span class="hljs-keyword">of</span> s) &#123;<br>        map.<span class="hljs-title function_">set</span>(char, (map.<span class="hljs-title function_">get</span>(char) || <span class="hljs-number">0</span>) + <span class="hljs-number">1</span>);<br>    &#125;<br>    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> char <span class="hljs-keyword">of</span> t) &#123;<br>        <span class="hljs-keyword">if</span> (map.<span class="hljs-title function_">get</span>(char)) map.<span class="hljs-title function_">set</span>(char, map.<span class="hljs-title function_">get</span>(char) - <span class="hljs-number">1</span>);<br>        <span class="hljs-keyword">else</span> <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;<br>    &#125;<br>    <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;<br>&#125;;<br></code></pre></td></tr></table></figure>
 
+<h2 id="2-赎金信"><a href="#2-赎金信" class="headerlink" title="2. 赎金信"></a>2. <a target="_blank" rel="noopener" href="https://programmercarl.com/0383.%E8%B5%8E%E9%87%91%E4%BF%A1.html">赎金信</a></h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-keyword">var</span> canConstruct = <span class="hljs-keyword">function</span> (<span class="hljs-params">ransomNote, magazine</span>) &#123;<br>    <span class="hljs-keyword">let</span> map = <span class="hljs-keyword">new</span> <span class="hljs-title class_">Map</span>();<br>    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> char <span class="hljs-keyword">of</span> magazine) &#123;<br>        map.<span class="hljs-title function_">set</span>(char, (map.<span class="hljs-title function_">get</span>(char) || <span class="hljs-number">0</span>) + <span class="hljs-number">1</span>);<br>    &#125;<br>    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> char <span class="hljs-keyword">of</span> ransomNote) &#123;<br>        <span class="hljs-keyword">if</span> (map.<span class="hljs-title function_">get</span>(char)) map.<span class="hljs-title function_">set</span>(char, map.<span class="hljs-title function_">get</span>(char) - <span class="hljs-number">1</span>);<br>        <span class="hljs-keyword">else</span> <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;<br>    &#125;<br>    <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;<br>&#125;;<br></code></pre></td></tr></table></figure>
 
-<h2 id="4-使用after伪元素清除浮动"><a href="#4-使用after伪元素清除浮动" class="headerlink" title="4.使用after伪元素清除浮动"></a>4.使用after伪元素清除浮动</h2><p>:after方式为空元素的升级版，好处是不用单独加标签了。</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs css"><span class="hljs-selector-class">.clearfix</span><span class="hljs-selector-pseudo">:after</span>&#123;     <span class="hljs-comment">/*伪元素是行内元素 正常浏览器清除浮动方法*/</span><br>        <span class="hljs-attribute">content</span>: <span class="hljs-string">&quot;&quot;</span>;<br>        <span class="hljs-attribute">display</span>: block;<br>        <span class="hljs-attribute">height</span>: <span class="hljs-number">0</span>;<br>        <span class="hljs-attribute">clear</span>:both;<br>        <span class="hljs-attribute">visibility</span>: hidden;<br>    &#125;<br><br>    &lt;<span class="hljs-selector-tag">div</span> class=&quot;father clearfix&quot;&gt;<br>        &lt;<span class="hljs-selector-tag">div</span> class=&quot;<span class="hljs-attribute">float</span>&quot;&gt;浮动了&lt;/<span class="hljs-selector-tag">div</span>&gt;<br>    &lt;/<span class="hljs-selector-tag">div</span>&gt;<br><br></code></pre></td></tr></table></figure>
-<h2 id="5-使用before和after双伪元素清除浮动（较常用推荐）"><a href="#5-使用before和after双伪元素清除浮动（较常用推荐）" class="headerlink" title="5. 使用before和after双伪元素清除浮动（较常用推荐）"></a>5. 使用before和after双伪元素清除浮动（较常用推荐）</h2><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs css"><span class="hljs-selector-class">.clearfix</span><span class="hljs-selector-pseudo">:before</span>,<br><span class="hljs-selector-class">.clearfix</span><span class="hljs-selector-pseudo">:after</span> &#123;<br>	<span class="hljs-attribute">content</span>: <span class="hljs-string">&quot;&quot;</span>;<br>	<span class="hljs-attribute">display</span>: table;<br>&#125;<br><span class="hljs-selector-class">.clearfix</span><span class="hljs-selector-pseudo">:after</span> &#123;<br>	<span class="hljs-attribute">clear</span>: both;<br>&#125;<br><br> &lt;<span class="hljs-selector-tag">div</span> class=&quot;father clearfix&quot;&gt;<br>      &lt;<span class="hljs-selector-tag">div</span> class=&quot;<span class="hljs-attribute">float</span>&quot;&gt;浮动了&lt;/<span class="hljs-selector-tag">div</span>&gt;<br> &lt;/<span class="hljs-selector-tag">div</span>&gt;<br><br></code></pre></td></tr></table></figure>
+<h2 id="3-字母异位词分组"><a href="#3-字母异位词分组" class="headerlink" title="3. 字母异位词分组"></a>3. <a target="_blank" rel="noopener" href="https://leetcode.cn/problems/group-anagrams/">字母异位词分组</a></h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-keyword">var</span> groupAnagrams = <span class="hljs-keyword">function</span> (<span class="hljs-params">strs</span>) &#123;<br>    <span class="hljs-keyword">let</span> map = <span class="hljs-keyword">new</span> <span class="hljs-title class_">Map</span>();<br>    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> str <span class="hljs-keyword">of</span> strs) &#123;<br>        <span class="hljs-keyword">let</span> arr = <span class="hljs-title class_">Array</span>.<span class="hljs-title function_">from</span>(str); <span class="hljs-comment">//字符串转数组</span><br>        arr.<span class="hljs-title function_">sort</span>();  <span class="hljs-comment">//单词内部字母排序</span><br>        <span class="hljs-keyword">let</span> key = arr.<span class="hljs-title function_">toString</span>();<br>        <span class="hljs-comment">//如果map中存在指定的key，则返回对应的list，否则返回一个新的数组。</span><br>        <span class="hljs-keyword">let</span> list = map.<span class="hljs-title function_">get</span>(key) ? map.<span class="hljs-title function_">get</span>(key) : <span class="hljs-keyword">new</span> <span class="hljs-title class_">Array</span>();<br>        list.<span class="hljs-title function_">push</span>(str);<br>        map.<span class="hljs-title function_">set</span>(key, list);<br>    &#125;<br>    <span class="hljs-keyword">return</span> <span class="hljs-title class_">Array</span>.<span class="hljs-title function_">from</span>(map.<span class="hljs-title function_">values</span>());<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<h2 id="4-找到字符串中所有字母异位词"><a href="#4-找到字符串中所有字母异位词" class="headerlink" title="4. 找到字符串中所有字母异位词"></a>4. <a target="_blank" rel="noopener" href="https://leetcode.cn/problems/find-all-anagrams-in-a-string/">找到字符串中所有字母异位词</a></h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-keyword">var</span> findAnagrams = <span class="hljs-keyword">function</span> (<span class="hljs-params">s, p</span>) &#123;<br>    <span class="hljs-keyword">let</span> lenS = s.<span class="hljs-property">length</span>,<br>        lenP = p.<span class="hljs-property">length</span>,<br>        result = [];<br><br>    <span class="hljs-keyword">if</span> (lenS &lt; lenP) <span class="hljs-keyword">return</span> result;<br><br>    <span class="hljs-keyword">let</span> countS = <span class="hljs-keyword">new</span> <span class="hljs-title class_">Array</span>(<span class="hljs-number">26</span>).<span class="hljs-title function_">fill</span>(<span class="hljs-number">0</span>),  <span class="hljs-comment">//对滑动窗口字符串的统计</span><br>        countP = <span class="hljs-keyword">new</span> <span class="hljs-title class_">Array</span>(<span class="hljs-number">26</span>).<span class="hljs-title function_">fill</span>(<span class="hljs-number">0</span>);<br><br>    <span class="hljs-comment">// 遍历目标字符串p，对每个字符出现的次数进行计数  </span><br>    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; lenP; i++) &#123;<br>        countP[p[i].<span class="hljs-title function_">charCodeAt</span>() - <span class="hljs-string">&#x27;a&#x27;</span>.<span class="hljs-title function_">charCodeAt</span>()]++;<br>        countS[s[i].<span class="hljs-title function_">charCodeAt</span>() - <span class="hljs-string">&#x27;a&#x27;</span>.<span class="hljs-title function_">charCodeAt</span>()]++;<br>    &#125;<br>    <span class="hljs-keyword">if</span> (countS.<span class="hljs-title function_">toString</span>() == countP.<span class="hljs-title function_">toString</span>()) result.<span class="hljs-title function_">push</span>(<span class="hljs-number">0</span>);<br><br>    <span class="hljs-comment">//滑动窗口调整countS的值</span><br>    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> left = <span class="hljs-number">0</span>, right = lenP; right &lt; lenS; left++, right++) &#123;<br>        countS[s[left].<span class="hljs-title function_">charCodeAt</span>() - <span class="hljs-string">&#x27;a&#x27;</span>.<span class="hljs-title function_">charCodeAt</span>()]--;<br>        countS[s[right].<span class="hljs-title function_">charCodeAt</span>() - <span class="hljs-string">&#x27;a&#x27;</span>.<span class="hljs-title function_">charCodeAt</span>()]++;<br>        <span class="hljs-keyword">if</span> (countS.<span class="hljs-title function_">toString</span>() == countP.<span class="hljs-title function_">toString</span>()) result.<span class="hljs-title function_">push</span>(left + <span class="hljs-number">1</span>);<br>    &#125;<br>    <span class="hljs-keyword">return</span> result;<br>&#125;;<br></code></pre></td></tr></table></figure>
 
 
                 
@@ -314,8 +310,15 @@
     
       <span class="category-chain">
         
-  <a href="/categories/CSS/" class="category-chain-item">CSS</a>
+  <a href="/categories/%E7%AE%97%E6%B3%95/" class="category-chain-item">算法</a>
   
+  
+    <span>></span>
+    
+  <a href="/categories/%E7%AE%97%E6%B3%95/%E5%93%88%E5%B8%8C%E8%A1%A8/" class="category-chain-item">哈希表</a>
+  
+  
+
   
 
       </span>
@@ -334,8 +337,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>清除浮动</div>
-      <div>http://example.com/2023/11/06/清除浮动/</div>
+      <div>有效的字母异位词</div>
+      <div>http://example.com/2023/11/27/有效的字母异位词/</div>
     </div>
     <div class="license-meta">
       
@@ -347,7 +350,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2023年11月6日</div>
+          <div>2023年11月27日</div>
         </div>
       
       
@@ -379,9 +382,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2023/11/06/%E5%B0%8F%E6%8A%80%E5%B7%A7/" title="小技巧">
+                      <a href="/2023/11/27/Untitled/" title="">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">小技巧</span>
+                        <span class="hidden-mobile"></span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -389,8 +392,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2023/11/06/%E9%9A%90%E8%97%8F%E5%85%83%E7%B4%A0%E7%9A%84%E6%96%B9%E6%B3%95%E6%9C%89%E5%93%AA%E4%BA%9B/" title="隐藏元素的方法">
-                        <span class="hidden-mobile">隐藏元素的方法</span>
+                      <a href="/2023/11/22/%E9%93%BE%E8%A1%A8/" title="链表">
+                        <span class="hidden-mobile">链表</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
